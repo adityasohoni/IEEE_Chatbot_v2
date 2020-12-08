@@ -1,0 +1,40 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+
+
+- rule: chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+
+# - rule: request_restaurant
+#   steps:
+#   - intent: request_restaurant
+#   - action: restaurant_form
+#   - active_loop: restaurant_form
+
+# - rule: submit form
+#   condition:
+#   - active_loop: restaurant_form
+#   steps:
+#   - action: restaurant_form
+#   - active_loop: null
+#   - action: utter_submit
+#   - action: utter_slots_values
+

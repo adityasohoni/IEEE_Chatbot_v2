@@ -1,0 +1,295 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hi
+    - Hey
+    - Hi bot
+    - Hey bot
+    - Hello
+    - Good morning
+    - hi again
+    - hi folks
+    - hi Mister
+    - hi pal!
+    - hi there
+    - greetings
+    - hello everybody
+    - hello is anybody there
+    - hello robot
+    - hallo
+    - heeey
+    - hi hi
+    - hey
+    - hey hey
+    - hello there
+    - hi
+    - hello
+    - yo
+    - hola
+    - hi?
+    - hey bot!
+    - hello friend
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yeah a cheap restaurant serving international cuisine
+    - correct
+    - ye
+    - uh yes
+    - let's do it
+    - yeah
+    - uh yes
+    - um yes
+    - yes knocking
+    - that's correct
+    - yes yes
+    - right
+    - yea
+    - yes
+    - yes right
+    - yes and i dont care
+    - right on
+    - i love that
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no
+    - no new selection
+    - no thanks
+    - no thank you
+    - uh no
+    - breath no
+    - do you have something else
+    - no this does not work for me
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+- intent: request_restaurant
+  examples: |
+    - im looking for a restaurant
+    - can i get [north indian](cuisine) cuisine in any area
+    - a restaurant that serves [south indian](cuisine) cuisine
+    - id like a restaurant
+    - im looking for a restaurant that serves [rotis](cuisine)
+    - can i find a restaurant that serves [naan](cuisine)
+    - i am looking for any place that serves [rice items](cuisine) for three
+    - i need to find a restaurant
+    - uh im looking for a restaurant that serves [south indian](cuisine) cuisine
+    - uh can i find a restaurant and it should serve [italian](cuisine) cuisine
+    - im looking for a restaurant serving [italian](cuisine) cuisine
+    - restaurant please
+    - i'd like to book a table for two with [mexican](cuisine) cuisine
+    - i need a table for 4
+    - book me a table for three at the [panjabi](cuisine) restaurant
+    - can you please book a table for 5?
+    - I would like to book a table for 2
+    - looking for a table at the [rajisthani](cuisine) restaurant for five
+    - find me a table for 7 people
+    - Can I get a table for four at the place which server [continental](cuisine) cuisine?
+
+
+
+# - intent: cuisine
+#   examples: |
+#     - where can I get [cuisine](cuisine)
+#     - where can I get [dinner](cuisine)
+#     - suggest me a good place for a tasty [lunch](cuisine)
+#     - im hungry, where can I get some [north indian cuisine](cuisine)
+#     - im hungry, where can I get some [south indian cuisine](cuisine)
+#     - whats the best [restaurant](cuisine) here?
+
+- intent: snacks
+  examples: |
+    - where can I get [chips](snacks)
+    - where can I get [ice cream](snacks)
+    - suggest me a good place for a [snack](snacks)
+    - im hungry, where can I get some [snacks](snacks)
+    - whats the best [fast cuisine place](snacks) here?
+    - whats the best [restaurant](snacks) here?
+    - where can I get [vada pav](snacks)
+    - where can I get [chaat](snacks) items?
+
+
+- intent: Acadedmic_Building
+  examples: |
+    - where can I get my [Transcripts](Acadedmic_Building)
+    - where is the [academic section](Acadedmic_Building)?
+    - where can I apply for the [CSAB special round](Acadedmic_Building)?
+    - where can I apply for [branch change](Acadedmic_Building)?
+    - where can I get my [hostel refund](Acadedmic_Building)?
+    - where can I get my [hostel refund](Acadedmic_Building)?
+
+- intent: Printing
+  examples: |
+    - where can I get a [printout](Printing)?
+    - where can I get a [scanned copy](Printing) of a pdf file?
+    - where can I get a [color printout](Printing)?
+    - Is there a place where i can get [printing](Printing) done?
+
+
+- intent: Delivery
+  examples: |
+    - where can I get my [Amazon delivery](Delivery)?
+    - where can I get my [Flipkart delivery](Delivery)?
+    - where do I go to collect my [Amazon delivery](Delivery)?
+    - where do I go to collect my [Flipkart delivery](Delivery)?
+
+- intent: stop
+  examples: |
+    - ok then you cant help me
+    - that was shit, you're not helping
+    - you can't help me
+    - you can't help me with what i need
+    - i guess you can't help me then
+    - ok i guess you can't help me
+    - that's not what i want
+    - ok, but that doesnt help me
+    - this is leading to nothing
+    - this conversation is not really helpful
+    - you cannot help me with what I want
+    - I think you cant help me
+    - hm i don't think you can do what i want
+    - stop
+    - stop go back
+    - do you get anything?
+    - and you call yourself bot company? pff
+    - and that's it?
+    - nothing else?
+
+- intent: chitchat
+  examples: |
+    - can you share your boss with me?
+    - i want to get to know your owner
+    - i want to know the company which designed you
+    - i want to know the company which generated you
+    - i want to know the company which invented you
+    - i want to know who invented you
+    - May I ask who invented you?
+    - please tell me the company who created you
+    - please tell me who created you
+    - tell me more about your creators
+    - tell me more about your founders
+    - Ahoy matey how are you?
+    - are you alright
+    - are you having a good day
+    - Are you ok?
+    - are you okay
+    - Do you feel good?
+    - how are things going
+    - how are things with you?
+    - How are things?
+    - how are you
+    - how are you doing
+    - how are you doing this morning
+    - how are you feeling
+    - how are you today
+    - How are you?
+    - How is the weather today?
+    - What's the weather like?
+    - How is the weather?
+    - What is the weather at your place?
+    - Do you have good weather?
+    - Is it raining?
+    - What's it like out there?
+    - Is it hot or cold?
+    - Beautiful day, isn't it?
+    - What's the weather forecast?
+    - Is it quite breezy outside?
+
+
+- intent: number_for_restaurant
+  examples: |
+    - [1](number_for_restaurant)
+    - [2](number_for_restaurant)
+    - [3](number_for_restaurant)
+    - [4](number_for_restaurant)
+    - [5](number_for_restaurant)
+    - [6](number_for_restaurant)
+    - [7](number_for_restaurant)
+    - [8](number_for_restaurant)
+    - [9](number_for_restaurant)
+    - [10](number_for_restaurant)
+    
