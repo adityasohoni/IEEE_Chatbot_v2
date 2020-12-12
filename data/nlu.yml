@@ -316,8 +316,10 @@ nlu:
     - I need to [transfer money] to my freinds 
     - where can I find [SBI](bank) branch?
     - where is [Canara](bank) bank?
+    - my cycle broke I need to claim for my [insurence](bank)
     - where can i pay for my [student loans](bank)?
     - I need to check balance on my [bank account](bank)
+    - I need to check my [bank balance](bank)
     - I have forgot my [debit card Pin](bank) where can i get it resolved
     - I have forgot my [net banking password](bank) ,I want help
     - where can i create a [bank account](bank)?
@@ -325,4 +327,3 @@ nlu:
     - someone stole my [credit card](bank)
     - I lost my [credit card](bank)
     - I have lost all money in my [bank account](bank)
-    
