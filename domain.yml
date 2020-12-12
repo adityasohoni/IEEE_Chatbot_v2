@@ -14,6 +14,7 @@ intents:
   - bot_challenge
   - request_restaurant
   # - cuisine
+  - bank
   - snacks
   - Acadedmic_Building
   - Printing
@@ -92,6 +93,9 @@ responses:
 
   utter_get_started:
   - text: "I can help you find what you want in NITK! Ask me about food, snacks, or transcripts"
+
+  utter_go_to_bank:
+  - text: "You can go to SBI bank near Mudrika"
 
   utter_default:
     - text: "Sorry, I didn't get that, can you rephrase?"

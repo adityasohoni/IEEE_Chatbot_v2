@@ -292,4 +292,17 @@ nlu:
     - [8](number_for_restaurant)
     - [9](number_for_restaurant)
     - [10](number_for_restaurant)
-    
+
+- intent: bank
+  examples: |
+    - I want to withdraw cash from atm
+    - where can i withdraw cash?  
+    - I have problem with my bank account
+    - my bank account is not working
+    - I have an issue with my bank account
+    - I want to deposit money?
+    - where should i deposit my money 
+    - I have lost my atm card
+    - someone stole my atm card 
+    - I am not able use my atm card
+    - I have to open an bank account   
