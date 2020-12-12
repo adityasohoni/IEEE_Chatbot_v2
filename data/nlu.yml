@@ -292,4 +292,38 @@ nlu:
     - [8](number_for_restaurant)
     - [9](number_for_restaurant)
     - [10](number_for_restaurant)
-    
+
+- intent: bank
+  examples: |
+    - I want to withdraw cash from [atm](bank)
+    - where can i [withdraw cash](bank)?  
+    - I have problem with my [bank account](bank)
+    - my [bank account](bank) is not working
+    - I have an issue with my [bank account](bank)
+    - I want to [deposit money](bank)?
+    - where should i deposit my money ?
+    - I have lost my [debit card](bank)
+    - someone stole my [credit card](bank) 
+    - I am not able use my [atm card](bank)
+    - I have to open an [bank account](bank)
+    - where can I get a new [debit card](bank)?
+    - where can I get a new [credit card](bank)?
+    - my upi is not working where can i find an [atm](bank)?
+    - where can i take a student [loan](bank)?
+    - I have won cash in a competition i need to [deposit](bank) into my [bank account](account)
+    - I have problems with [net banking](bank)
+    - where should i cash in a [check](bank)
+    - I need to [transfer money] to my freinds 
+    - where can I find [SBI](bank) branch?
+    - where is [Canara](bank) bank?
+    - my cycle broke I need to claim for my [insurence](bank)
+    - where can i pay for my [student loans](bank)?
+    - I need to check balance on my [bank account](bank)
+    - I need to check my [bank balance](bank)
+    - I have forgot my [debit card Pin](bank) where can i get it resolved
+    - I have forgot my [net banking password](bank) ,I want help
+    - where can i create a [bank account](bank)?
+    - I need to get [student loan](bank)
+    - someone stole my [credit card](bank)
+    - I lost my [credit card](bank)
+    - I have lost all money in my [bank account](bank)
