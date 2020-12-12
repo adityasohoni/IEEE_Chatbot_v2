@@ -118,22 +118,6 @@ stories:
   - intent: deny
   - action: utter_cheer_up
 
-- story: going to bank
-  steps: 
-  - intent: bank 
-  - action: utter_go_to_bank
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad go to bank
-  steps:
-  - intent: bank 
-  - action: utter_go_to_bank
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_cheer_up    
-
 
 # - story: stop form + continue
 #   steps:
