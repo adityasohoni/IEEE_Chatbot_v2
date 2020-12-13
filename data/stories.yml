@@ -126,7 +126,7 @@ stories:
   - intent: affirm
   - action: utter_happy
 
-- story: sad Acadedmic_Building
+- story: sad sports_complex
   steps:
   - intent: sports_complex
   - action: utter_go_to_sports_complex
