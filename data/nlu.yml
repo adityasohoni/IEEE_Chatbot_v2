@@ -292,4 +292,26 @@ nlu:
     - [8](number_for_restaurant)
     - [9](number_for_restaurant)
     - [10](number_for_restaurant)
+
+- intent: sports_complex
+  examples: |
+    - Where can I play [sports](sports_complex)
+    - Where can I play [badminton](sports_complex)
+    - I want to play [shuttle](sports_complex)
+    - Where is the [cricket](sports_complex) ground ?
+    - Where do people play [football](sports_complex) ?
+    - Do anyone play [table tennis](sports_complex) in NITK ?
+    - I want to play [TT](sports_complex)
+    - Where is the [squash](sports_complex) court ?
+    - Where can I get the [sports](sports_complex) [equipments](sports_complex) from ?
+    - Where is the [yoga](sports_complex) hall ?
+    - Can I play [kabaddi](sports_complex) ?
+    - Where can I practise [athletics](sports_complex) ?
+    - Where do people play in the evening ?
+    - I want to go to the [playground](sports_complex).
+    - Where is the [sports](sports_complex) adviser's office ?
+    - Where can I play [indoor sports](sports_complex) ?
+    - Where is the [hockey](sports_complex) ground ?
+
+
     

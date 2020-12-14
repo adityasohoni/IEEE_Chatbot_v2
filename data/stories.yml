@@ -118,6 +118,22 @@ stories:
   - intent: deny
   - action: utter_cheer_up
 
+- story: happy sports_complex
+  steps:
+  - intent: sports_complex
+  - action: utter_go_to_sports_complex
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad sports_complex
+  steps:
+  - intent: sports_complex
+  - action: utter_go_to_sports_complex
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+
 
 # - story: stop form + continue
 #   steps:

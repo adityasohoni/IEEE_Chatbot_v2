@@ -18,6 +18,7 @@ intents:
   - Acadedmic_Building
   - Printing
   - Delivery
+  - sports_complex
 
   - how_to_get_started
   - nlu_fallback
@@ -32,6 +33,7 @@ entities:
   - Acadedmic_Building
   - Printing
   - Delivery
+  - sports_complex
   
 
 
@@ -129,6 +131,8 @@ responses:
     - text: "Could not convert input to boolean value, please try again"
   utter_restart:
     - text: "restarted"
+  utter_go_to_sports_complex:
+    - text: "You can go to the sports complex which is beside Amul."
 
 
 
