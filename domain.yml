@@ -18,11 +18,8 @@ intents:
   - Acadedmic_Building
   - Printing
   - Delivery
-<<<<<<< HEAD
   - Health_Care_Centre
-=======
   - sports_complex
->>>>>>> 510af20102b884660d170b66b87f5167da54be57
 
   - how_to_get_started
   - nlu_fallback
@@ -37,11 +34,9 @@ entities:
   - Acadedmic_Building
   - Printing
   - Delivery
-<<<<<<< HEAD
   - Health_Care_Centre
-=======
   - sports_complex
->>>>>>> 510af20102b884660d170b66b87f5167da54be57
+
   
 
 
