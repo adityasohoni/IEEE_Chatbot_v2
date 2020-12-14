@@ -1,5 +1,5 @@
 # IEEE_Chatbot_v2
-# Run Rasa sommands in a virtual environment
+# Run Rasa commands in a virtual environment
 
 
 To train
