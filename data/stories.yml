@@ -118,18 +118,18 @@ stories:
   - intent: deny
   - action: utter_cheer_up
 
-- story: happy Health_Care_Center
+- story: happy Health_Care_Centre
   steps:
-  - intent: Health_Care_Center
-  - action: utter_go_to_health_care_center
+  - intent: Health_Care_Centre
+  - action: utter_go_to_health_care_Centre
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
 
-- story: sad Health_Care_Center
+- story: sad Health_Care_Centre
   steps:
-  - intent: Health_Care_Center
-  - action: utter_go_to_health_care_center
+  - intent: Health_Care_Centre
+  - action: utter_go_to_health_care_Centre
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up

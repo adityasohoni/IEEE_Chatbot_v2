@@ -217,18 +217,23 @@ nlu:
     - where do I go to collect my [Amazon delivery](Delivery)?
     - where do I go to collect my [Flipkart delivery](Delivery)?
 
-- intent: Health_Care_Center
+- intent: Health_Care_Centre
   examples: |
-    - where can I get [medicines](Health_Care_Center)?
-    - where can I get a [health checkup](Health_Care_Center)?
-    - where should I go for a [routine checkup](Health_Care_Center)?
-    - Is there a [hospital](Health_Care_Center) nearby?
-    - I am [not feeling well](Health_Care_Center).
-    - I am [feeling sick](Health_Care_Center).
-    - I am [sick](Health_Care_Center).
-    - where can I go for any [medical emergency](Health_Care_Center)?
-    - where can I get a [doctor](Health_Care_Center)?
-
+    - where can I get [medicines](Health_Care_Centre)?
+    - where can I get a [health checkup](Health_Care_Centre)?
+    - where can I get a [checkup](Health_Care_Centre)?
+    - where should I go for a [routine checkup](Health_Care_Centre)?
+    - Is there a [hospital](Health_Care_Centre) nearby?
+    - I am [not feeling well](Health_Care_Centre).
+    - Where can I find a [psychiatrist](Health_Care_Centre)?
+    - I am [feeling sick](Health_Care_Centre).
+    - I am [sick](Health_Care_Centre).
+    - where can I go for any [medical emergency](Health_Care_Centre)?
+    - where can I get a [doctor](Health_Care_Centre)?
+    - Where can I find a [dermatologist](Health_Care_Centre)?
+    - Is there a [doctor](Health_Care_Centre) nearby?
+    - Where can I find a [dentist](Health_Care_Centre)?
+    - Where can I find a [paediatrician](Health_Care_Centre)?
 
 - intent: stop
   examples: |

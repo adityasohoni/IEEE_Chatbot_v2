@@ -18,7 +18,7 @@ intents:
   - Acadedmic_Building
   - Printing
   - Delivery
-  - Health_Care_Center
+  - Health_Care_Centre
 
   - how_to_get_started
   - nlu_fallback
@@ -33,7 +33,7 @@ entities:
   - Acadedmic_Building
   - Printing
   - Delivery
-  - Health_Care_Center
+  - Health_Care_Centre
   
 
 
@@ -131,8 +131,8 @@ responses:
     - text: "Could not convert input to boolean value, please try again"
   utter_restart:
     - text: "restarted"
-  utter_go_to_health_care_center:
-    - text: "You can go to the Health Care Center for all medical issues"
+  utter_go_to_health_care_centre:
+    - text: "For all medical issues you can go to the Health Care Centre which is situated at the centre of the campus, opposite to the main playground."
 
 
 
