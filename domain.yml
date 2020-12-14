@@ -132,7 +132,7 @@ responses:
   utter_restart:
     - text: "restarted"
   utter_go_to_sports_complex:
-    - text: "You can go to the sports complex."
+    - text: "You can go to the sports complex which is beside Amul."
 
 
 
