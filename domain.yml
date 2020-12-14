@@ -19,6 +19,7 @@ intents:
   - Printing
   - Delivery
   - sports_complex
+  - bank
 
   - how_to_get_started
   - nlu_fallback
@@ -34,6 +35,7 @@ entities:
   - Printing
   - Delivery
   - sports_complex
+  - bank
   
 
 
@@ -133,6 +135,8 @@ responses:
     - text: "restarted"
   utter_go_to_sports_complex:
     - text: "You can go to the sports complex which is beside Amul."
+  utter_go_to_bank:
+    - text: "You can go to SBI/Canara bank near Mudrika" 
 
 
 
