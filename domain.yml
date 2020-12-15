@@ -20,6 +20,7 @@ intents:
   - Delivery
   - Health_Care_Centre
   - sports_complex
+  - bank
 
   - how_to_get_started
   - nlu_fallback
@@ -36,6 +37,10 @@ entities:
   - Delivery
   - Health_Care_Centre
   - sports_complex
+
+
+
+  - bank
 
   
 
@@ -138,6 +143,8 @@ responses:
     - text: "For all medical issues you can go to the Health Care Centre which is situated at the centre of the campus, opposite to the main playground."
   utter_go_to_sports_complex:
     - text: "You can go to the sports complex which is beside Amul."
+  utter_go_to_bank:
+    - text: "You can go to SBI/Canara bank near Mudrika" 
 
 
 

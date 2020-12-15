@@ -150,6 +150,24 @@ stories:
   - intent: deny
   - action: utter_cheer_up
 
+
+
+- story: happy bank
+  steps: 
+  - intent: bank 
+  - action: utter_go_to_bank
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad bank
+  steps:
+  - intent: bank 
+  - action: utter_go_to_bank
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up 
+
 # - story: stop form + continue
 #   steps:
 #     - intent: request_restaurant
