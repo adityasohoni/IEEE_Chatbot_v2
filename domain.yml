@@ -18,6 +18,7 @@ intents:
   - Acadedmic_Building
   - Printing
   - Delivery
+  - Health_Care_Centre
   - sports_complex
   - bank
 
@@ -34,8 +35,13 @@ entities:
   - Acadedmic_Building
   - Printing
   - Delivery
+  - Health_Care_Centre
   - sports_complex
+
+
+
   - bank
+
   
 
 
@@ -133,6 +139,8 @@ responses:
     - text: "Could not convert input to boolean value, please try again"
   utter_restart:
     - text: "restarted"
+  utter_go_to_health_care_centre:
+    - text: "For all medical issues you can go to the Health Care Centre which is situated at the centre of the campus, opposite to the main playground."
   utter_go_to_sports_complex:
     - text: "You can go to the sports complex which is beside Amul."
   utter_go_to_bank:
