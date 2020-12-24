@@ -44,6 +44,12 @@ nlu:
     - hi?
     - hey bot!
     - hello friend
+    - Morning
+    - Howdy
+    - What’s up
+    - sup
+    - hey friend
+    - bonjour
 
 - intent: goodbye
   examples: |
@@ -58,6 +64,15 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - adios
+    - talk to you later
+    - got to go
+    - catch you later
+    - gotta go
+    - see you next time
+    - I must be going
+    - farewell
+    - bye for now
 
 
 - intent: affirm
@@ -86,6 +101,20 @@ nlu:
     - yes and i dont care
     - right on
     - i love that
+    - yup
+    - thats great
+    - ya
+    - sure
+    - ok
+    - okhie
+    - k
+    - alright
+    - sounds good
+    - sure thing
+    - fine
+    - ohk
+    - okay
+    - yep
 
 - intent: deny
   examples: |
@@ -104,6 +133,15 @@ nlu:
     - breath no
     - do you have something else
     - no this does not work for me
+    - nope
+    - nah
+    - unfortunately not
+    - doesnt work for me
+    - doesnt work
+    - certainly not
+    - I think not
+    - by no means
+    - not possible
 
 - intent: mood_great
   examples: |
@@ -121,6 +159,13 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - nice 
+    - happy
+    - excited
+    - superb
+    - I am excited
+    - I am happy
+    - joyful
 
 - intent: mood_unhappy
   examples: |
@@ -138,6 +183,10 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - feeling low
+    - fed up
+    - not great
+    - I am fed up
 
 - intent: bot_challenge
   examples: |
@@ -168,7 +217,7 @@ nlu:
     - I would like to book a table for 2
     - looking for a table at the [rajisthani](cuisine) restaurant for five
     - find me a table for 7 people
-    - Can I get a table for four at the place which server [continental](cuisine) cuisine?
+    - Can I get a table for four at the place which serves [continental](cuisine) cuisine?
 
 
 
