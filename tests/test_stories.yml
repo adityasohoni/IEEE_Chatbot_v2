@@ -88,4 +88,4 @@ stories:
   - user: |
       are you a bot?
     intent: bot_challenge
-  - action: utter_iamabot
+  - action: utter_i_am_a_bot
