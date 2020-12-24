@@ -415,3 +415,22 @@ nlu:
     - I lost my [credit card](bank)
     - I have lost all money in my [bank account](bank)
     
+- intent: Central_Computer_Centre
+  examples: |
+    - Is there a [computer lab](Central_Computer_Centre) nearby?
+    - Where do first years go for their [computer programming classes](Central_Computer_Centre)?
+    - Where can I get [computing facilities](Central_Computer_Centre)?
+    - Where can I go for [internet connectivity issues](Central_Computer_Centre)?
+    - Where can I file a complaint regarding the [internet connection](Central_Computer_Centre) in my room?
+
+- intent: Central_Library
+  examples: |
+    - Where is the [library](Central_Library)?
+    - Where can I [borrow books](Central_Library)?
+    - Where can I read [books](Central_Library)?
+    - Is there a [library](Central_Library) nearby?
+    - Where can I get [periodicals](Central_Library)?
+    - Where can I read [journals](Central_Library)?
+    - Where can I read [newspapers](Central_Library)?
+    - Is there any [reading hall](Central_Library) nearby?
+    - Where is the [reading room](Central_Library)?

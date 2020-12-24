@@ -21,6 +21,8 @@ intents:
   - Health_Care_Centre
   - sports_complex
   - bank
+  - Central_Computer_Centre
+  - Central_Library
 
   - how_to_get_started
   - nlu_fallback
@@ -37,6 +39,8 @@ entities:
   - Delivery
   - Health_Care_Centre
   - sports_complex
+  - Central_Computer_Centre
+  - Central_Library
 
 
 
@@ -145,7 +149,10 @@ responses:
     - text: "You can go to the sports complex which is beside Amul."
   utter_go_to_bank:
     - text: "You can go to SBI/Canara bank near Mudrika" 
-
+  utter_go_to_central_computer_center:
+    - text: "You can go to the Central Computer Centre (CCC) which is opposite to the Silver Jubilee Auditorium."
+  utter_go_to_central_library:
+    - text: "You can go to the Central Library which is behind the Main Building, besides the Pavillion."
 
 
 # forms:
