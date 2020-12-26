@@ -10,7 +10,7 @@ rules:
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
   - intent: bot_challenge
-  - action: utter_iamabot
+  - action: utter_i_am_a_bot
 
 - rule: fallback
   steps:

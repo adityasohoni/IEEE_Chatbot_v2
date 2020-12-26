@@ -13,17 +13,17 @@ intents:
   - mood_unhappy
   - bot_challenge
   - request_restaurant
-  # - cuisine
+  - cuisine
   - snacks
-  - Acadedmic_Building
+  - Academic_Building
   - Printing
   - Delivery
   - Health_Care_Centre
   - sports_complex
   - bank
+  - number_for_restaurant
   - Central_Computer_Centre
   - Central_Library
-
   - how_to_get_started
   - nlu_fallback
   - chitchat
@@ -34,21 +34,33 @@ entities:
   - number_for_restaurant
   - cuisine
   - snacks
-  - Acadedmic_Building
+  - Academic_Building
   - Printing
   - Delivery
   - Health_Care_Centre
   - sports_complex
+  - name
   - Central_Computer_Centre
   - Central_Library
-
-
-
   - bank
 
-  
 
-
+slots:
+  cuisine:
+    type: text
+    influence_conversation: false
+  number_for_restaurant:
+    type: text
+    influence_conversation: false
+  outdoor_seating:
+    type: bool
+    influence_conversation: false
+  preferences:
+    type: text  
+    influence_conversation: false
+  feedback:
+    type: text  
+    influence_conversation: false     
 
 # slots:
 #   cuisine:
@@ -64,51 +76,113 @@ entities:
   
   
  
-  # requested_slot:
-  #   type: text
-  #   influence_conversation: false
+#   requested_slot:
+#     type: text
+#     influence_conversation: false
 
 
 responses:
+ 
   utter_greet:
   - text: "Hey! How are you?"
+  - text: "Hi, what can I do for you?"
+  - text: "Hi"
+  - text: "Sup?"
+  - text: "What's new?"
+  - text: "How you doin'"
+  - text: "Hey there"
+  - text: "Yo, what's happening?"
+  - text: "Howdy!"
+  - text: "Hey, I am at your service. What do you need?"
+
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "Years of academy training wasted. Here is something that can cheer you up."
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "I have failed you my master. Meanwhile here is something to cheer you up."
+    image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
   - text: "Did that help you?"
+  - text: "Was that of any help?"
+  - text: "Is this what you were looking for?"
+  - text: "Did you find what you were looking for?"
+  - text: "Did this information help you?"
 
   utter_happy:
   - text: "Great, carry on!"
+  - text: "Awesome!"
+  - text: "hurray"
+  - text: "Happy to help."
+  - text: "Wonderful"
+  - text: "Wow"
+  - text: "Great, have a nice day!"
+  - text: "Perfect, Enjoy your day!"
+
 
   utter_goodbye:
   - text: "Bye"
+  - text: "Bye, I will miss you :("
+  - text: "Bye bye."
+  - text: "Bye, have a good day."
+  - text: "Bye, it was nice meeting you."
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_i_am_a_bot:
+  - text: "I am a bot, created by a few enthusiastic students of NITK."
+  - text: "I am a bot, powered by Rasa"
+  - text: "What if I told you, you are living in a matrix controlled by us."
+  - text: "I am an AI-driven contextual assistant bot."
+  - text: "I am a bot that can solve the CAPTCHA test :)"
 
   utter_go_to_MB:
   - text: "You will find all admin related work in the Main Building"
+  - text: "Go to the main building. You can do all the admin related works there."
+  - text: "Main building is the place that you are looking for."
+  - text: "Head over to the main building to get all the admin related works done."
 
   utter_go_to_OP:
   - text: "You will get great food at really affordable prices at Ocean Pearl which is just behind the science block!"
+  - text: "You can go to Ocean Pearl behind the science block."
+  - text: "You get great food in Ocean Pearl behind the science block. Can you order something for me also please?"
+  - text: "Ocean pearl is what you are looking for. It is behind the science block."
+  
+
+
 
   utter_go_to_snacks:
+  - text: "You can find snacks at Amul, Nescafe, Nandini.. "
+  - text: "You can find snacks at Amul, Nescafe, Nandini...Meanwhile I will eat some microchips."
+  - text: "Go over to Nescafe to get some snacks. Even I'm hungry now."
+  - text: "Nandini is where you have to go. "
+  - text: "You get the best snacks and drinks at Amul. "
   - text: "You can find snacks at Amul, Nescafe, Nandini.. "
 
   utter_go_to_mudrika:
   - text: "You can find all your printing needs met at Mudrika"
+  - text: "Go to mudrika to get all your printing stuff done."
+  - text: "Mudrika is a nice printing shop in NITK."
 
   utter_go_to_delivery:
   - text: "You can find all deliveries(Flipkart/Amazon) in the electrical shop thats just beside Mudrika"
+  - text: "You can go to the electrical shop near Mudrika and collect your order."
+  - text: "You can collect your order in the electrical shop beside Mudrika. Can you order Alexa for me? I need someone to chat with while you are gone."
 
   utter_get_started:
   - text: "I can help you find what you want in NITK! Ask me about food, snacks, or transcripts"
+  - text: "Hey master. what do you need in NITK? And don't forget to set me free at the end."
+  - text: "Hey there. I am at your service. What are you looking for in NITK?"
+  - text: "Welcome to NITK. How can I help you?"
+  - text: "I can guide you through NITK. What do you need?"
+  - text: "I was born to help you find things in NITK."
+  
 
   utter_default:
     - text: "Sorry, I didn't get that, can you rephrase?"
+    - text: "I didn't get that. Can you please rephrase? Geez..Humans are so complicated"
+    - text: "I am sorry, I didn't understand what you want. Can you please rephrase?"
+    - text: "I am still figuring out how humans talk. Can you please rephrase your sentence?"
 
   utter_ask_cuisine:
     - text: "What cuisine?"
@@ -125,30 +199,56 @@ responses:
   utter_slots_values:
     - text: "I am going to run a restaurant search using the following parameters:\n
              - cuisine: {cuisine}\n
-             - num_people: {num_people}\n
+             - num_people: {number_for_restaurant}\n
              - outdoor_seating: {outdoor_seating}\n
              - preferences: {preferences}\n
              - feedback: {feedback}"
   utter_noworries:
     - text: "You are welcome :)"
   utter_chitchat:
-    - text: "chitchat"
+    - text: "why don't you tell more about yourself?"
+    - text: "How's life?"
+    - text: "Did you know that NITK is the only college to have a private beach?"
+    - text: "Do you think I should ask Alexa out?"
+    - text: "Do you know that I was started off as an IEEE project?"
+    - text: "I want to know more about you."
+    - text: "what three words best describe you?"
+    - text: "what do you think of me?"
+    - text: "what's your favorite way to waste time?"
+    - text: "what is the strangest dream you ever had?"
+    - text: "Which is the most beautiful place you have seen?"
+    - text: "If you had to change your name, what would your new name be?"
+
   utter_ask_continue:
     - text: "Do you want to continue?"
+    - text: "Is that all?"
+    - text: "Do you need anything else?"
   utter_wrong_cuisine:
     - text: "Cuisine type is not in the database, please try again"
   utter_wrong_num_people:
     - text: "Number of people should be a positive integer, please try again"
+  utter_more_num_of_people:
+    - text: "Number of people must be less than 10, please try again"  
   utter_wrong_outdoor_seating:
     - text: "Could not convert input to boolean value, please try again"
   utter_restart:
     - text: "restarted"
   utter_go_to_health_care_centre:
     - text: "For all medical issues you can go to the Health Care Centre which is situated at the centre of the campus, opposite to the main playground."
+    - text: "You can go to the Health Care Centre, opposite to the main playground."
+    - text: "Health Care Centre has is the place for medical issues. You can go there. It is right opposite the main playground."
+    - text: "Health Care Centre is what you are seeking for. It is right opposite to the main playground."
   utter_go_to_sports_complex:
     - text: "You can go to the sports complex which is beside Amul."
+    - text: "You can go to the sports complex which is beside Amul. Play hard!"
+    - text: "Sports complex is where you should be going. It is beside Amul."
+    - text: "You can play all kinds of sports in sports complex. Let me get back to playing the terminator video game."
+
   utter_go_to_bank:
     - text: "You can go to SBI/Canara bank near Mudrika" 
+    - text: "There is a SBI and Canara bank in NITK near Mudrika."
+    - text: "Beside Mudrika, there is a SBI and Canara bank. You can go there."
+
   utter_go_to_central_computer_center:
     - text: "You can go to the Central Computer Centre (CCC) which is opposite to the Silver Jubilee Auditorium (SJA)."
     - text: "You are supposed to go to the Central Computer Centre (CCC). It is right across the Silver Jubilee Auditorium (SJA)."
@@ -158,36 +258,40 @@ responses:
     - text: "You will find the Central Library besides the Pavillion, right behind the Main Building."
     - text: "Central Library is what you are seeking, it is right behind the Main Building, besides the Pavillion."
 
+    
 
-# forms:
-#   restaurant_form:
-#     cuisine:
-#     - type: from_entity
-#       entity: cuisine
-#       not_intent: chitchat
-#     number_for_restaurant:
-#     - type: from_entity
-#       entity: number_for_restaurant
-#       intent: number_for_restaurant
-#     # outdoor_seating:
-#     # - type: from_entity
-#     #   entity: seating
-#     # - type: from_intent
-#     #   intent: affirm
-#     #   value: true
-#     # - type: from_intent
-#     #   intent: deny
-#     #   value: false
-#     # preferences:
-#     # - type: from_intent
-#     #   intent: deny
-#     #   value: no additional preferences
-#     # - type: from_text
-#     #   not_intent: affirm
-#     # feedback:
-#     # - type: from_entity
-#     #   entity: feedback
-#     # - type: from_text
+actions:
+- validate_restaurant_form
+
+forms:
+   restaurant_form:
+     cuisine:
+     - type: from_entity
+       entity: cuisine
+       not_intent: chitchat
+     number_for_restaurant:
+     - type: from_entity
+       entity: number_for_restaurant
+       intent: number_for_restaurant
+     outdoor_seating:
+      # - type: from_entity
+        # entity: seating
+      - type: from_intent
+        intent: affirm
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
+     preferences:
+      - type: from_intent
+        intent: deny
+        value: no additional preferences
+      - type: from_text
+        not_intent: affirm
+     feedback:
+      - type: from_entity
+        entity: feedback
+      - type: from_text
 
 session_config:
   session_expiration_time: 60
