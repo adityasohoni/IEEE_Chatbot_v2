@@ -206,6 +206,45 @@ stories:
 
 
 
+- story: happy Central_Computer_Centre
+  steps: 
+  - intent: Central_Computer_Centre
+  - action: utter_go_to_central_computer_center
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad Central_Computer_Centre
+  steps:
+  - intent: Central_Computer_Centre
+  - action: utter_go_to_central_computer_center
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+
+
+
+- story: happy Central_Library
+  steps: 
+  - intent: Central_Library
+  - action: utter_go_to_central_library
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad Central_Library
+  steps:
+  - intent: Central_Library
+  - action: utter_go_to_central_library
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up 
+
+
+
+
+
+
 
 
 

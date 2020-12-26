@@ -22,6 +22,8 @@ intents:
   - sports_complex
   - bank
   - number_for_restaurant
+  - Central_Computer_Centre
+  - Central_Library
   - how_to_get_started
   - nlu_fallback
   - chitchat
@@ -38,9 +40,8 @@ entities:
   - Health_Care_Centre
   - sports_complex
   - name
-
-
-
+  - Central_Computer_Centre
+  - Central_Library
   - bank
 
 
@@ -247,6 +248,17 @@ responses:
     - text: "You can go to SBI/Canara bank near Mudrika" 
     - text: "There is a SBI and Canara bank in NITK near Mudrika."
     - text: "Beside Mudrika, there is a SBI and Canara bank. You can go there."
+
+  utter_go_to_central_computer_center:
+    - text: "You can go to the Central Computer Centre (CCC) which is opposite to the Silver Jubilee Auditorium (SJA)."
+    - text: "You are supposed to go to the Central Computer Centre (CCC). It is right across the Silver Jubilee Auditorium (SJA)."
+    - text: "Central Computer Centre (CCC) is where you are supposed to go. You can find it exactly opposite to the Silver Jubilee Auditorium (SJA)."
+  utter_go_to_central_library:
+    - text: "You can go to the Central Library which is behind the Main Building, besides the Pavillion."
+    - text: "You will find the Central Library besides the Pavillion, right behind the Main Building."
+    - text: "Central Library is what you are seeking, it is right behind the Main Building, besides the Pavillion."
+
+    
 
 actions:
 - validate_restaurant_form
