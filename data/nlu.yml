@@ -193,14 +193,14 @@ nlu:
     - where can I get [chaat](snacks) items?
 
 
-- intent: Acadedmic_Building
+- intent: Academic_Building
   examples: |
-    - where can I get my [Transcripts](Acadedmic_Building)
-    - where is the [academic section](Acadedmic_Building)?
-    - where can I apply for the [CSAB special round](Acadedmic_Building)?
-    - where can I apply for [branch change](Acadedmic_Building)?
-    - where can I get my [hostel refund](Acadedmic_Building)?
-    - where can I get my [hostel refund](Acadedmic_Building)?
+    - where can I get my [Transcripts](Academic_Building)
+    - where is the [academic section](Academic_Building)?
+    - where can I apply for the [CSAB special round](Academic_Building)?
+    - where can I apply for [branch change](Academic_Building)?
+    - where can I get my [hostel refund](Academic_Building)?
+    - where can I get my [hostel refund](Academic_Building)?
 
 - intent: Printing
   examples: |

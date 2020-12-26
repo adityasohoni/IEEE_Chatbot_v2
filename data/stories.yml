@@ -66,17 +66,17 @@ stories:
 
 
 
-- story: happy Acadedmic_Building
+- story: happy Academic_Building
   steps:
-  - intent: Acadedmic_Building
+  - intent: Academic_Building
   - action: utter_go_to_MB
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
 
-- story: sad Acadedmic_Building
+- story: sad Academic_Building
   steps:
-  - intent: Acadedmic_Building
+  - intent: Academic_Building
   - action: utter_go_to_MB
   - action: utter_did_that_help
   - intent: deny
@@ -121,7 +121,7 @@ stories:
 - story: happy Health_Care_Centre
   steps:
   - intent: Health_Care_Centre
-  - action: utter_go_to_health_care_Centre
+  - action: utter_go_to_health_care_centre
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
@@ -129,7 +129,7 @@ stories:
 - story: sad Health_Care_Centre
   steps:
   - intent: Health_Care_Centre
-  - action: utter_go_to_health_care_Centre
+  - action: utter_go_to_health_care_centre
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up
