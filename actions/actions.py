@@ -80,7 +80,7 @@ class ValidateRestaurantForm(FormValidationAction):
             # user will be asked for the slot again
             return {"cuisine": None}
 
-    def validate_num_people(
+    def validate_number_for_restaurant(
         self,
         value: Text,
         dispatcher: CollectingDispatcher,
@@ -90,11 +90,16 @@ class ValidateRestaurantForm(FormValidationAction):
         """Validate num_people value."""
 
         if self.is_int(value) and int(value) > 0:
-            return {"num_people": value}
+            if int(value) < 11:
+                return {"number_for_restaurant": value}
+            else:
+                dispatcher.utter_message(template = "utter_more_num_of_people")
+                return {"number_for_restaurant": None}
+
         else:
             dispatcher.utter_message(template="utter_wrong_num_people")
             # validation failed, set slot to None
-            return {"num_people": None}
+            return {"number_for_restaurant": None}
 
     def validate_outdoor_seating(
         self,

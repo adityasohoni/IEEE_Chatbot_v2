@@ -172,14 +172,14 @@ nlu:
 
 
 
-# - intent: cuisine
-#   examples: |
-#     - where can I get [cuisine](cuisine)
-#     - where can I get [dinner](cuisine)
-#     - suggest me a good place for a tasty [lunch](cuisine)
-#     - im hungry, where can I get some [north indian cuisine](cuisine)
-#     - im hungry, where can I get some [south indian cuisine](cuisine)
-#     - whats the best [restaurant](cuisine) here?
+- intent: cuisine
+  examples: |
+    - where can I get [cuisine](cuisine)
+    - where can I get [dinner](cuisine)
+    - suggest me a good place for a tasty [lunch](cuisine)
+    - im hungry, where can I get some [north indian cuisine](cuisine)
+    - im hungry, where can I get some [south indian cuisine](cuisine)
+    - whats the best [restaurant](cuisine) here?
 
 - intent: snacks
   examples: |

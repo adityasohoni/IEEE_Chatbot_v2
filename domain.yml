@@ -13,7 +13,7 @@ intents:
   - mood_unhappy
   - bot_challenge
   - request_restaurant
-  # - cuisine
+  - cuisine
   - snacks
   - Academic_Building
   - Printing
@@ -21,7 +21,7 @@ intents:
   - Health_Care_Centre
   - sports_complex
   - bank
-
+  - number_for_restaurant
   - how_to_get_started
   - nlu_fallback
   - chitchat
@@ -37,14 +37,29 @@ entities:
   - Delivery
   - Health_Care_Centre
   - sports_complex
+  - name
 
 
 
   - bank
 
-  
 
-
+slots:
+  cuisine:
+    type: text
+    influence_conversation: false
+  number_for_restaurant:
+    type: text
+    influence_conversation: false
+  outdoor_seating:
+    type: bool
+    influence_conversation: false
+  preferences:
+    type: text  
+    influence_conversation: false
+  feedback:
+    type: text  
+    influence_conversation: false     
 
 # slots:
 #   cuisine:
@@ -60,12 +75,13 @@ entities:
   
   
  
-  # requested_slot:
-  #   type: text
-  #   influence_conversation: false
+#   requested_slot:
+#     type: text
+#     influence_conversation: false
 
 
 responses:
+ 
   utter_greet:
   - text: "Hey! How are you?"
   - text: "Hi, what can I do for you?"
@@ -77,6 +93,7 @@ responses:
   - text: "Yo, what's happening?"
   - text: "Howdy!"
   - text: "Hey, I am at your service. What do you need?"
+
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -181,7 +198,7 @@ responses:
   utter_slots_values:
     - text: "I am going to run a restaurant search using the following parameters:\n
              - cuisine: {cuisine}\n
-             - num_people: {num_people}\n
+             - num_people: {number_for_restaurant}\n
              - outdoor_seating: {outdoor_seating}\n
              - preferences: {preferences}\n
              - feedback: {feedback}"
@@ -209,6 +226,8 @@ responses:
     - text: "Cuisine type is not in the database, please try again"
   utter_wrong_num_people:
     - text: "Number of people should be a positive integer, please try again"
+  utter_more_num_of_people:
+    - text: "Number of people must be less than 10, please try again"  
   utter_wrong_outdoor_seating:
     - text: "Could not convert input to boolean value, please try again"
   utter_restart:
@@ -229,37 +248,38 @@ responses:
     - text: "There is a SBI and Canara bank in NITK near Mudrika."
     - text: "Beside Mudrika, there is a SBI and Canara bank. You can go there."
 
+actions:
+- validate_restaurant_form
 
-
-# forms:
-#   restaurant_form:
-#     cuisine:
-#     - type: from_entity
-#       entity: cuisine
-#       not_intent: chitchat
-#     number_for_restaurant:
-#     - type: from_entity
-#       entity: number_for_restaurant
-#       intent: number_for_restaurant
-#     # outdoor_seating:
-#     # - type: from_entity
-#     #   entity: seating
-#     # - type: from_intent
-#     #   intent: affirm
-#     #   value: true
-#     # - type: from_intent
-#     #   intent: deny
-#     #   value: false
-#     # preferences:
-#     # - type: from_intent
-#     #   intent: deny
-#     #   value: no additional preferences
-#     # - type: from_text
-#     #   not_intent: affirm
-#     # feedback:
-#     # - type: from_entity
-#     #   entity: feedback
-#     # - type: from_text
+forms:
+   restaurant_form:
+     cuisine:
+     - type: from_entity
+       entity: cuisine
+       not_intent: chitchat
+     number_for_restaurant:
+     - type: from_entity
+       entity: number_for_restaurant
+       intent: number_for_restaurant
+     outdoor_seating:
+      # - type: from_entity
+        # entity: seating
+      - type: from_intent
+        intent: affirm
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
+     preferences:
+      - type: from_intent
+        intent: deny
+        value: no additional preferences
+      - type: from_text
+        not_intent: affirm
+     feedback:
+      - type: from_entity
+        entity: feedback
+      - type: from_text
 
 session_config:
   session_expiration_time: 60
