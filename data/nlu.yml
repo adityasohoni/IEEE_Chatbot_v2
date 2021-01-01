@@ -474,12 +474,14 @@ nlu:
     - Till when is the [electrical shop](Location) open?
     - When will the [central library](Location) close?
     - When will the [sports complex](Location) open?
+    - [mudrika](Location) opening time.
     - When can I go to the [nandini](Location)?
     - What time does the [academic building](Location) close?
     - Is [amul](Location) open now?
     - When will the [library](Location) close?
     - When will the [ccc](Location) open?
     - At what time is the [bank](Location) available?
+    - [nandini](Location) closing time.
     - What are the timings of the [academic building](Location)?
     - What time will the [sports complex](Location) close?
     - When can I go to the [hcc](Location)?
@@ -488,7 +490,9 @@ nlu:
     - When does the [electric shop](Location) open?
     - At what time is the [central library](Location) open?
     - At what time does the [nescafe](Location) close?
+    - [amul](Location) timings.
     - Is the [bank](Location) available right now?
     - When does [hcc](Location) close?
     - Till when is the [ccc](Location) open?
     - What are the timings of the [health care centre](Location)?
+    
