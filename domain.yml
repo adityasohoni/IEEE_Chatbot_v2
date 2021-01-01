@@ -24,6 +24,8 @@ intents:
   - number_for_restaurant
   - Central_Computer_Centre
   - Central_Library
+  - Indirect_Time_Query
+  - Direct_Time_Query
   - how_to_get_started
   - nlu_fallback
   - chitchat
@@ -42,6 +44,7 @@ entities:
   - name
   - Central_Computer_Centre
   - Central_Library
+  - Location
   - bank
 
 
@@ -60,7 +63,10 @@ slots:
     influence_conversation: false
   feedback:
     type: text  
-    influence_conversation: false     
+    influence_conversation: false  
+  context_location:
+    type: text
+    influence_conversation: false   
 
 # slots:
 #   cuisine:
@@ -154,9 +160,8 @@ responses:
   utter_go_to_snacks:
   - text: "You can find snacks at Amul, Nescafe, Nandini.. "
   - text: "You can find snacks at Amul, Nescafe, Nandini...Meanwhile I will eat some microchips."
-  - text: "Go over to Nescafe to get some snacks. Even I'm hungry now."
-  - text: "Nandini is where you have to go. "
-  - text: "You get the best snacks and drinks at Amul. "
+  - text: "Go over to Nescafe, Amul or Nandini to get some snacks. Even I'm hungry now."
+  - text: "You get the best snacks and drinks at Amul, Nescafe, Nandini... "
   - text: "You can find snacks at Amul, Nescafe, Nandini.. "
 
   utter_go_to_mudrika:
@@ -257,11 +262,40 @@ responses:
     - text: "You can go to the Central Library which is behind the Main Building, besides the Pavillion."
     - text: "You will find the Central Library besides the Pavillion, right behind the Main Building."
     - text: "Central Library is what you are seeking, it is right behind the Main Building, besides the Pavillion."
+  
 
-    
+  # The opening and closing times are based on google search (might not be accurate)
+  utter_open_close_time_snacks:
+    - text: "Amul is open from 7:45 AM to 7:45 PM, Nandini is available from 8:30 AM to 10:30 PM and Nescafe from XX:XX AM to XX:XX PM all days of the week(to be updated)."
+  utter_open_close_time_amul:
+    - text: "Amul is open from 7:45 AM to 7:45 PM all days of the week."
+  utter_open_close_time_nescafe:
+    - text: "Nescafe is open from XX:XX AM to XX:XX PM (to be updated)"               # someone fill this out
+  utter_open_close_time_nandini:
+    - text: "Nandini is open from 8:30 AM to 10:30 PM all days of the week."
+  utter_open_close_time_academic_building:
+    - text: "The Academic Building is open from XX:XX AM to XX:XX PM (to be updated)" # someone fill this out
+  utter_open_close_time_printing:
+    - text: "Mudrika is open from 8:30 AM to 6:30 PM all days of the week."
+  utter_open_close_time_delivery:
+    - text: "The electrical shop is open from 9:00 AM to 5:00 PM all days of the week."
+  utter_open_close_time_health_care_centre:
+    - text: "The Heath Care Centre is open from 9:00 AM to 6:00 PM Monday to Friday, on Saturday it closes at 4:00 PM and at 12:00 PM on Sundays."
+  utter_open_close_time_sports_complex:
+    - text: "The Sports Complex is open from XX:XX AM to XX:XX PM (to be updated)."   # someone fill this out
+  utter_open_close_time_bank:
+    - text: "The Bank is open from 10:00 AM to 4:00 PM Monday to Friday, on Saturday it closes at 12:00 PM and its closed on Sundays."
+  utter_open_close_time_central_computer_centre:
+    - text: "The central Computer Centre is open from 9:00 AM to 8:00 PM all days of the week."
+  utter_open_close_time_central_library:
+    - text: "The Central Library is open from 8:00 AM to 5:30 PM all days of the week, except on Sundays when it closes at 4:00 PM."
+
 
 actions:
 - validate_restaurant_form
+- set_context_location
+- direct_time_query
+- indirect_time_query
 
 forms:
    restaurant_form:

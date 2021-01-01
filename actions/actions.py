@@ -27,7 +27,9 @@
 #         return []
 from typing import Dict, Text, Any, List, Union
 
-from rasa_sdk import Tracker
+from rasa_sdk import Tracker,Action
+from rasa_sdk.events import SlotSet
+
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormValidationAction
 
@@ -126,3 +128,104 @@ class ValidateRestaurantForm(FormValidationAction):
             # affirm/deny was picked up as True/False by the from_intent mapping
             return {"outdoor_seating": value}
 
+class ActionSetSlotContextLocation(Action):
+    def name(self):
+        return "set_context_location"
+
+    def run(self, dispatcher, tracker, domain):
+
+        #setting context location as the building/landmark/shop being discussed in the conversation
+        return [SlotSet("context_location", tracker.latest_message["intent"].get("name"))]
+
+class DirectTimeQuery(Action):
+    def name(self):
+        return "direct_time_query"
+
+    @staticmethod
+    def location_utter_mapping():
+
+        return {
+            "amul":"utter_open_close_time_amul",
+            "nescafe":"utter_open_close_time_nescafe",
+            "nandini":"utter_open_close_time_nandini",
+            "academic building":"utter_open_close_time_academic_building",
+            "mudrika":"utter_open_close_time_printing",
+            "electrical shop":"utter_open_close_time_delivery",
+            "health care centre":"utter_open_close_time_health_care_centre",
+            "sports complex":"utter_open_close_time_sports_complex",
+            "bank":"utter_open_close_time_bank",
+            "central computer centre":"utter_open_close_time_central_computer_centre",
+            "central library":"utter_open_close_time_central_library",
+        }
+
+    def run(self, dispatcher, tracker, domain):
+        query_locations = []
+
+        for e in tracker.latest_message["entities"]:
+            if e["entity"]=="Location":
+                query_locations.append(e["value"])
+                # making a list of locations detected
+
+        if len(query_locations)==1:
+            #single location found and recognised
+            location = query_locations[0]
+            dispatcher.utter_message(template=self.selectUtterStatment(location))
+        
+        else:
+            #location missing or mulitple locations or location not recognized
+            dispatcher.utter_message(template="utter_default")
+        
+        return []
+    
+    def selectUtterStatment(self,location):
+
+        location=location.lower().replace("_"," ")
+        
+        if location in self.location_utter_mapping().keys():
+            #location recognised
+            return self.location_utter_mapping()[location]
+        else:
+            return "utter_default"
+        
+
+class IndirectTimeQuery(Action):
+    
+    def name(self):
+        return "indirect_time_query"
+
+    def location_utter_mapping(self):
+
+        return {
+            "snacks":"utter_open_close_time_snacks",
+            "academic building":"utter_open_close_time_academic_building",
+            "printing":"utter_open_close_time_printing",
+            "delivery":"utter_open_close_time_delivery",
+            "health care centre":"utter_open_close_time_health_care_centre",
+            "sports complex":"utter_open_close_time_sports_complex",
+            "bank":"utter_open_close_time_bank",
+            "central computer centre":"utter_open_close_time_central_computer_centre",
+            "central library":"utter_open_close_time_central_library",
+        }
+
+    def run(self, dispatcher, tracker, domain):
+        
+        if tracker.get_slot("context_location"):
+            #some context location found
+            location = tracker.get_slot("context_location")
+            dispatcher.utter_message(template=self.selectUtterStatment(location))
+        
+        else:
+            #context location missing
+            dispatcher.utter_message(template="utter_default")
+        
+        return []
+
+    def selectUtterStatment(self,location):
+
+        location=location.lower().replace("_"," ")
+        
+        if location in self.location_utter_mapping().keys():
+            #location recognised
+            return self.location_utter_mapping()[location]
+        else:
+            return "utter_default"

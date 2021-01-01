@@ -1,6 +1,19 @@
 version: "2.0"
 
 nlu:
+- synonym: health care centre
+  examples: |
+    - hcc
+- synonym: central computer centre
+  examples: |
+    - ccc
+- synonym: central library
+  examples: |
+    - library
+- synonym: electrical shop
+  examples: |
+    - electric shop
+
 - intent: greet
   examples: |
     - hey
@@ -434,3 +447,48 @@ nlu:
     - Where can I read [newspapers](Central_Library)?
     - Is there any [reading hall](Central_Library) nearby?
     - Where is the [reading room](Central_Library)?
+
+- intent: Indirect_Time_Query
+  examples: |
+    - When does it close?
+    - Till when is it open?
+    - When will it close?
+    - When will it open?
+    - When can I go there?
+    - What time does it close?
+    - Is it open now?
+    - When is it available?
+    - What time does it open?
+    - At what time is it available?
+    - What time will it close?
+    - Till what time is it open?
+    - When does it open?
+    - What time will it open?
+    - At what time is it open?
+    - At what time does it close?
+    - Is it available right now?
+
+- intent: Direct_Time_Query
+  examples: |
+    - When does [mudrika](Location) close?
+    - Till when is the [electrical shop](Location) open?
+    - When will the [central library](Location) close?
+    - When will the [sports complex](Location) open?
+    - When can I go to the [nandini](Location)?
+    - What time does the [academic building](Location) close?
+    - Is [amul](Location) open now?
+    - When will the [library](Location) close?
+    - When will the [ccc](Location) open?
+    - At what time is the [bank](Location) available?
+    - What are the timings of the [academic building](Location)?
+    - What time will the [sports complex](Location) close?
+    - When can I go to the [hcc](Location)?
+    - What time does [central computer centre](Location) open?
+    - Till what time is the [health care centre](Location) open?
+    - When does the [electric shop](Location) open?
+    - At what time is the [central library](Location) open?
+    - At what time does the [nescafe](Location) close?
+    - Is the [bank](Location) available right now?
+    - When does [hcc](Location) close?
+    - Till when is the [ccc](Location) open?
+    - What are the timings of the [health care centre](Location)?
