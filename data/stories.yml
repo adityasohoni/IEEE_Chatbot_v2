@@ -54,6 +54,7 @@ stories:
   steps:
   - intent: snacks
   - action: utter_go_to_snacks
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
@@ -62,6 +63,7 @@ stories:
   steps:
   - intent: snacks
   - action: utter_go_to_snacks
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up
@@ -72,6 +74,7 @@ stories:
   steps:
   - intent: Academic_Building
   - action: utter_go_to_MB
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
@@ -80,6 +83,7 @@ stories:
   steps:
   - intent: Academic_Building
   - action: utter_go_to_MB
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up
@@ -90,6 +94,7 @@ stories:
   steps:
   - intent: Printing
   - action: utter_go_to_mudrika
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
@@ -98,6 +103,7 @@ stories:
   steps:
   - intent: Printing
   - action: utter_go_to_mudrika
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up
@@ -108,6 +114,7 @@ stories:
   steps:
   - intent: Delivery
   - action: utter_go_to_delivery
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
@@ -116,6 +123,7 @@ stories:
   steps:
   - intent: Delivery
   - action: utter_go_to_delivery
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up
@@ -124,6 +132,7 @@ stories:
   steps:
   - intent: Health_Care_Centre
   - action: utter_go_to_health_care_centre
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
@@ -132,6 +141,7 @@ stories:
   steps:
   - intent: Health_Care_Centre
   - action: utter_go_to_health_care_centre
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up
@@ -140,6 +150,7 @@ stories:
   steps:
   - intent: sports_complex
   - action: utter_go_to_sports_complex
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
@@ -148,6 +159,7 @@ stories:
   steps:
   - intent: sports_complex
   - action: utter_go_to_sports_complex
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up
@@ -158,6 +170,7 @@ stories:
   steps: 
   - intent: bank 
   - action: utter_go_to_bank
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
@@ -166,6 +179,7 @@ stories:
   steps:
   - intent: bank 
   - action: utter_go_to_bank
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up 
@@ -210,6 +224,7 @@ stories:
   steps: 
   - intent: Central_Computer_Centre
   - action: utter_go_to_central_computer_center
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
@@ -218,6 +233,7 @@ stories:
   steps:
   - intent: Central_Computer_Centre
   - action: utter_go_to_central_computer_center
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up
@@ -228,6 +244,7 @@ stories:
   steps: 
   - intent: Central_Library
   - action: utter_go_to_central_library
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
@@ -236,19 +253,40 @@ stories:
   steps:
   - intent: Central_Library
   - action: utter_go_to_central_library
+  - action: set_context_location
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up 
 
 
+- story: Happy Indirect Time Query 
+  steps: 
+  - intent: Indirect_Time_Query
+  - action: indirect_time_query
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
 
+- story: Sad Indirect Time Query
+  steps: 
+  - intent: Indirect_Time_Query
+  - action: indirect_time_query
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
 
+- story: Happy Direct Time Query
+  steps: 
+  - intent: Direct_Time_Query
+  - action: direct_time_query
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
 
-
-
-
-
-
-
-
-
+- story: Sad Direct Time Query
+  steps: 
+  - intent: Direct_Time_Query
+  - action: direct_time_query
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
