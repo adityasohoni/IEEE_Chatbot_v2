@@ -104,11 +104,11 @@ responses:
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    image: "https://i.pinimg.com/originals/c9/88/d3/c988d35b9498f24afe6ea0fec75e1793.jpg"
   - text: "Years of academy training wasted. Here is something that can cheer you up."
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    image: "https://i.pinimg.com/originals/c9/88/d3/c988d35b9498f24afe6ea0fec75e1793.jpg"
   - text: "I have failed you my master. Meanwhile here is something to cheer you up."
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    image: "https://i.pinimg.com/originals/c9/88/d3/c988d35b9498f24afe6ea0fec75e1793.jpg"
 
   utter_did_that_help:
   - text: "Did that help you?"
