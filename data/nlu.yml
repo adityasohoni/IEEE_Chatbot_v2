@@ -49,6 +49,7 @@ nlu:
   examples: |
     - good afternoon
     - cu
+    - cya
     - good by
     - cee you later
     - good night
@@ -218,6 +219,9 @@ nlu:
     - whats the best [restaurant](snacks) here?
     - where can I get [vada pav](snacks)
     - where can I get [chaat](snacks) items?
+    - where can i get something to eat.
+    - I need to get some [snacks](snacks), where should i go?
+    - where can i get something light to eat.
 - intent: Academic_Building
   examples: |
     - where can I get my [Transcripts](Academic_Building)
@@ -225,18 +229,25 @@ nlu:
     - where can I apply for the [CSAB special round](Academic_Building)?
     - where can I apply for [branch change](Academic_Building)?
     - where can I get my [hostel refund](Academic_Building)?
+    - where can i get my [marksheet](Academic_Building)?
+    - I need my [Grade card](Academic_Building), where should I head to?
 - intent: Printing
   examples: |
     - where can I get a [printout](Printing)?
     - where can I get a [scanned copy](Printing) of a pdf file?
     - where can I get a [color printout](Printing)?
     - Is there a place where i can get [printing](Printing) done?
+    - I got to [print](Printing) something, where should I go?
+    - where can I get my photographs [printed](Printing)?
 - intent: Delivery
   examples: |
     - where can I get my [Amazon delivery](Delivery)?
     - where can I get my [Flipkart delivery](Delivery)?
     - where do I go to collect my [Amazon delivery](Delivery)?
     - where do I go to collect my [Flipkart delivery](Delivery)?
+    - where can I pick up my [delivery](Delivery) from?
+    - where does [Amazon deliver](Delivery) my orders.
+    - where does [Flipkart deliver](Delivery) my orders.
 - intent: Health_Care_Centre
   examples: |
     - where can I get [medicines](Health_Care_Centre)?
@@ -275,45 +286,6 @@ nlu:
     - and you call yourself bot company? pff
     - and that's it?
     - nothing else?
-- intent: chitchat
-  examples: |
-    - can you share your boss with me?
-    - i want to get to know your owner
-    - i want to know the company which designed you
-    - i want to know the company which generated you
-    - i want to know the company which invented you
-    - i want to know who invented you
-    - May I ask who invented you?
-    - please tell me the company who created you
-    - please tell me who created you
-    - tell me more about your creators
-    - tell me more about your founders
-    - Ahoy matey how are you?
-    - are you alright
-    - are you having a good day
-    - Are you ok?
-    - are you okay
-    - Do you feel good?
-    - how are things going
-    - how are things with you?
-    - How are things?
-    - how are you
-    - how are you doing
-    - how are you doing this morning
-    - how are you feeling
-    - how are you today
-    - How are you?
-    - How is the weather today?
-    - What's the weather like?
-    - How is the weather?
-    - What is the weather at your place?
-    - Do you have good weather?
-    - Is it raining?
-    - What's it like out there?
-    - Is it hot or cold?
-    - Beautiful day, isn't it?
-    - What's the weather forecast?
-    - Is it quite breezy outside?
 - intent: number_for_restaurant
   examples: |
     - [1](number_for_restaurant)
@@ -336,7 +308,7 @@ nlu:
     - Do anyone play [table tennis](sports_complex) in NITK ?
     - I want to play [TT](sports_complex)
     - Where is the [squash](sports_complex) court ?
-    - Where can I get the [sports](sports_complex) [equipments](sports_complex) from ?
+    - Where can I get the [sports equipments](sports_complex) from ?
     - Where is the [yoga](sports_complex) hall ?
     - Can I play [kabaddi](sports_complex) ?
     - Where can I practise [athletics](sports_complex) ?
@@ -364,7 +336,7 @@ nlu:
     - where can i take a student [loan](bank)?
     - I have won cash in a competition i need to [deposit](bank) into my [bank account](account)
     - I have problems with [net banking](bank)
-    - where should i cash in a [check](bank)
+    - where should i cash in a [cheque](bank)
     - I need to [transfer money] to my freinds
     - where can I find [SBI](bank) branch?
     - where is [Canara](bank) bank?
@@ -378,6 +350,7 @@ nlu:
     - I need to get [student loan](bank)
     - I lost my [credit card](bank)
     - I have lost all money in my [bank account](bank)
+    - where can i get [cash](bank)
 - intent: Central_Computer_Centre
   examples: |
     - Is there a [computer lab](Central_Computer_Centre) nearby?
@@ -385,11 +358,13 @@ nlu:
     - Where can I get [computing facilities](Central_Computer_Centre)?
     - Where can I go for [internet connectivity issues](Central_Computer_Centre)?
     - Where can I file a complaint regarding the [internet connection](Central_Computer_Centre) in my room?
+    - Where is the [computer lab](Central_Computer_Centre)?
+    - Where can I get a [computer](Central_Computer_Centre)?
 - intent: Central_Library
   examples: |
     - Where is the [library](Central_Library)?
     - Where can I [borrow books](Central_Library)?
-    - Where can I read [books](Central_Library)?
+    - Where can I [read books](Central_Library)?
     - Is there a [library](Central_Library) nearby?
     - Where can I get [periodicals](Central_Library)?
     - Where can I read [journals](Central_Library)?
@@ -442,6 +417,57 @@ nlu:
     - When does [hcc](Location) close?
     - Till when is the [ccc](Location) open?
     - What are the timings of the [health care centre](Location)?
+- intent: purpose
+  examples: |
+    - how can you help me?
+    - what can you do for me?
+    - how can u help me?
+    - what is your purpose?
+    - whats ur purpose?
+    - what are u supposed to do?
+- intent: creator
+  examples: |
+    - can you share your boss with me?
+    - i want to get to know ur owner
+    - i want to know the company which designed you
+    - i want to know the company which generated u
+    - i want to know the company which invented you
+    - i want to know who invented you
+    - May I ask who invented you?
+    - please tell me the company who created u
+    - please tell me who created you
+    - tell me more about ur creators
+    - tell me more about your founders
+- intent: pleasantry
+  examples: |
+    - Ahoy matey how are you?
+    - are you alright
+    - are u having a good day
+    - Are you ok?
+    - are u okay
+    - Do you feel good?
+    - how are things going
+    - how are things with you?
+    - How r things?
+    - how are u
+    - how r you doing
+    - how are you doing this morning
+    - how are you feeling
+    - how r u today
+    - How are u?
+- intent: weather
+  examples: |
+    - How is the weather today?
+    - What's the weather like?
+    - How is the weather?
+    - What is the weather at your place?
+    - Do you have good weather?
+    - Is it raining?
+    - What's it like out there?
+    - Is it hot or cold?
+    - Beautiful day, isn't it?
+    - What's the weather forecast?
+    - Is it quite breezy outside?
 - synonym: health care centre
   examples: |
     - hcc
@@ -454,3 +480,12 @@ nlu:
 - synonym: electrical shop
   examples: |
     - electric shop
+- synonym: are
+  examples: |
+    - r
+- synonym: you
+  examples: |
+    - u
+- synonym: your
+  examples: |
+    - ur

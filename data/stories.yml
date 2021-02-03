@@ -9,8 +9,6 @@ stories:
   - intent: mood_great
   - action: utter_happy
 
-  
-
 - story: sad path 1
   steps:
   - intent: greet
@@ -31,7 +29,6 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-
 # - story: happy food
 #   steps:
 #   - intent: food
@@ -47,8 +44,6 @@ stories:
 #   - action: utter_did_that_help
 #   - intent: deny
 #   - action: utter_cheer_up
-
-
 
 - story: happy snacks
   steps:
@@ -68,8 +63,6 @@ stories:
   - intent: deny
   - action: utter_cheer_up
 
-
-
 - story: happy Academic_Building
   steps:
   - intent: Academic_Building
@@ -88,8 +81,6 @@ stories:
   - intent: deny
   - action: utter_cheer_up
 
-
-
 - story: happy Printing
   steps:
   - intent: Printing
@@ -107,8 +98,6 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up
-
-
 
 - story: happy Delivery
   steps:
@@ -164,8 +153,6 @@ stories:
   - intent: deny
   - action: utter_cheer_up
 
-
-
 - story: happy bank
   steps: 
   - intent: bank 
@@ -206,7 +193,6 @@ stories:
     - action: utter_submit
     - action: utter_slots_values
 
-
 - story: stop form + stop
   steps:
     - intent: request_restaurant
@@ -217,8 +203,6 @@ stories:
     - intent: deny
     - action: action_deactivate_loop
     - active_loop: null
-
-
 
 - story: happy Central_Computer_Centre
   steps: 
@@ -238,8 +222,6 @@ stories:
   - intent: deny
   - action: utter_cheer_up
 
-
-
 - story: happy Central_Library
   steps: 
   - intent: Central_Library
@@ -257,7 +239,6 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up 
-
 
 - story: Happy Indirect Time Query 
   steps: 
@@ -290,3 +271,23 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up
+
+- story: about purpose
+  steps:
+  - intent: purpose
+  - action: utter_purpose
+
+- story: about creators
+  steps:
+  - intent: creator
+  - action: utter_creator
+
+- story: exchange pleasantries
+  steps:
+  - intent: pleasantry
+  - action: utter_pleasantry
+
+- story: about weather
+  steps:
+  - intent: weather
+  - action: utter_weather

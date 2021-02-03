@@ -26,8 +26,11 @@ intents:
 - Direct_Time_Query
 - how_to_get_started
 - nlu_fallback
-- chitchat
 - stop
+- purpose
+- creator
+- pleasantry
+- weather
 entities:
 - Academic_Building
 - Central_Computer_Centre
@@ -134,13 +137,6 @@ responses:
   - text: You can find all deliveries(Flipkart/Amazon) in the electrical shop thats just beside Mudrika
   - text: You can go to the electrical shop near Mudrika and collect your order.
   - text: You can collect your order in the electrical shop beside Mudrika. Can you order Alexa for me? I need someone to chat with while you are gone.
-  utter_get_started:
-  - text: I can help you find what you want in NITK! Ask me about food, snacks, or transcripts
-  - text: Hey master. what do you need in NITK? And don't forget to set me free at the end.
-  - text: Hey there. I am at your service. What are you looking for in NITK?
-  - text: Welcome to NITK. How can I help you?
-  - text: I can guide you through NITK. What do you need?
-  - text: I was born to help you find things in NITK.
   utter_default:
   - text: Sorry, I didn't get that, can you rephrase?
   - text: I didn't get that. Can you please rephrase? Geez..Humans are so complicated
@@ -181,6 +177,21 @@ responses:
   - text: what is the strangest dream you ever had?
   - text: Which is the most beautiful place you have seen?
   - text: If you had to change your name, what would your new name be?
+  utter_purpose:
+  - text: I can help you find what you want in NITK! Ask me about food, snacks, or transcripts
+  - text: Hey master.I can help you with stuffs related to NITK.
+  - text: I can guide you through NITK. What do you need?
+  - text: I was born to help you find things in NITK.
+  utter_creator:
+  - text: I was created by a few enthusiastic students of NITK.
+  utter_pleasantry:
+  - text: I’m doing great.
+  - text: I’m fine :)
+  - text: I am good, thank u for asking :)
+  utter_weather:
+  - text: What a nice day!
+  - text: The weather is fine.
+  - text: The weather is refreshing.
   utter_ask_continue:
   - text: Do you want to continue?
   - text: Is that all?
@@ -246,6 +257,54 @@ actions:
 - indirect_time_query
 - set_context_location
 - validate_restaurant_form
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_i_am_a_bot
+- utter_go_to_MB
+- utter_go_to_OP
+- utter_go_to_snacks
+- utter_go_to_mudrika
+- utter_go_to_delivery
+- utter_default
+- utter_ask_cuisine
+- utter_ask_number_for_restaurant
+- utter_ask_outdoor_seating
+- utter_ask_preferences
+- utter_ask_feedback
+- utter_submit
+- utter_slots_values
+- utter_noworries
+- utter_chitchat
+- utter_purpose
+- utter_creator
+- utter_pleasantry
+- utter_weather
+- utter_ask_continue
+- utter_wrong_cuisine
+- utter_wrong_num_people
+- utter_more_num_of_people
+- utter_wrong_outdoor_seating
+- utter_restart
+- utter_go_to_health_care_centre
+- utter_go_to_sports_complex
+- utter_go_to_bank
+- utter_go_to_central_computer_center
+- utter_go_to_central_library
+- utter_open_close_time_snacks
+- utter_open_close_time_amul
+- utter_open_close_time_nescafe
+- utter_open_close_time_nandini
+- utter_open_close_time_academic_building
+- utter_open_close_time_printing
+- utter_open_close_time_delivery
+- utter_open_close_time_health_care_centre
+- utter_open_close_time_sports_complex
+- utter_open_close_time_bank
+- utter_open_close_time_central_computer_centre
+- utter_open_close_time_central_library
 forms:
   restaurant_form:
     cuisine:
