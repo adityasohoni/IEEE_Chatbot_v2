@@ -1,19 +1,5 @@
 version: "2.0"
-
 nlu:
-- synonym: health care centre
-  examples: |
-    - hcc
-- synonym: central computer centre
-  examples: |
-    - ccc
-- synonym: central library
-  examples: |
-    - library
-- synonym: electrical shop
-  examples: |
-    - electric shop
-
 - intent: greet
   examples: |
     - hey
@@ -47,11 +33,7 @@ nlu:
     - hallo
     - heeey
     - hi hi
-    - hey
     - hey hey
-    - hello there
-    - hi
-    - hello
     - yo
     - hola
     - hi?
@@ -63,7 +45,6 @@ nlu:
     - sup
     - hey friend
     - bonjour
-
 - intent: goodbye
   examples: |
     - good afternoon
@@ -86,8 +67,6 @@ nlu:
     - I must be going
     - farewell
     - bye for now
-
-
 - intent: affirm
   examples: |
     - yes
@@ -97,19 +76,16 @@ nlu:
     - that sounds good
     - correct
     - yeah a cheap restaurant serving international cuisine
-    - correct
     - ye
     - uh yes
     - let's do it
     - yeah
-    - uh yes
     - um yes
     - yes knocking
     - that's correct
     - yes yes
     - right
     - yea
-    - yes
     - yes right
     - yes and i dont care
     - right on
@@ -128,7 +104,6 @@ nlu:
     - ohk
     - okay
     - yep
-
 - intent: deny
   examples: |
     - no
@@ -138,7 +113,6 @@ nlu:
     - don't like that
     - no way
     - not really
-    - no
     - no new selection
     - no thanks
     - no thank you
@@ -155,7 +129,6 @@ nlu:
     - I think not
     - by no means
     - not possible
-
 - intent: mood_great
   examples: |
     - perfect
@@ -172,14 +145,13 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-    - nice 
+    - nice
     - happy
     - excited
     - superb
     - I am excited
     - I am happy
     - joyful
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -200,15 +172,12 @@ nlu:
     - fed up
     - not great
     - I am fed up
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
-
 - intent: request_restaurant
   examples: |
     - im looking for a restaurant
@@ -231,9 +200,6 @@ nlu:
     - looking for a table at the [rajisthani](cuisine) restaurant for five
     - find me a table for 7 people
     - Can I get a table for four at the place which serves [continental](cuisine) cuisine?
-
-
-
 - intent: cuisine
   examples: |
     - where can I get [cuisine](cuisine)
@@ -242,7 +208,6 @@ nlu:
     - im hungry, where can I get some [north indian cuisine](cuisine)
     - im hungry, where can I get some [south indian cuisine](cuisine)
     - whats the best [restaurant](cuisine) here?
-
 - intent: snacks
   examples: |
     - where can I get [chips](snacks)
@@ -253,8 +218,6 @@ nlu:
     - whats the best [restaurant](snacks) here?
     - where can I get [vada pav](snacks)
     - where can I get [chaat](snacks) items?
-
-
 - intent: Academic_Building
   examples: |
     - where can I get my [Transcripts](Academic_Building)
@@ -262,23 +225,18 @@ nlu:
     - where can I apply for the [CSAB special round](Academic_Building)?
     - where can I apply for [branch change](Academic_Building)?
     - where can I get my [hostel refund](Academic_Building)?
-    - where can I get my [hostel refund](Academic_Building)?
-
 - intent: Printing
   examples: |
     - where can I get a [printout](Printing)?
     - where can I get a [scanned copy](Printing) of a pdf file?
     - where can I get a [color printout](Printing)?
     - Is there a place where i can get [printing](Printing) done?
-
-
 - intent: Delivery
   examples: |
     - where can I get my [Amazon delivery](Delivery)?
     - where can I get my [Flipkart delivery](Delivery)?
     - where do I go to collect my [Amazon delivery](Delivery)?
     - where do I go to collect my [Flipkart delivery](Delivery)?
-
 - intent: Health_Care_Centre
   examples: |
     - where can I get [medicines](Health_Care_Centre)?
@@ -296,7 +254,6 @@ nlu:
     - Is there a [doctor](Health_Care_Centre) nearby?
     - Where can I find a [dentist](Health_Care_Centre)?
     - Where can I find a [paediatrician](Health_Care_Centre)?
-
 - intent: stop
   examples: |
     - ok then you cant help me
@@ -318,7 +275,6 @@ nlu:
     - and you call yourself bot company? pff
     - and that's it?
     - nothing else?
-
 - intent: chitchat
   examples: |
     - can you share your boss with me?
@@ -358,8 +314,6 @@ nlu:
     - Beautiful day, isn't it?
     - What's the weather forecast?
     - Is it quite breezy outside?
-
-
 - intent: number_for_restaurant
   examples: |
     - [1](number_for_restaurant)
@@ -372,7 +326,6 @@ nlu:
     - [8](number_for_restaurant)
     - [9](number_for_restaurant)
     - [10](number_for_restaurant)
-
 - intent: sports_complex
   examples: |
     - Where can I play [sports](sports_complex)
@@ -392,18 +345,17 @@ nlu:
     - Where is the [sports](sports_complex) adviser's office ?
     - Where can I play [indoor sports](sports_complex) ?
     - Where is the [hockey](sports_complex) ground ?
-
 - intent: bank
   examples: |
     - I want to withdraw cash from [atm](bank)
-    - where can i [withdraw cash](bank)?  
+    - where can i [withdraw cash](bank)?
     - I have problem with my [bank account](bank)
     - my [bank account](bank) is not working
     - I have an issue with my [bank account](bank)
     - I want to [deposit money](bank)?
     - where should i deposit my money ?
     - I have lost my [debit card](bank)
-    - someone stole my [credit card](bank) 
+    - someone stole my [credit card](bank)
     - I am not able use my [atm card](bank)
     - I have to open an [bank account](bank)
     - where can I get a new [debit card](bank)?
@@ -413,7 +365,7 @@ nlu:
     - I have won cash in a competition i need to [deposit](bank) into my [bank account](account)
     - I have problems with [net banking](bank)
     - where should i cash in a [check](bank)
-    - I need to [transfer money] to my freinds 
+    - I need to [transfer money] to my freinds
     - where can I find [SBI](bank) branch?
     - where is [Canara](bank) bank?
     - my cycle broke I need to claim for my [insurence](bank)
@@ -424,10 +376,8 @@ nlu:
     - I have forgot my [net banking password](bank) ,I want help
     - where can i create a [bank account](bank)?
     - I need to get [student loan](bank)
-    - someone stole my [credit card](bank)
     - I lost my [credit card](bank)
     - I have lost all money in my [bank account](bank)
-    
 - intent: Central_Computer_Centre
   examples: |
     - Is there a [computer lab](Central_Computer_Centre) nearby?
@@ -435,7 +385,6 @@ nlu:
     - Where can I get [computing facilities](Central_Computer_Centre)?
     - Where can I go for [internet connectivity issues](Central_Computer_Centre)?
     - Where can I file a complaint regarding the [internet connection](Central_Computer_Centre) in my room?
-
 - intent: Central_Library
   examples: |
     - Where is the [library](Central_Library)?
@@ -447,7 +396,6 @@ nlu:
     - Where can I read [newspapers](Central_Library)?
     - Is there any [reading hall](Central_Library) nearby?
     - Where is the [reading room](Central_Library)?
-
 - intent: Indirect_Time_Query
   examples: |
     - When does it close?
@@ -467,7 +415,6 @@ nlu:
     - At what time is it open?
     - At what time does it close?
     - Is it available right now?
-
 - intent: Direct_Time_Query
   examples: |
     - When does [mudrika](Location) close?
@@ -495,4 +442,15 @@ nlu:
     - When does [hcc](Location) close?
     - Till when is the [ccc](Location) open?
     - What are the timings of the [health care centre](Location)?
-    
+- synonym: health care centre
+  examples: |
+    - hcc
+- synonym: central computer centre
+  examples: |
+    - ccc
+- synonym: central library
+  examples: |
+    - library
+- synonym: electrical shop
+  examples: |
+    - electric shop
