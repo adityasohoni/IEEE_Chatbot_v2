@@ -272,22 +272,17 @@ stories:
   - intent: deny
   - action: utter_cheer_up
 
-- story: about purpose
+- story: interactive chitchat
   steps:
-  - intent: purpose
-  - action: utter_purpose
-
-- story: about creators
-  steps:
-  - intent: creator
-  - action: utter_creator
-
-- story: exchange pleasantries
-  steps:
+  - intent: greet
+  - action: utter_greet
   - intent: pleasantry
   - action: utter_pleasantry
-
-- story: about weather
-  steps:
+  - intent: purpose
+  - action: utter_purpose
+  - intent: creator
+  - action: utter_creator
   - intent: weather
   - action: utter_weather
+  - intent: stop
+  - action: utter_sorry

@@ -192,6 +192,9 @@ responses:
   - text: What a nice day!
   - text: The weather is fine.
   - text: The weather is refreshing.
+  utter_sorry:
+  - text: Sorry, I will try to be better next time.
+  - text: Sorry, I wasnt helpfull :( 
   utter_ask_continue:
   - text: Do you want to continue?
   - text: Is that all?
@@ -282,6 +285,7 @@ actions:
 - utter_creator
 - utter_pleasantry
 - utter_weather
+- utter_sorry
 - utter_ask_continue
 - utter_wrong_cuisine
 - utter_wrong_num_people

@@ -425,6 +425,7 @@ nlu:
     - what is your purpose?
     - whats ur purpose?
     - what are u supposed to do?
+    - how can u help me out?
 - intent: creator
   examples: |
     - can you share your boss with me?
@@ -438,6 +439,11 @@ nlu:
     - please tell me who created you
     - tell me more about ur creators
     - tell me more about your founders
+    - tell me about ur creators
+    - who are ur creators?
+    - who are your creators?
+    - who made you?
+    - i wanna know about your creators
 - intent: pleasantry
   examples: |
     - Ahoy matey how are you?
@@ -468,6 +474,7 @@ nlu:
     - Beautiful day, isn't it?
     - What's the weather forecast?
     - Is it quite breezy outside?
+    - the weather looks fine today, isnt it?
 - synonym: health care centre
   examples: |
     - hcc
