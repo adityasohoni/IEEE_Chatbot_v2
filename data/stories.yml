@@ -196,6 +196,7 @@ stories:
     - active_loop: null
     - action: utter_submit
     - action: utter_slots_values
+    - action: find_restaurant
 
 - story: happy form + 
   steps:
@@ -205,6 +206,7 @@ stories:
     - active_loop: null
     - action: utter_submit
     - action: utter_slots_values
+    - action: find_restaurant
 
 
 - story: stop form + stop

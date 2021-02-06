@@ -34,6 +34,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormValidationAction
 
 
+
 class ValidateRestaurantForm(FormValidationAction):
     """Example of a form validation action."""
 
@@ -229,3 +230,27 @@ class IndirectTimeQuery(Action):
             return self.location_utter_mapping()[location]
         else:
             return "utter_default"
+
+class FindRestaurant(Action):
+    def name(self):
+        return "find_restaurant"
+    
+    async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]):
+         cuisine  = tracker.get_slot('cuisine')
+         number_of_seats =  tracker.get_slot('number_for_restaurant')
+         outdoor_seating = tracker.get_slot('outdoor_seating')
+         preferences = tracker.get_slot('preferences')
+         feedback = tracker.get_slot('feedback')
+
+        #  TODO: use above variables to find restaurant using places api
+
+         events = []
+         events.append(SlotSet('cuisine',None))
+         events.append(SlotSet('number_for_restaurant',None))
+         events.append(SlotSet('outdoor_seating',None))
+         events.append(SlotSet('preferences',None))
+         events.append(SlotSet('feedback',None))
+         return events
+
+
+    

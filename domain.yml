@@ -296,6 +296,7 @@ actions:
 - set_context_location
 - direct_time_query
 - indirect_time_query
+- find_restaurant
 
 forms:
    restaurant_form:
