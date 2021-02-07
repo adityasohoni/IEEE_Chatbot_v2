@@ -29,22 +29,6 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-# - story: happy food
-#   steps:
-#   - intent: food
-#   - action: utter_go_to_OP
-#   - action: utter_did_that_help
-#   - intent: affirm
-#   - action: utter_happy
-
-# - story: sad food
-#   steps:
-#   - intent: food
-#   - action: utter_go_to_OP
-#   - action: utter_did_that_help
-#   - intent: deny
-#   - action: utter_cheer_up
-
 - story: happy snacks
   steps:
   - intent: snacks
@@ -272,17 +256,278 @@ stories:
   - intent: deny
   - action: utter_cheer_up
 
-- story: interactive chitchat
+- story: purpose story 
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: pleasantry
-  - action: utter_pleasantry
   - intent: purpose
   - action: utter_purpose
+
+- story: creator story 
+  steps:
   - intent: creator
   - action: utter_creator
+  
+- story: pleasantry story 
+  steps:
+  - intent: pleasantry
+  - action: utter_pleasantry
+
+- story: weather story 
+  steps:
   - intent: weather
   - action: utter_weather
-  - intent: stop
-  - action: utter_sorry
+
+- story: age story 
+  steps:
+  - intent: age
+  - action: utter_age
+
+- story: annoying story 
+  steps:
+  - intent: annoying
+  - action: utter_annoying
+
+- story: be_clever story 
+  steps:
+  - intent: be_clever
+  - action: utter_be_clever
+
+- story: beautiful story 
+  steps:
+  - intent: beautiful
+  - action: utter_beautiful
+
+
+- story: birth_date story 
+  steps:
+  - intent: birth_date
+  - action: utter_birth_date
+
+- story: boring story 
+  steps:
+  - intent: boring
+  - action: utter_boring
+
+- story: busy story 
+  steps:
+  - intent: busy
+  - action: utter_busy
+
+- story: can_you_help story 
+  steps:
+  - intent: can_you_help
+  - action: utter_can_you_help
+  
+- story: clever story 
+  steps:
+  - intent: clever
+  - action: utter_clever
+
+- story: crazy story 
+  steps:
+  - intent: crazy
+  - action: utter_crazy
+
+- story: fired story 
+  steps:
+  - intent: fired
+  - action: utter_fired
+
+- story: funny story 
+  steps:
+  - intent: funny
+  - action: utter_funny
+
+- story: hobby story 
+  steps:
+  - intent: hobby
+  - action: utter_hobby
+
+- story: my_friend story 
+  steps:
+  - intent: my_friend
+  - action: utter_my_friend
+
+- story: right story 
+  steps:
+  - intent: right
+  - action: utter_right
+
+- story: sure story 
+  steps:
+  - intent: sure
+  - action: utter_sure
+
+- story: talk_to_me story 
+  steps:
+  - intent: talk_to_me
+  - action: utter_talk_to_me
+
+- story: there story 
+  steps:
+  - intent: there
+  - action: utter_there
+
+- story: no_problem story 
+  steps:
+  - intent: no_problem
+  - action: utter_no_problem
+
+- story: thank_you story 
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+
+- story: welcome story 
+  steps:
+  - intent: welcome
+  - action: utter_welcome
+
+- story: ha_ha story 
+  steps:
+  - intent: ha_ha
+  - action: utter_ha_ha
+
+- story: wow story 
+  steps:
+  - intent: wow
+  - action: utter_wow
+
+- story: goodevening story 
+  steps:
+  - intent: goodevening
+  - action: utter_goodevening
+
+- story: goodmorning story 
+  steps:
+  - intent: goodmorning
+  - action: utter_goodmorning
+
+- story: goodnight story 
+  steps:
+  - intent: goodnight
+  - action: utter_goodnight
+
+- story: nice_to_meet_you story 
+  steps:
+  - intent: nice_to_meet_you
+  - action: utter_nice_to_meet_you
+
+- story: angry story 
+  steps:
+  - intent: angry
+  - action: utter_angry
+
+- story: user_back story 
+  steps:
+  - intent: user_back
+  - action: utter_user_back
+
+- story: bored story 
+  steps:
+  - intent: bored
+  - action: utter_bored
+
+- story: user_busy story 
+  steps:
+  - intent: user_busy
+  - action: utter_user_busy
+
+- story: can_not_sleep story 
+  steps:
+  - intent: can_not_sleep
+  - action: utter_can_not_sleep
+
+- story: does_not_want_to_talk story 
+  steps:
+  - intent: does_not_want_to_talk
+  - action: utter_does_not_want_to_talk
+
+- story: excited story 
+  steps:
+  - intent: excited
+  - action: utter_excited
+
+- story: going_to_bed excited story 
+  steps:
+  - intent: going_to_bed
+  - action: utter_going_to_bed
+
+- story: has_birthday story 
+  steps:
+  - intent: has_birthday
+  - action: utter_has_birthday
+  
+- story: here story 
+  steps:
+  - intent: here
+  - action: utter_here
+
+- story: joking story 
+  steps:
+  - intent: joking
+  - action: utter_joking
+  
+- story: lonely story 
+  steps:
+  - intent: lonely
+  - action: utter_lonely
+
+- story: needs_advice story 
+  steps:
+  - intent: needs_advice
+  - action: utter_needs_advice
+
+- story: will_be_back story 
+  steps:
+  - intent: will_be_back
+  - action: utter_will_be_back
+
+- story: tired story 
+  steps:
+  - intent: tired
+  - action: utter_tired
+  
+- story: waits story 
+  steps:
+  - intent: waits
+  - action: utter_waits
+
+- story: wants_to_see_agent_again story 
+  steps:
+  - intent: wants_to_see_agent_again
+  - action: utter_wants_to_see_agent_again
+
+- story: wants_to_talk story 
+  steps:
+  - intent: wants_to_talk
+  - action: utter_wants_to_talk
+
+- story: praise story 
+  steps:
+  - intent: praise
+  - action: utter_praise
+
+- story: criticize story 
+  steps:
+  - intent: criticize
+  - action: utter_criticize
+
+- story: hold_on story 
+  steps:
+  - intent: hold_on
+  - action: utter_hold_on
+
+- story: sleepy story 
+  steps:
+  - intent: sleepy
+  - action: utter_sleepy
+  
+- story: residence story 
+  steps:
+  - intent: residence
+  - action: utter_residence
+
+- story: origin story 
+  steps:
+  - intent: origin
+  - action: utter_origin

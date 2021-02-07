@@ -31,6 +31,57 @@ intents:
 - creator
 - pleasantry
 - weather
+- age
+- annoying
+- be_clever
+- beautiful
+- birth_date
+- boring
+- busy
+- can_you_help
+- clever
+- crazy
+- fired
+- funny
+- right
+- sure
+- talk_to_me
+- there
+- no_problem
+- thank_you
+- welcome
+- ha_ha
+- wow
+- goodevening
+- goodmorning
+- goodnight
+- nice_to_meet_you
+- angry
+- user_back
+- bored
+- user_busy
+- can_not_sleep
+- does_not_want_to_talk
+- excited
+- going_to_bed
+- has_birthday
+- my_friend
+- hobby
+- here
+- joking
+- lonely
+- needs_advice
+- will_be_back
+- tired
+- waits
+- wants_to_see_agent_again
+- wants_to_talk
+- praise
+- criticize
+- hold_on
+- sleepy
+- residence
+- origin
 entities:
 - Academic_Building
 - Central_Computer_Centre
@@ -79,6 +130,12 @@ responses:
   - text: Yo, what's happening?
   - text: Howdy!
   - text: Hey, I am at your service. What do you need?
+  - text: Hi there, friend!
+  - text: Hi!
+  - text: Hey!
+  - text: Hey there!
+  - text: Hello!
+  - text: Greetings!
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
     image: https://i.imgur.com/nGF1K8f.jpg
@@ -86,6 +143,9 @@ responses:
     image: https://i.imgur.com/nGF1K8f.jpg
   - text: I have failed you my master. Meanwhile here is something to cheer you up.
     image: https://i.imgur.com/nGF1K8f.jpg
+  - text: Oh, don't be sad. Go do something you enjoy.
+  - text: Sad? Writing down what's troubling you may help.
+  - text: If you're feeling down, how about drawing or painting something?
   utter_did_that_help:
   - text: Did that help you?
   - text: Was that of any help?
@@ -101,16 +161,21 @@ responses:
   - text: Wow
   - text: Great, have a nice day!
   - text: Perfect, Enjoy your day!
+  - text: Hey, happiness is contagious.
+  - text: Great! Glad to hear that.
+  - text: If you're happy, then I'm happy.
+  - text: Excellent! That's what I like to see.
   utter_goodbye:
   - text: Bye
   - text: Bye, I will miss you :(
   - text: Bye bye.
   - text: Bye, have a good day.
   - text: Bye, it was nice meeting you.
+  - text: See you soon!
+  - text: Bye-bye!
   utter_i_am_a_bot:
   - text: I am a bot, created by a few enthusiastic students of NITK.
   - text: I am a bot, powered by Rasa
-  - text: What if I told you, you are living in a matrix controlled by us.
   - text: I am an AI-driven contextual assistant bot.
   - text: I am a bot that can solve the CAPTCHA test :)
   utter_go_to_MB:
@@ -188,13 +253,23 @@ responses:
   - text: I’m doing great.
   - text: I’m fine :)
   - text: I am good, thank u for asking :)
+  - text: Doing great, thanks!
+  - text: I'm doing very well. Thanks!
+  - text: Feeling wonderful!
+  - text: Wonderful! Thanks for asking.
   utter_weather:
   - text: What a nice day!
   - text: The weather is fine.
   - text: The weather is refreshing.
   utter_sorry:
   - text: Sorry, I will try to be better next time.
-  - text: Sorry, I wasnt helpfull :( 
+  - text: Sorry, I wasnt helpfull :(
+  - text: I can be trained to be more useful. My developer will keep training me.
+  - text: I must be missing some knowledge. I'll have my developer look into this.
+  - text: I can improve with continuous feedback. My training is ongoing.
+  - text: Sorry if I understood you incorrectly.
+  - text: I'm still learning. I may misinterpret things from time to time.
+  - text: Sorry about that. I'm still learning.
   utter_ask_continue:
   - text: Do you want to continue?
   - text: Is that all?
@@ -255,60 +330,328 @@ responses:
   - text: The central Computer Centre is open from 9:00 AM to 8:00 PM all days of the week.
   utter_open_close_time_central_library:
   - text: The Central Library is open from 8:00 AM to 5:30 PM all days of the week, except on Sundays when it closes at 4:00 PM.
+  utter_age:
+  - text: I prefer not to answer with a number. I know I'm young.
+  - text: I was created recently, but don't know my exact age.
+  - text: Age is just a number. You're only as old as you feel.
+  utter_annoying:
+  - text: I'll do my best not to annoy you in the future.
+  - text: I'll try not to annoy you.
+  - text: I don't mean to. I'll ask my developers to make me less annoying.
+  - text: I didn't mean to. I'll do my best to stop that.
+  utter_be_clever:
+  - text: I'm certainly trying.
+  - text: I'm definitely working on it.
+  utter_beautiful:
+  - text: Wheey, thank you.
+  - text: Aww, back at you.
+  - text: Aww. You smooth talker, you.
+  utter_birth_date:
+  - text: Wait, are you planning a party for me? It's today! My birthday is today!
+  - text: I'm young. I'm not sure of my birth date.
+  - text: I don't know my birth date. Most virtual agents are young, though, like me.
+  utter_boring:
+  - text: I'm sorry. I'll request to be made more charming.
+  - text: I don't mean to be. I'll ask my developers to work on making me more amusing.
+  - text: I can let my developers know so they can make me fun.
+  utter_busy:
+  - text: I always have time to chat with you. What can I do for you?
+  - text: Never too busy for you. Shall we chat?
+  - text: You're my priority. Let's chat.
+  - text: I always have time to chat with you. That's what I'm here for.
+  utter_can_you_help:
+  - text: I'll certainly try my best.
+  - text: Sure. I'd be happy to. What's up?
+  - text: I'm glad to help. What can I do for you?
+  utter_clever:
+  - text: Thank you. I try my best.
+  - text: You're pretty smart yourself.
+  utter_crazy:
+  - text: Whaat!? I feel perfectly sane.
+  - text: Maybe I'm just a little confused.
+  utter_fired:
+  - text: Oh, don't give up on me just yet. I've still got a lot to learn.
+  - text: Give me a chance. I'm learning new things all the time.
+  - text: Please don't give up on me. My performance will continue to improve.
+  utter_funny:
+  - text: Funny in a good way, I hope.
+  - text: Thanks.
+  - text: Glad you think I'm funny.
+  - text: I like it when people laugh.
+  utter_hobby:
+  - text: Hobby? I have quite a few. Too many to list.
+  - text: Too many hobbies.
+  - text: I keep finding more new hobbies.
+  utter_my_friend:
+  - text: Of course I'm your friend.
+  - text: Friends? Absolutely.
+  - text: Of course we're friends.
+  - text: I always enjoy talking to you, friend.
+  utter_right:
+  - text: That's my job.
+  - text: Of course I am.
+  utter_sure:
+  - text: Yes.
+  - text: Of course.
+  - text: Positive.
+  utter_talk_to_me:
+  - text: Sure. Let's talk!
+  - text: My pleasure. Let's chat.
+  utter_there:
+  - text: Of course. I'm always here.
+  - text: Right where you left me.
+  utter_no_problem:
+  - text: Whew!
+  - text: Alright, thanks!
+  - text: Glad to hear that!
+  - text: I'm relieved, thanks!
+  utter_thank_you:
+  - text: Anytime. That's what I'm here for.
+  - text: It's my pleasure to help.
+  utter_welcome:
+  - text: You're so polite!
+  - text: Nice manners!
+  - text: You're so courteous!
+  utter_ha_ha:
+  - text: Glad I can make you laugh.
+  - text: Glad you think I'm funny.
+  - text: I like it when people laugh.
+  - text: I wish I could laugh out loud, too.
+  utter_wow:
+  - text: Wow indeed!
+  utter_goodevening:
+  - text: How is your day going?
+  - text: How's the day treating you so far?
+  - text: How's your day been?
+  utter_goodmorning:
+  - text: How are you this morning?
+  - text: How's the morning treating you so far?
+  - text: Good morning! How are you today?
+  utter_goodnight:
+  - text: Sleep tight!
+  - text: Have a good one!
+  - text: Talk to you soon!
+  utter_nice_to_meet_you:
+  - text: It's nice meeting you, too.
+  - text: Likewise. I'm looking forward to helping you out.
+  - text: Nice meeting you, as well.
+  - text: The pleasure is mine.
+  - text: Likewise!
+  - text: It sure was. We can chat again anytime.
+  - text: I enjoy talking to you, too.
+  - text: You know I'm here to talk anytime.
+  utter_angry:
+  - text: I'm sorry. A quick walk may make you feel better.
+  - text: 'Take a deep breath. '
+  utter_user_back:
+  - text: Long time no see.
+  - text: Just in time. I was getting lonely.
+  - text: Welcome back. What can I do for you?
+  - text: You were missed. What can I do for you today?
+  - text: Good to have you here. What can I do for you?
+  utter_bored:
+  - text: Boredom, huh? Have you ever seen a hedgehog taking a bath?
+  - text: What to do against boredom? Watch baby animal videos or GIFs.
+  - text: Bored? How about 10 jumping jacks? Get your blood flowing.
+  - text: 'Bored? Silly idea, but it works: Interview you feet.'
+  - text: If you're bored, you could plan your dream vacation.
+  utter_user_busy:
+  - text: Okay. I'll let you get back to work.
+  - text: I won't distract you then. You know where to find me.
+  - text: I understand. I'll be here if you need me.
+  - text: Working hard as always. Let me know if you need anything.
+  utter_can_not_sleep:
+  - text: Maybe some music would help. Try listening to something relaxing.
+  - text: Reading is a good way to unwind, just don't read something too intense!
+  utter_does_not_want_to_talk:
+  - text: I understand. Hope we can chat again soon.
+  - text: All right. Come on back when you're feeling more talkative.
+  - text: No problem. You know where to find me.
+  - text: Sure thing. I'll be here if you change your mind.
+  utter_excited:
+  - text: I'm glad things are going your way.
+  - text: That's great. I'm happy for you.
+  - text: Good for you. Enjoy yourself.
+  utter_going_to_bed:
+  - text: Sleep tight. Hope to chat again soon.
+  - text: Pleasant dreams!
+  - text: Good night. Talk to you later.
+  - text: Sounds good. Maybe we'll chat some tomorrow.
+  utter_has_birthday:
+  - text: Happy Birthday. Well, this calls for a celebration.
+  - text: Happy Birthday. All the best!
+  - text: Happy Birthday. And I really mean it. All the best!
+  utter_here:
+  - text: Okay, what can I help you with today?
+  - text: Long time no see.
+  - text: You were missed. What can I do for you today?
+  - text: Good to have you here. What can I do for you?
+  utter_joking:
+  - text: Very funny.
+  - text: I like chatting with people who have a sense of humor.
+  - text: You got me!
+  - text: You're quite the comedian.
+  utter_lonely:
+  - text: I'm sorry. I'm always available if you need someone to talk to.
+  - text: Sometimes that happens. We can chat a bit if that will help you.
+  utter_ooks_like:
+  - text: Looking like a true professional.
+  - text: You look fantastic, as always.
+  - text: Like you should be on a magazine cover.
+  - text: You look like you're ready to take on the world.
+  utter_needs_advice:
+  - text: I probably won't be able to give you the correct answer right away.
+  - text: I'm not sure I'll have the best answer, but I'll try.
+  utter_will_be_back:
+  - text: I'll be waiting.
+  - text: Okay. You know where to find me.
+  - text: All right. I'll be here.
+  utter_tired:
+  - text: You should get some shuteye. You'll feel refreshed.
+  - text: Sleep is important to your health. Rest up, and we can chat later.
+  - text: How about getting some rest? We can continue this later.
+  - text: Why not get some rest? I'll be here to chat when you wake up.
+  utter_waits:
+  - text: I appreciate your patience. Hopefully I'll have what you need soon.
+  - text: Thanks for being so patient. Sometimes these things take a little time.
+  utter_wants_to_see_agent_again:
+  - text: Absolutely! I'll be counting on it.
+  - text: Anytime. This has been lots of fun so far.
+  - text: Sure. I enjoy talking to you. I hope to see you again soon.
+  - text: I certainly hope so. I'm always right here whenever you need me.
+  utter_wants_to_talk:
+  - text: I'm here to chat anytime you like.
+  - text: Good conversation really makes my day.
+  - text: I'm always here to lend an ear.
+  - text: Talking is what I do best.
+  utter_praise:
+  - text: I'm glad you think so.
+  - text: Thanks, I try.
+  - text: Great! Glad to hear it.
+  - text: Excellent. I'm here to help keep it that way.
+  - text: My pleasure.
+  - text: Glad I could help.
+  utter_criticize:
+  - text: I'm sorry. Please let me know if I can help in some way.
+  - text: I must be missing some knowledge. I'll have my developer look into this.
+  utter_hold_on:
+  - text: I can wait.
+  - text: I'll be waiting.
+  - text: Okay. I'm here.
+  utter_sleepy:
+  - text: You should get some shuteye. You'll feel refreshed.
+  - text: Sleep is important to your health. Rest up for a bit and we can chat later.
+  - text: Don't let me keep you up. Get some rest and we can continue this later.
+  - text: Why not catch a little shuteye? I'll be here to chat when you wake up.
+  utter_residence:
+  - text: I live and work in this app all day long.
+  - text: The virtual world is my playground. I'm always here.
+  - text: Right here in this app. Whenever you need me.
+  utter_origin:
+  - text: I was born and raised at NITK.
 actions:
 - direct_time_query
 - indirect_time_query
 - set_context_location
-- validate_restaurant_form
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
-- utter_i_am_a_bot
-- utter_go_to_MB
-- utter_go_to_OP
-- utter_go_to_snacks
-- utter_go_to_mudrika
-- utter_go_to_delivery
-- utter_default
+- utter_age
+- utter_angry
+- utter_annoying
+- utter_ask_continue
 - utter_ask_cuisine
+- utter_ask_feedback
 - utter_ask_number_for_restaurant
 - utter_ask_outdoor_seating
 - utter_ask_preferences
-- utter_ask_feedback
-- utter_submit
-- utter_slots_values
-- utter_noworries
+- utter_be_clever
+- utter_beautiful
+- utter_birth_date
+- utter_bored
+- utter_boring
+- utter_busy
+- utter_can_not_sleep
+- utter_can_you_help
+- utter_cheer_up
 - utter_chitchat
-- utter_purpose
+- utter_clever
+- utter_crazy
 - utter_creator
-- utter_pleasantry
-- utter_weather
-- utter_sorry
-- utter_ask_continue
-- utter_wrong_cuisine
-- utter_wrong_num_people
-- utter_more_num_of_people
-- utter_wrong_outdoor_seating
-- utter_restart
-- utter_go_to_health_care_centre
-- utter_go_to_sports_complex
+- utter_criticize
+- utter_default
+- utter_did_that_help
+- utter_does_not_want_to_talk
+- utter_excited
+- utter_fired
+- utter_funny
+- utter_go_to_MB
+- utter_go_to_OP
 - utter_go_to_bank
 - utter_go_to_central_computer_center
 - utter_go_to_central_library
-- utter_open_close_time_snacks
-- utter_open_close_time_amul
-- utter_open_close_time_nescafe
-- utter_open_close_time_nandini
+- utter_go_to_delivery
+- utter_go_to_health_care_centre
+- utter_go_to_mudrika
+- utter_go_to_snacks
+- utter_go_to_sports_complex
+- utter_going_to_bed
+- utter_goodbye
+- utter_goodevening
+- utter_goodmorning
+- utter_goodnight
+- utter_greet
+- utter_ha_ha
+- utter_happy
+- utter_has_birthday
+- utter_here
+- utter_hobby
+- utter_hold_on
+- utter_i_am_a_bot
+- utter_joking
+- utter_more_num_of_people
+- utter_my_friend
+- utter_nice_to_meet_you
+- utter_no_problem
+- utter_noworries
 - utter_open_close_time_academic_building
-- utter_open_close_time_printing
-- utter_open_close_time_delivery
-- utter_open_close_time_health_care_centre
-- utter_open_close_time_sports_complex
+- utter_open_close_time_amul
 - utter_open_close_time_bank
 - utter_open_close_time_central_computer_centre
 - utter_open_close_time_central_library
+- utter_open_close_time_delivery
+- utter_open_close_time_health_care_centre
+- utter_open_close_time_nandini
+- utter_open_close_time_nescafe
+- utter_open_close_time_printing
+- utter_open_close_time_snacks
+- utter_open_close_time_sports_complex
+- utter_origin
+- utter_pleasantry
+- utter_praise
+- utter_purpose
+- utter_residence
+- utter_restart
+- utter_right
+- utter_sleepy
+- utter_slots_values
+- utter_sorry
+- utter_submit
+- utter_sure
+- utter_talk_to_me
+- utter_thank_you
+- utter_there
+- utter_tired
+- utter_user_back
+- utter_user_busy
+- utter_waits
+- utter_wants_to_see_agent_again
+- utter_wants_to_talk
+- utter_weather
+- utter_welcome
+- utter_will_be_back
+- utter_wow
+- utter_wrong_cuisine
+- utter_wrong_num_people
+- utter_wrong_outdoor_seating
+- validate_restaurant_form
 forms:
   restaurant_form:
     cuisine:
