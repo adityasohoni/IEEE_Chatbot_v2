@@ -30,6 +30,8 @@ intents:
   - nlu_fallback
   - chitchat
   - stop
+  - form_details
+  - skip
 
 entities:
   # - food
@@ -46,7 +48,7 @@ entities:
   - Central_Library
   - Location
   - bank
-
+  - restaurant_form_details
 
 slots:
   cuisine:
@@ -201,13 +203,19 @@ responses:
     - text: "Please give your feedback on your experience so far"
   utter_submit:
   - text: "All done!"
-  utter_slots_values:
-    - text: "I am going to run a restaurant search using the following parameters:\n
-             - cuisine: {cuisine}\n
-             - num_people: {number_for_restaurant}\n
-             - outdoor_seating: {outdoor_seating}\n
-             - preferences: {preferences}\n
-             - feedback: {feedback}"
+  utter_parameters_values:
+    - text: "I am going to run a restaurant search using the following parameters:"
+  utter_cuisine_slot:    
+    - text: "cuisine: {cuisine}\n"
+  utter_num_people_slot:    
+    - text: "num_people: {number_for_restaurant}\n"
+  utter_outdoor_slot:    
+    - text: "outdoor_seating: {outdoor_seating}\n"
+  utter_preference_slot:    
+    - text: "preferences: {preferences}\n"
+  utter_feedback_slot:    
+    - text: "feedback: {feedback}"      
+             
   utter_noworries:
     - text: "You are welcome :)"
   utter_chitchat:
@@ -297,6 +305,7 @@ actions:
 - direct_time_query
 - indirect_time_query
 - find_restaurant
+- return_form_details
 
 forms:
    restaurant_form:
@@ -322,11 +331,12 @@ forms:
         intent: deny
         value: no additional preferences
       - type: from_text
-        not_intent: affirm
+        not_intent: skip
      feedback:
       - type: from_entity
         entity: feedback
       - type: from_text
+        not_intent: skip
 
 session_config:
   session_expiration_time: 60

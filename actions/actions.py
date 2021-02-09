@@ -243,6 +243,17 @@ class FindRestaurant(Action):
          feedback = tracker.get_slot('feedback')
 
         #  TODO: use above variables to find restaurant using places api
+         dispatcher.utter_message(template="utter_parameters_values")
+         if cuisine!=None:
+             dispatcher.utter_message(template="utter_cuisine_slot")
+         if number_of_seats!=None:
+             dispatcher.utter_message(template="utter_num_people_slot")
+         if outdoor_seating!=None:
+             dispatcher.utter_message(template="utter_outdoor_slot")
+         if preferences!=None:
+             dispatcher.utter_message(template="utter_preference_slot")
+         if feedback!=None:
+             dispatcher.utter_message(template="utter_feedback_slot")       
 
          events = []
          events.append(SlotSet('cuisine',None))
@@ -252,5 +263,42 @@ class FindRestaurant(Action):
          events.append(SlotSet('feedback',None))
          return events
 
+class FormDetails(Action):
+    def name(self):
+        return "return_form_details"
+    
+    @staticmethod
+    def cuisine_db() :
+        """Database of supported cuisines."""
 
+        return "south indian, north indian, continental, italian, punjabi, mexican and assamese"
+        
+    
+    async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]):
+         cuisine  = tracker.get_slot('cuisine')
+         number_of_seats =  tracker.get_slot('number_for_restaurant')
+         outdoor_seating = tracker.get_slot('outdoor_seating')
+         required_details = next(tracker.get_latest_entity_values('restaurant_form_details'), None)
+         if required_details!=None :
+             if required_details == 'cuisine':
+                cuisines = self.cuisine_db() 
+                dispatcher.utter_message(text = "Avaialble Cuisines are")
+                dispatcher.utter_message(text = cuisines)
+             if required_details == 'people':
+                dispatcher.utter_message(text = "number of people can range from 1 to 10")
+         else:
+             if cuisine == None:
+                cuisines = self.cuisine_db() 
+                dispatcher.utter_message(text = "Avaialble Cuisines are")
+                dispatcher.utter_message(text = cuisines)
+                return []
+             if number_of_seats == None:
+                dispatcher.utter_message(text = "Number of people can range from 1 to 10")
+                return[]
+             if outdoor_seating == None:
+                dispatcher.utter_message(text = "Enter Yes if u want to sit outside or no if you want to sit inside")
+                return[]
+         return []       
+
+        
     
