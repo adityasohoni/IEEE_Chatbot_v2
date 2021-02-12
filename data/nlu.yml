@@ -424,6 +424,12 @@ nlu:
     - looking for a table at the [rajisthani](cuisine) restaurant for five
     - find me a table for 7 people
     - Can I get a table for four at the place which serves [continental](cuisine) cuisine?
+    - i want to book a restaurant
+    - restaurant booking
+    - restaurant pls
+    - book restaurant
+    - where can i get good food.
+    - tell me a place to get great food.
 - intent: cuisine
   examples: |
     - where can I get [cuisine](cuisine)
@@ -465,10 +471,14 @@ nlu:
 - intent: Delivery
   examples: |
     - where can I get my [Amazon delivery](Delivery)?
+    - where can I get my [Amazon deliveries](Delivery)?
     - where can I get my [Flipkart delivery](Delivery)?
+    - where can I get my [Flipkart deliveries](Delivery)?
     - where do I go to collect my [Amazon delivery](Delivery)?
     - where do I go to collect my [Flipkart delivery](Delivery)?
+    - where do I go to collect my [Flipkart deliveries](Delivery)?
     - where can I pick up my [delivery](Delivery) from?
+    - where can I pick up my [deliveries](Delivery) from?
     - where does [Amazon deliver](Delivery) my orders.
     - where does [Flipkart deliver](Delivery) my orders.
 - intent: Health_Care_Centre
