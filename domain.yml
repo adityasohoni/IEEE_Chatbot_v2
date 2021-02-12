@@ -143,16 +143,32 @@ responses:
   - text: "I am a bot that can solve the CAPTCHA test :)"
 
   utter_go_to_MB:
-  - text: "You will find all admin related work in the Main Building"
-  - text: "Go to the main building. You can do all the admin related works there."
-  - text: "Main building is the place that you are looking for."
-  - text: "Head over to the main building to get all the admin related works done."
+  - custom: 
+      text: "You will find all admin related work in the Main Building"
+      title: "MainBuilding"
+  - custom: 
+      text: "Go to the main building. You can do all the admin related works there."
+      title: "MainBuilding"
+  - custom: 
+      text: "MainBuilding is the place that you are looking for."
+      title: "MainBuilding"
+  - custom: 
+      text: "Head over to the main building to get all the admin related works done."
+      title: "MainBuilding"
 
   utter_go_to_OP:
-  - text: "You will get great food at really affordable prices at Ocean Pearl which is just behind the science block!"
-  - text: "You can go to Ocean Pearl behind the science block."
-  - text: "You get great food in Ocean Pearl behind the science block. Can you order something for me also please?"
-  - text: "Ocean pearl is what you are looking for. It is behind the science block."
+  - custom: 
+      text: "You will get great food at really affordable prices at Ocean Pearl which is just behind the science block!"
+      title: "OceanPearl"
+  - custom: 
+      text: "You can go to Ocean Pearl behind the science block."
+      title: "OceanPearl"
+  - custom: 
+      text: "You get great food in Ocean Pearl behind the science block. Can you order something for me also please?"
+      title: "OceanPearl"
+  - custom: 
+      text: "OceanPearl is what you are looking for. It is behind the science block."
+      title: "OceanPearl"
   
 
 
@@ -165,14 +181,26 @@ responses:
   - text: "You can find snacks at Amul, Nescafe, Nandini.. "
 
   utter_go_to_mudrika:
-  - text: "You can find all your printing needs met at Mudrika"
-  - text: "Go to mudrika to get all your printing stuff done."
-  - text: "Mudrika is a nice printing shop in NITK."
+  - custom: 
+      text: "You can find all your printing needs met at Mudrika"
+      title: "Mudrika"
+  - custom: 
+      text: "Go to mudrika to get all your printing stuff done."
+      title: "Mudrika"
+  - custom: 
+      text: "Mudrika is a nice printing shop in NITK."
+      title: "Mudrika"
 
   utter_go_to_delivery:
-  - text: "You can find all deliveries(Flipkart/Amazon) in the electrical shop thats just beside Mudrika"
-  - text: "You can go to the electrical shop near Mudrika and collect your order."
-  - text: "You can collect your order in the electrical shop beside Mudrika. Can you order Alexa for me? I need someone to chat with while you are gone."
+  - custom: 
+      text: "You can find all deliveries(Flipkart/Amazon) in the electrical shop thats just beside Mudrika"
+      title: "Yennar"
+  - custom: 
+      text: "You can go to the electrical shop near Mudrika and collect your order."
+      title: "Yennar"
+  - custom: 
+      text: "You can collect your order in the electrical shop beside Mudrika. Can you order Alexa for me? I need someone to chat with while you are gone."
+      title: "Yennar"
 
   utter_get_started:
   - text: "I can help you find what you want in NITK! Ask me about food, snacks, or transcripts"
@@ -239,29 +267,64 @@ responses:
   utter_restart:
     - text: "restarted"
   utter_go_to_health_care_centre:
-    - text: "For all medical issues you can go to the Health Care Centre which is situated at the centre of the campus, opposite to the main playground."
-    - text: "You can go to the Health Care Centre, opposite to the main playground."
-    - text: "Health Care Centre has is the place for medical issues. You can go there. It is right opposite the main playground."
-    - text: "Health Care Centre is what you are seeking for. It is right opposite to the main playground."
+    - custom: 
+        text: "For all medical issues you can go to the Health Care Centre which is situated at the centre of the campus, opposite to the main playground."
+        location: "HealthCareCentre"
+    - custom:     
+        text: "You can go to the Health Care Centre, opposite to the main playground."
+        location: "HealthCareCentre"
+    - custom: 
+        text: "Health Care Centre has is the place for medical issues. You can go there. It is right opposite the main playground."
+        location: "HealthCareCentre"
+    - custom: 
+        text: "Health Care Centre is what you are seeking for. It is right opposite to the main playground."
+        location: "HealthCareCentre"
   utter_go_to_sports_complex:
-    - text: "You can go to the sports complex which is beside Amul."
-    - text: "You can go to the sports complex which is beside Amul. Play hard!"
-    - text: "Sports complex is where you should be going. It is beside Amul."
-    - text: "You can play all kinds of sports in sports complex. Let me get back to playing the terminator video game."
+    - custom: 
+        text: "You can go to the sports complex which is beside Amul."
+        title: "SportsComplex"
+    - custom: 
+        text: "You can go to the sports complex which is beside Amul. Play hard!"
+        title: "SportsComplex"
+    - custom: 
+        text: "Sports complex is where you should be going. It is beside Amul."
+        title: "SportsComplex"
+    - custom: 
+        text: "You can play all kinds of sports in sports complex. Let me get back to playing the terminator video game."
+        title: "SportsComplex"
 
   utter_go_to_bank:
-    - text: "You can go to SBI/Canara bank near Mudrika" 
-    - text: "There is a SBI and Canara bank in NITK near Mudrika."
-    - text: "Beside Mudrika, there is a SBI and Canara bank. You can go there."
+    - custom: 
+        text: "You can go to SBI/Canara bank near Mudrika" 
+        title: "SBIBank"
+    - custom: 
+        text: "There is a SBI and Canara bank in NITK near Mudrika."
+        title: "SBIBank"
+    - custom: 
+        text: "Beside Mudrika, there is a SBI and Canara bank. You can go there."
+        title: "SBIBank"
+    
 
   utter_go_to_central_computer_center:
-    - text: "You can go to the Central Computer Centre (CCC) which is opposite to the Silver Jubilee Auditorium (SJA)."
-    - text: "You are supposed to go to the Central Computer Centre (CCC). It is right across the Silver Jubilee Auditorium (SJA)."
-    - text: "Central Computer Centre (CCC) is where you are supposed to go. You can find it exactly opposite to the Silver Jubilee Auditorium (SJA)."
+    - custom: 
+        text: "You can go to the Central Computer Centre (CCC) which is opposite to the Silver Jubilee Auditorium (SJA)."
+        title: "CCC"
+    - custom: 
+        text: "You are supposed to go to the Central Computer Centre (CCC). It is right across the Silver Jubilee Auditorium (SJA)."
+        title: "CCC"
+    - custom: 
+        text: "Central Computer Centre (CCC) is where you are supposed to go. You can find it exactly opposite to the Silver Jubilee Auditorium (SJA)."
+        title: "CCC"
   utter_go_to_central_library:
-    - text: "You can go to the Central Library which is behind the Main Building, besides the Pavillion."
-    - text: "You will find the Central Library besides the Pavillion, right behind the Main Building."
-    - text: "Central Library is what you are seeking, it is right behind the Main Building, besides the Pavillion."
+    - custom: 
+        text: "You can go to the Central Library which is behind the Main Building, besides the Pavillion."
+        title: "CentralLibrary"
+    - custom: 
+        text: "You will find the Central Library besides the Pavillion, right behind the Main Building."
+        title: "CentralLibrary"
+    - custom: 
+        text: "Central Library is what you are seeking, it is right behind the Main Building, besides the Pavillion."
+        title: "CentralLibrary"
   
 
   # The opening and closing times are based on google search (might not be accurate)
