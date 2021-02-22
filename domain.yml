@@ -318,8 +318,9 @@ responses:
   utter_wrong_outdoor_seating:
   - text: Could not convert input to boolean value, please try again
   utter_restart:
-  - text: restarted
-  utter_go_to_health_care_centre:    
+  - text: restarted   
+    - text: "restarted"
+  utter_go_to_health_care_centre:
     - custom: 
         text: "For all medical issues you can go to the Health Care Centre which is situated at the centre of the campus, opposite to the main playground."
         location: "HealthCareCentre"
