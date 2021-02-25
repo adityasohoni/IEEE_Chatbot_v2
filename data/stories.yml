@@ -47,18 +47,18 @@ stories:
   - intent: deny
   - action: utter_cheer_up
 
-- story: happy Academic_Building
+- story: happy Main_Building
   steps:
-  - intent: Academic_Building
+  - intent: Main_Building
   - action: utter_go_to_MB
   - action: set_context_location
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
 
-- story: sad Academic_Building
+- story: sad Main_Building
   steps:
-  - intent: Academic_Building
+  - intent: Main_Building
   - action: utter_go_to_MB
   - action: set_context_location
   - action: utter_did_that_help
@@ -531,3 +531,19 @@ stories:
   steps:
   - intent: origin
   - action: utter_origin
+
+- story: Happy Location Query
+  steps: 
+  - intent: Location_Query
+  - action: location_query
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Sad Location Query
+  steps: 
+  - intent: Location_Query
+  - action: location_query
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up

@@ -451,15 +451,15 @@ nlu:
     - where can i get something to eat.
     - I need to get some [snacks](snacks), where should i go?
     - where can i get something light to eat.
-- intent: Academic_Building
+- intent: Main_Building
   examples: |
-    - where can I get my [Transcripts](Academic_Building)
-    - where is the [academic section](Academic_Building)?
-    - where can I apply for the [CSAB special round](Academic_Building)?
-    - where can I apply for [branch change](Academic_Building)?
-    - where can I get my [hostel refund](Academic_Building)?
-    - where can i get my [marksheet](Academic_Building)?
-    - I need my [Grade card](Academic_Building), where should I head to?
+    - where can I get my [Transcripts](Main_Building)
+    - where is the [academic section](Main_Building)?
+    - where can I apply for the [CSAB special round](Main_Building)?
+    - where can I apply for [branch change](Main_Building)?
+    - where can I get my [hostel refund](Main_Building)?
+    - where can i get my [marksheet](Main_Building)?
+    - I need my [Grade card](Main_Building), where should I head to?
 - intent: Printing
   examples: |
     - where can I get a [printout](Printing)?
@@ -659,13 +659,13 @@ nlu:
     - When will the [sports complex](Location) open?
     - [mudrika](Location) opening time.
     - When can I go to the [nandini](Location)?
-    - What time does the [academic building](Location) close?
+    - What time does the [main building](Location) close?
     - Is [amul](Location) open now?
     - When will the [library](Location) close?
     - When will the [ccc](Location) open?
     - At what time is the [bank](Location) available?
     - [nandini](Location) closing time.
-    - What are the timings of the [academic building](Location)?
+    - What are the timings of the [main building](Location)?
     - What time will the [sports complex](Location) close?
     - When can I go to the [hcc](Location)?
     - What time does [central computer centre](Location) open?
@@ -2024,6 +2024,40 @@ nlu:
     - Where are you from?
     - Let me know about the origin of u
     - your native?
+- intent: Location_Query
+  examples: |
+    - Where is [mudrika](Location)?
+    - Wheres the [electrical shop](Location)?
+    - Where's the [central library](Location)?
+    - How do you get to the the [sports complex](Location)?
+    - [mudrika](Location) location.
+    - How can i go to [nandini](Location)?
+    - location of [main building](Location).
+    - How do i go to [amul](Location)
+    - Where exactly is the [library](Location).
+    - Where is the [ccc](Location)?
+    - How far is the [bank](Location).
+    - [nandini](Location) location in campus.
+    - Where is the [main building](Location)?
+    - How can i get to the [sports complex](Location)?
+    - where is the [hcc](Location)?
+    - [central computer centre](Location) location?
+    - How can i go to the [health care centre](Location)?
+    - wheres the [electric shop](Location)?
+    - [central library](Location)?
+    - [nescafe](Location)?
+    - [amul](Location).
+    - [bank](Location).
+    - [hcc](Location)
+    - [ccc](Location)?
+    - [health care centre](Location)
+    - [mudrika](Location)
+    - [electrical shop](Location)
+    - [sports complex](Location)?
+    - [nandini](Location)
+    - [main building](Location).
+    - [library](Location).
+    - [central computer centre](Location)
 - synonym: health care centre
   examples: |
     - hcc

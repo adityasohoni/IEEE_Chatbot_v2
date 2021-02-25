@@ -13,7 +13,7 @@ intents:
 - request_restaurant
 - cuisine
 - snacks
-- Academic_Building
+- Main_Building
 - Printing
 - Delivery
 - Health_Care_Centre
@@ -82,6 +82,7 @@ intents:
 - sleepy
 - residence
 - origin
+- Location_Query
 entities:
 - Academic_Building
 - Central_Computer_Centre
@@ -137,12 +138,12 @@ responses:
   - text: Hello!
   - text: Greetings!
   utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
-    image: https://i.imgur.com/nGF1K8f.jpg
+  - text: Here is something to cheer you up
+    image: https://i.pinimg.com/originals/c9/88/d3/c988d35b9498f24afe6ea0fec75e1793.jpg
   - text: Years of academy training wasted. Here is something that can cheer you up.
-    image: https://i.imgur.com/nGF1K8f.jpg
+    image: https://i.pinimg.com/originals/c9/88/d3/c988d35b9498f24afe6ea0fec75e1793.jpg
   - text: I have failed you my master. Meanwhile here is something to cheer you up.
-    image: https://i.imgur.com/nGF1K8f.jpg
+    image: https://i.pinimg.com/originals/c9/88/d3/c988d35b9498f24afe6ea0fec75e1793.jpg
   - text: Oh, don't be sad. Go do something you enjoy.
   - text: Sad? Writing down what's troubling you may help.
   - text: If you're feeling down, how about drawing or painting something?
@@ -367,13 +368,13 @@ responses:
       title: CCC
   utter_go_to_central_library:
   - custom:
-      text: You can go to the Central Library which is behind the Main Building, besides the Pavillion.
+      text: You can go to the Central Library which is behind the Main Building, beside the Pavillion.
       title: CentralLibrary
   - custom:
-      text: You will find the Central Library besides the Pavillion, right behind the Main Building.
+      text: You will find the Central Library beside the Pavillion, right behind the Main Building.
       title: CentralLibrary
   - custom:
-      text: Central Library is what you are seeking, it is right behind the Main Building, besides the Pavillion.
+      text: Central Library is what you are seeking, it is right behind the Main Building, beside the Pavillion.
       title: CentralLibrary
   utter_open_close_time_snacks:
   - text: Amul is open from 7:45 AM to 7:45 PM, Nandini is available from 8:30 AM to 10:30 PM and Nescafe from XX:XX AM to XX:XX PM all days of the week(to be updated).
@@ -383,8 +384,8 @@ responses:
   - text: Nescafe is open from XX:XX AM to XX:XX PM (to be updated)
   utter_open_close_time_nandini:
   - text: Nandini is open from 8:30 AM to 10:30 PM all days of the week.
-  utter_open_close_time_academic_building:
-  - text: The Academic Building is open from XX:XX AM to XX:XX PM (to be updated)
+  utter_open_close_time_main_building:
+  - text: The Main Building is open from XX:XX AM to XX:XX PM (to be updated)
   utter_open_close_time_printing:
   - text: Mudrika is open from 8:30 AM to 6:30 PM all days of the week.
   utter_open_close_time_delivery:
@@ -618,9 +619,54 @@ responses:
   - text: Right here in this app. Whenever you need me.
   utter_origin:
   - text: I was born and raised at NITK.
+  utter_location_amul:
+  - custom:
+      text: Amul is located near the boys hostel, besides the sports complex.
+      title: Amul
+  utter_location_nescafe:
+  - custom: 
+      text: Nescafe is right in front of the boys hostel.
+      title: Nescafe
+  utter_location_nandini:
+  - custom:
+      text: Nandini is right in front of the Mechanical Department.
+      title: Nandini
+  utter_location_main_building:
+  - custom:
+      text: The Main building is behind the Central Library, adjacent to the Pavillion.
+      title: MainBuilding
+  utter_location_printing:
+  - custom:
+      text: Mudrika is right beside the electric shop, near the students cooperative society.
+      title: Mudrika
+  utter_location_delivery:
+  - custom:
+      text: Yennar Electricals is adjacent to Mudrika.
+      title: Yennar
+  utter_location_health_care_centre:
+  - custom:
+      text: The Health Care Centre is in the center of the campus, right in front of the main playground.
+      title: HealthCareCentre
+  utter_location_sports_complex:
+  - custom:
+      text: The sports complex is near the main playground.
+      title: SportsComplex
+  utter_location_bank:
+  - custom:
+      text: SBI Bank is near Mudrika.
+      title: SBIBank
+  utter_location_central_computer_centre:
+  - custom:
+      text: The Central Computer Centre is behind the HCC, across the Silver Jubilee Auditorium (SJA).
+      title: CCC
+  utter_location_central_library:
+  - custom:
+      text: The Central Library beside the Pavillion, right behind the Main Building.
+      title: CentralLibrary
 actions:
 - direct_time_query
 - indirect_time_query
+- location_query
 - set_context_location
 - utter_age
 - utter_angry
@@ -680,7 +726,7 @@ actions:
 - utter_nice_to_meet_you
 - utter_no_problem
 - utter_noworries
-- utter_open_close_time_academic_building
+- utter_open_close_time_main_building
 - utter_open_close_time_amul
 - utter_open_close_time_bank
 - utter_open_close_time_central_computer_centre
@@ -721,6 +767,17 @@ actions:
 - utter_wrong_num_people
 - utter_wrong_outdoor_seating
 - validate_restaurant_form
+- utter_location_amul
+- utter_location_nescafe
+- utter_location_nandini
+- utter_location_main_building
+- utter_location_printing
+- utter_location_delivery
+- utter_location_health_care_centre
+- utter_location_sports_complex
+- utter_location_bank
+- utter_location_central_computer_centre
+- utter_location_central_library
 forms:
   restaurant_form:
     cuisine:
