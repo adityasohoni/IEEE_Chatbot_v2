@@ -2057,7 +2057,62 @@ nlu:
     - [nandini](Location)
     - [main building](Location).
     - [library](Location).
-    - [central computer centre](Location)
+- intent: Department_Query
+  examples: |
+    - Where is the [it department](Department)?
+    - Wheres the [information technology department](Department)?
+    - Where's the [cse department](Department)?
+    - How do you get to the the [computer science and engineering department](Department)?
+    - [mech department](Department) location.
+    - How can i go to the [mechanical department](Department)?
+    - location of [ece department](Department).
+    - How do i go to [electronics and communication engineering department](Department)
+    - Where exactly is the [electronics and communication department](Department).
+    - Where is the [computer science department](Department)?
+    - How far is the [electronics department](Department).
+    - [eee department](Department) location in campus.
+    - Where is the [electrical department](Department)?
+    - How can i get to the [electrical and electronics department](Department)?
+    - where is the [electrical and electronics engineering department](Department)?
+    - [mining department](Department) location?
+    - How can i go to the [mining engineering department](Department)?
+    - wheres the [mn department](Department)?
+    - Where is the [meta department](Department)?
+    - Wheres the [metallurgical department](Department)?
+    - Where's the [metallurgical and materials engineering department](Department)?
+    - How do you get to the the [cv department](Department)?
+    - [civil department](Department) location.
+    - How can i go to the [civil engineering department](Department)?
+    - location of [chem department](Department).
+    - How do i go to [chemical engineering department](Department)
+    - Where exactly is the [chemical department](Department).
+    - [it department](Department)?
+    - [information technology department](Department).
+    - [cse department](Department)?
+    - [computer science and engineering department](Department)?
+    - [mech department](Department).
+    - [mechanical department](Department)?
+    - [ece department](Department).
+    - [electronics and communication engineering department](Department)
+    - [electronics and communication department](Department).
+    - [computer science department](Department)?
+    - [electronics department](Department).
+    - [eee department](Department).
+    - [electrical department](Department)?
+    - [electrical and electronics department](Department)?
+    - [electrical and electronics engineering department](Department)?
+    - [mining department](Department)?
+    - [mining engineering department](Department)?
+    - [mn department](Department)?
+    - [meta department](Department)?
+    - [metallurgical department](Department)?
+    - [metallurgical and materials engineering department](Department)?
+    - [cv department](Department)?
+    - [civil department](Department).
+    - [civil engineering department](Department)?
+    - [chem department](Department).
+    - [chemical engineering department](Department)
+    - [chemical department](Department).
 - synonym: health care centre
   examples: |
     - hcc
@@ -2079,3 +2134,40 @@ nlu:
 - synonym: your
   examples: |
     - ur
+- synonym: it department
+  examples: |
+    - information technology department
+- synonym: cse department
+  examples: |
+    - computer science department
+    - computer science and engineering department
+- synonym: ece department
+  examples: |
+    - electronics department
+    - electronics and communication department
+    - electronics and communication engineering department
+- synonym: eee department
+  examples: |
+    - electrical department
+    - electrical and electronics department
+    - electrical and electronics engineering department
+- synonym: mech department
+  examples: |
+    - mechanical department
+    - mechanical engineering department
+- synonym: mn department
+  examples: |
+    - mining department
+    - mining engineering department
+- synonym: meta department
+  examples: |
+    - metallurgical department
+    - metallurgical and materials engineering department
+- synonym: cv department
+  examples: |
+    - civil department
+    - civil engineering department
+- synonym: chem department
+  examples: |
+    - chemical department
+    - chemical engineering department

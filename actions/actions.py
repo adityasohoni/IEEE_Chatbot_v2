@@ -265,7 +265,7 @@ class LocationQuery(Action):
             dispatcher.utter_message(template=self.selectUtterStatment(location))
         
         else:
-            #location missing or mulitple locations or location not recognized
+            #mulitple locations or location not recognized
             dispatcher.utter_message(template="utter_default")
         
         return []
@@ -277,5 +277,53 @@ class LocationQuery(Action):
         if location in self.location_utter_mapping().keys():
             #location recognised
             return self.location_utter_mapping()[location]
+        else:
+            return "utter_default"
+
+class DepartmentQuery(Action):
+    def name(self):
+        return "department_query"
+
+    @staticmethod
+    def department_utter_mapping():
+
+        return {
+            "it department":"utter_location_it_department",
+            "cse department":"utter_location_cse_department",
+            "ece department":"utter_location_ece_department",
+            "eee department":"utter_location_eee_department",
+            "mech department":"utter_location_mech_department",
+            "mn department":"utter_location_mn_department",
+            "meta department":"utter_location_meta_department",
+            "chem department":"utter_location_chem_department",
+            "cv department":"utter_location_cv_department",
+        }
+
+    def run(self, dispatcher, tracker, domain):
+        query_departments = []
+
+        for e in tracker.latest_message["entities"]:
+            if e["entity"]=="Department":
+                query_departments.append(e["value"])
+                # making a list of departments detected
+
+        if len(query_departments)==1:
+            #single department found and recognised
+            department = query_departments[0]
+            dispatcher.utter_message(template=self.selectUtterStatment(department))
+        
+        else:
+            #mulitple departments or location not recognized
+            dispatcher.utter_message(template="utter_default")
+        
+        return []
+    
+    def selectUtterStatment(self,department):
+
+        department=department.lower()
+        
+        if department in self.department_utter_mapping().keys():
+            #department recognised
+            return self.department_utter_mapping()[department]
         else:
             return "utter_default"

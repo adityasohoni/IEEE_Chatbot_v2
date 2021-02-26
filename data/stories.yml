@@ -547,3 +547,19 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_cheer_up
+
+- story: Happy Department Query
+  steps: 
+  - intent: Department_Query
+  - action: department_query
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Sad Department Query
+  steps: 
+  - intent: Department_Query
+  - action: department_query
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up

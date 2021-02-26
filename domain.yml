@@ -83,6 +83,7 @@ intents:
 - residence
 - origin
 - Location_Query
+- Department_Query
 entities:
 - Academic_Building
 - Central_Computer_Centre
@@ -97,6 +98,7 @@ entities:
 - number_for_restaurant
 - snacks
 - sports_complex
+- Department
 slots:
   cuisine:
     type: text
@@ -661,12 +663,49 @@ responses:
       title: CCC
   utter_location_central_library:
   - custom:
-      text: The Central Library beside the Pavillion, right behind the Main Building.
+      text: The Central Library is beside the Pavillion, right behind the Main Building.
       title: CentralLibrary
+  utter_location_it_department:
+  - custom:
+      text: The Information Technology Department is in the west side of the campus, near LHC-C and ECE Department.
+      title: ITDepartment
+  utter_location_cse_department:
+  - custom:
+      text: The Computer Science and Engineering Department is in the west side of the campus, a block away from the Seminar Hall.
+      title: CSEDepartment
+  utter_location_ece_department:
+  - custom:
+      text: The Electronics and Communication Engineering Department is in the west side of the campus, adjacent to the seminar hall near IT Department.
+      title: ECEDepartment
+  utter_location_eee_department:
+  - custom:
+      text:  The Electrical and Electronics Engineering Department is in the west side of the campus, near LHC-C and ECE Department.
+      title: EEEDepartment
+  utter_location_mech_department:
+  - custom:
+      text: The Mechanical Engineering Department is in the east side of the campus, in front of Nandini.
+      title: MECHDepartment
+  utter_location_mn_department:
+  - custom:
+      text: The Mining Engineering Department is in the east side of the campus, near the Main Building.
+      title: MNDepartment
+  utter_location_meta_department:
+  - custom:
+      text: The Metallugical and Materials Engineering Department is in the east side of the campus, near the Library, beside the Pavillion.
+      title: METADepartment
+  utter_location_cv_department:
+  - custom:
+      text: The Civil Engineering Department is in the east side of the campus, near the the Mining Department, in front of the main gate.
+      title: CVDepartment
+  utter_location_chem_department:
+  - custom:
+      text: The Chemical Engineering Department is in the east side of the campus, right in front of the basket ball court.
+      title: CHEMDepartment
 actions:
 - direct_time_query
 - indirect_time_query
 - location_query
+- department_query
 - set_context_location
 - utter_age
 - utter_angry
@@ -778,6 +817,15 @@ actions:
 - utter_location_bank
 - utter_location_central_computer_centre
 - utter_location_central_library
+- utter_location_it_department
+- utter_location_cse_department
+- utter_location_ece_department
+- utter_location_eee_department
+- utter_location_mech_department
+- utter_location_mn_department
+- utter_location_meta_department
+- utter_location_cv_department
+- utter_location_chem_department
 forms:
   restaurant_form:
     cuisine:
