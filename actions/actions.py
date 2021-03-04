@@ -34,7 +34,6 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormValidationAction
 
 
-
 class ValidateRestaurantForm(FormValidationAction):
     """Example of a form validation action."""
 
@@ -231,149 +230,6 @@ class IndirectTimeQuery(Action):
         else:
             return "utter_default"
 
-
-class FindRestaurant(Action):
-    def name(self):
-        return "find_restaurant"
-    
-    @staticmethod
-    def restaurant_db():
-        """Database of restaurants."""
-
-        return [
-            {
-                "name":"7th Block Night Canteen",
-                "cuisine":["north indian"],
-                "Outside":True,
-                "Non-Veg":True
-            },
-            {
-                "name":"NITK Block 3 Night Canteen",
-                "cuisine":['continental' , 'south indian' ],
-                "Outside":False,
-                "Non-Veg":False
-            },
-
-            {
-                "name":"NITK Food Court (OM Caterers)",
-                "cuisine":["north indian","south indian"],
-                "Outside":False,
-                "Non-Veg":False
-            },
-            {
-                "name":"Samudra Darshan cáfe NITK",
-                "cuisine":["north indain" , "south indian"],
-                "Outside":True,
-                "Non-Veg":False
-            },
-            {
-                "name":"Red Rock Residency",
-                "cuisine":["north indian"],
-                "Outside":True,
-                "Non-Veg":True
-            },
-            {
-                "name":"Red Rock's Bourbon Bakery & Cafe",
-                "cuisine":["north indian" , "italian","continental"],
-                "Outside":True,
-                "Non-Veg":True
-                
-            },
-            {
-                "name":"Jyothi Prakash, Punjabi Dhaba",
-                "cuisine":["Punjabi" , "north indian"],
-                "Outside":True,
-                "Non-Veg":True
-            },
-            {
-                "name":"Kalash Veg Restaurant",
-                "cuisine":["north indian"],
-                "Outside":True,
-                "Non-Veg":True
-            }
-
-        ]
-    
-    async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-        cuisine  = tracker.get_slot('cuisine')
-        number_of_seats =  tracker.get_slot('number_for_restaurant')
-        outdoor_seating = tracker.get_slot('outdoor_seating')
-        preferences = tracker.get_slot('preferences')
-        feedback = tracker.get_slot('feedback')
-
-        #  TODO: use above variables to find restaurant using places api
-        restaurants = self.restaurant_db()
-        eligible_restaurants = []
-
-
-        dispatcher.utter_message(template="utter_parameters_values")
-        if cuisine!=None:
-            for r in restaurants:
-                # print(r["cuisine"])
-                if cuisine in r["cuisine"]:
-                    eligible_restaurants.append(r)
-            restaurants = eligible_restaurants
-            eligible_restaurants = []
-        if outdoor_seating!=None:
-            if outdoor_seating:
-                for r in restaurants:
-                        if r["Outside"]:
-                            eligible_restaurants.append(r)
-                restaurants = eligible_restaurants   
-        if len(restaurants):
-            dispatcher.utter_message(template="utter_found_restaurants")
-            for r in restaurants:
-                dispatcher.utter_message(text = r['name'])
-
-
-        events = []
-        events.append(SlotSet('cuisine',None))
-        events.append(SlotSet('number_for_restaurant',None))
-        events.append(SlotSet('outdoor_seating',None))
-        events.append(SlotSet('preferences',None))
-        events.append(SlotSet('feedback',None))
-        return events
-
-class FormDetails(Action):
-    def name(self):
-        return "return_form_details"
- 
-    @staticmethod
-    def cuisine_db() :
-        """Database of supported cuisines."""
-
-        return "south indian, north indian, continental, italian, punjabi, mexican and assamese"
-        
-    
-    async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-         cuisine  = tracker.get_slot('cuisine')
-         number_of_seats =  tracker.get_slot('number_for_restaurant')
-         outdoor_seating = tracker.get_slot('outdoor_seating')
-         required_details = next(tracker.get_latest_entity_values('restaurant_form_details'), None)
-         if required_details!=None :
-             if required_details == 'cuisine':
-                cuisines = self.cuisine_db() 
-                dispatcher.utter_message(text = "Avaialble Cuisines are")
-                dispatcher.utter_message(text = cuisines)
-             if required_details == 'people':
-                dispatcher.utter_message(text = "number of people can range from 1 to 10")
-         else:
-             if cuisine == None:
-                cuisines = self.cuisine_db() 
-                dispatcher.utter_message(text = "Avaialble Cuisines are")
-                dispatcher.utter_message(text = cuisines)
-                return []
-             if number_of_seats == None:
-                dispatcher.utter_message(text = "Number of people can range from 1 to 10")
-                return[]
-             if outdoor_seating == None:
-                dispatcher.utter_message(text = "Enter Yes if u want to sit outside or no if you want to sit inside")
-                return[]
-         return []       
-
-        
-    
-
 class LocationQuery(Action):
     def name(self):
         return "location_query"
@@ -471,4 +327,3 @@ class DepartmentQuery(Action):
             return self.department_utter_mapping()[department]
         else:
             return "utter_default"
-

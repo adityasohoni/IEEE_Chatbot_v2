@@ -678,33 +678,6 @@ nlu:
     - When does [hcc](Location) close?
     - Till when is the [ccc](Location) open?
     - What are the timings of the [health care centre](Location)?
-
-    
-- intent: form_details
-  examples: |
-    - which [cuisine](restaurant_form_details) are available ?
-    - how many [people](restaurant_form_details) are allowed? 
-    - why do you need this?
-    - what should i enter here?
-    - I am not understanding what to enter
-    - I am lost could u help me fill the form
-
-- intent: skip 
-  examples: |
-    - I want to skip this part 
-    - you are wasting time just get on with it
-    - I dont have time just book a restaurant
-    - book asap
-    - I dont care about these details just finish. 
-    - don't waste time. 
-    - i am okay with anything
-    - leave the details
-    - i dont have time for this
-    - dont waste my time
-    - just get on with it
-    - you are asking too many questions
-    - these are irrelavant questions
-
 - intent: purpose
   examples: |
     - how can you help me?
@@ -2198,4 +2171,3 @@ nlu:
   examples: |
     - chemical department
     - chemical engineering department
-
