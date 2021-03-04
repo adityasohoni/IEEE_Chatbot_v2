@@ -3,102 +3,116 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
-- greet
-- goodbye
-- affirm
-- deny
-- mood_great
-- mood_unhappy
-- bot_challenge
-- request_restaurant
-- cuisine
-- snacks
-- Main_Building
-- Printing
-- Delivery
-- Health_Care_Centre
-- sports_complex
-- bank
-- number_for_restaurant
-- Central_Computer_Centre
-- Central_Library
-- Indirect_Time_Query
-- Direct_Time_Query
-- how_to_get_started
-- nlu_fallback
-- stop
-- purpose
-- creator
-- pleasantry
-- weather
-- age
-- annoying
-- be_clever
-- beautiful
-- birth_date
-- boring
-- busy
-- can_you_help
-- clever
-- crazy
-- fired
-- funny
-- right
-- sure
-- talk_to_me
-- there
-- no_problem
-- thank_you
-- welcome
-- ha_ha
-- wow
-- goodevening
-- goodmorning
-- goodnight
-- nice_to_meet_you
-- angry
-- user_back
-- bored
-- user_busy
-- can_not_sleep
-- does_not_want_to_talk
-- excited
-- going_to_bed
-- has_birthday
-- my_friend
-- hobby
-- here
-- joking
-- lonely
-- needs_advice
-- will_be_back
-- tired
-- waits
-- wants_to_see_agent_again
-- wants_to_talk
-- praise
-- criticize
-- hold_on
-- sleepy
-- residence
-- origin
-- Location_Query
-- Department_Query
+
+  # - request_restaurant:
+  #     use_entities: []
+  # - chitchat:
+  #     use_entities: []
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - request_restaurant
+  - cuisine
+  - snacks
+  - Academic_Building
+  - Printing
+  - Delivery
+  - Health_Care_Centre
+  - sports_complex
+  - bank
+  - number_for_restaurant
+  - Central_Computer_Centre
+  - Central_Library
+  - Indirect_Time_Query
+  - Direct_Time_Query
+  - how_to_get_started
+  - nlu_fallback
+  - chitchat
+  - stop
+  - form_details
+  - skip
+  - purpose
+  - creator
+  - pleasantry
+  - weather
+  - age
+  - annoying
+  - be_clever
+  - beautiful
+  - birth_date
+  - boring
+  - busy
+  - can_you_help
+  - clever
+  - crazy
+  - fired
+  - funny
+  - right
+  - sure
+  - talk_to_me
+  - there
+  - no_problem
+  - thank_you
+  - welcome
+  - ha_ha
+  - wow
+  - goodevening
+  - goodmorning
+  - goodnight
+  - nice_to_meet_you
+  - angry
+  - user_back
+  - bored
+  - user_busy
+  - can_not_sleep
+  - does_not_want_to_talk
+  - excited
+  - going_to_bed
+  - has_birthday
+  - my_friend
+  - hobby
+  - here
+  - joking
+  - lonely
+  - needs_advice
+  - will_be_back
+  - tired
+  - waits
+  - wants_to_see_agent_again
+  - wants_to_talk
+  - praise
+  - criticize
+  - hold_on
+  - sleepy
+  - residence
+  - origin
+  - Location_Query
+  - Department_Query
+
 entities:
-- Academic_Building
-- Central_Computer_Centre
-- Central_Library
-- Delivery
-- Health_Care_Centre
-- Location
-- Printing
-- bank
-- cuisine
-- name
-- number_for_restaurant
-- snacks
-- sports_complex
-- Department
+  # - food
+  - number_for_restaurant
+  - cuisine
+  - snacks
+  - Academic_Building
+  - Printing
+  - Delivery
+  - Health_Care_Centre
+  - sports_complex
+  - name
+  - Central_Computer_Centre
+  - Central_Library
+  - Location
+  - bank
+  - restaurant_form_details
+  - Location
+  - Department
+
+
 slots:
   cuisine:
     type: text
@@ -256,15 +270,15 @@ responses:
   utter_ask_feedback:
   - text: Please give your feedback on your experience so far
   utter_submit:
-  - text: All done!
-  utter_slots_values:
-  - text: |-
-      I am going to run a restaurant search using the following parameters:
-       - cuisine: {cuisine}
-       - num_people: {number_for_restaurant}
-       - outdoor_seating: {outdoor_seating}
-       - preferences: {preferences}
-       - feedback: {feedback}
+  - text: "All done!"
+  utter_parameters_values:
+    - text: "I am going to run a restaurant search using the parameters:"
+  utter_found_restaurants: 
+    - text: "Found Following restaurants:\n"
+  utter_not_found:
+    - text: "Not Found Restaurants for the above requirement" 
+             
+
   utter_noworries:
   - text: You are welcome :)
   utter_chitchat:
@@ -704,6 +718,8 @@ responses:
 actions:
 - direct_time_query
 - indirect_time_query
+- find_restaurant
+- return_form_details
 - location_query
 - department_query
 - set_context_location
@@ -827,29 +843,33 @@ actions:
 - utter_location_cv_department
 - utter_location_chem_department
 forms:
-  restaurant_form:
-    cuisine:
-    - type: from_entity
-      entity: cuisine
-      not_intent: chitchat
-    number_for_restaurant:
-    - type: from_entity
-      entity: number_for_restaurant
-      intent: number_for_restaurant
-    outdoor_seating:
-    - type: from_intent
-      intent: affirm
-      value: true
-    - type: from_intent
-      intent: deny
-      value: false
-    preferences:
-    - type: from_intent
-      intent: deny
-      value: no additional preferences
-    - type: from_text
-      not_intent: affirm
-    feedback:
-    - type: from_entity
-      entity: feedback
-    - type: from_text
+   restaurant_form:
+     cuisine:
+     - type: from_entity
+       entity: cuisine
+       not_intent: chitchat
+     number_for_restaurant:
+     - type: from_entity
+       entity: number_for_restaurant
+       intent: number_for_restaurant
+     outdoor_seating:
+      # - type: from_entity
+        # entity: seating
+      - type: from_intent
+        intent: affirm
+        value: true
+      - type: from_intent
+        intent: deny
+        value: false
+     preferences:
+      - type: from_intent
+        intent: deny
+        value: no additional preferences
+      - type: from_text
+        not_intent: skip
+     feedback:
+      - type: from_entity
+        entity: feedback
+      - type: from_text
+        not_intent: skip
+
