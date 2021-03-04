@@ -235,38 +235,108 @@ class FindRestaurant(Action):
     def name(self):
         return "find_restaurant"
     
+    @staticmethod
+    def restaurant_db():
+        """Database of restaurants."""
+
+        return [
+            {
+                "name":"7th Block Night Canteen",
+                "cuisine":["north indian"],
+                "Outside":True,
+                "Non-Veg":True
+            },
+            {
+                "name":"NITK Block 3 Night Canteen",
+                "cuisine":['continental' , 'south indian' ],
+                "Outside":False,
+                "Non-Veg":False
+            },
+
+            {
+                "name":"NITK Food Court (OM Caterers)",
+                "cuisine":["north indian","south indian"],
+                "Outside":False,
+                "Non-Veg":False
+            },
+            {
+                "name":"Samudra Darshan cáfe NITK",
+                "cuisine":["north indain" , "south indian"],
+                "Outside":True,
+                "Non-Veg":False
+            },
+            {
+                "name":"Red Rock Residency",
+                "cuisine":["north indian"],
+                "Outside":True,
+                "Non-Veg":True
+            },
+            {
+                "name":"Red Rock's Bourbon Bakery & Cafe",
+                "cuisine":["north indian" , "italian","continental"],
+                "Outside":True,
+                "Non-Veg":True
+                
+            },
+            {
+                "name":"Jyothi Prakash, Punjabi Dhaba",
+                "cuisine":["Punjabi" , "north indian"],
+                "Outside":True,
+                "Non-Veg":True
+            },
+            {
+                "name":"Kalash Veg Restaurant",
+                "cuisine":["north indian"],
+                "Outside":True,
+                "Non-Veg":True
+            }
+
+        ]
+    
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]):
-         cuisine  = tracker.get_slot('cuisine')
-         number_of_seats =  tracker.get_slot('number_for_restaurant')
-         outdoor_seating = tracker.get_slot('outdoor_seating')
-         preferences = tracker.get_slot('preferences')
-         feedback = tracker.get_slot('feedback')
+        cuisine  = tracker.get_slot('cuisine')
+        number_of_seats =  tracker.get_slot('number_for_restaurant')
+        outdoor_seating = tracker.get_slot('outdoor_seating')
+        preferences = tracker.get_slot('preferences')
+        feedback = tracker.get_slot('feedback')
 
         #  TODO: use above variables to find restaurant using places api
-         dispatcher.utter_message(template="utter_parameters_values")
-         if cuisine!=None:
-             dispatcher.utter_message(template="utter_cuisine_slot")
-         if number_of_seats!=None:
-             dispatcher.utter_message(template="utter_num_people_slot")
-         if outdoor_seating!=None:
-             dispatcher.utter_message(template="utter_outdoor_slot")
-         if preferences!=None:
-             dispatcher.utter_message(template="utter_preference_slot")
-         if feedback!=None:
-             dispatcher.utter_message(template="utter_feedback_slot")       
+        restaurants = self.restaurant_db()
+        eligible_restaurants = []
 
-         events = []
-         events.append(SlotSet('cuisine',None))
-         events.append(SlotSet('number_for_restaurant',None))
-         events.append(SlotSet('outdoor_seating',None))
-         events.append(SlotSet('preferences',None))
-         events.append(SlotSet('feedback',None))
-         return events
+
+        dispatcher.utter_message(template="utter_parameters_values")
+        if cuisine!=None:
+            for r in restaurants:
+                # print(r["cuisine"])
+                if cuisine in r["cuisine"]:
+                    eligible_restaurants.append(r)
+            restaurants = eligible_restaurants
+            eligible_restaurants = []
+        if outdoor_seating!=None:
+            if outdoor_seating:
+                for r in restaurants:
+                        if r["Outside"]:
+                            eligible_restaurants.append(r)
+                restaurants = eligible_restaurants   
+        if len(restaurants):
+            dispatcher.utter_message(template="utter_found_restaurants")
+            for r in restaurants:
+                dispatcher.utter_message(text = r['name'])
+
+
+        events = []
+        events.append(SlotSet('cuisine',None))
+        events.append(SlotSet('number_for_restaurant',None))
+        events.append(SlotSet('outdoor_seating',None))
+        events.append(SlotSet('preferences',None))
+        events.append(SlotSet('feedback',None))
+        return events
 
 class FormDetails(Action):
     def name(self):
         return "return_form_details"
-    
+ 
     @staticmethod
     def cuisine_db() :
         """Database of supported cuisines."""
