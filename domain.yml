@@ -1,6 +1,9 @@
-version: "2.0"
-
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
+
   # - request_restaurant:
   #     use_entities: []
   # - chitchat:
@@ -32,6 +35,63 @@ intents:
   - stop
   - form_details
   - skip
+  - purpose
+  - creator
+  - pleasantry
+  - weather
+  - age
+  - annoying
+  - be_clever
+  - beautiful
+  - birth_date
+  - boring
+  - busy
+  - can_you_help
+  - clever
+  - crazy
+  - fired
+  - funny
+  - right
+  - sure
+  - talk_to_me
+  - there
+  - no_problem
+  - thank_you
+  - welcome
+  - ha_ha
+  - wow
+  - goodevening
+  - goodmorning
+  - goodnight
+  - nice_to_meet_you
+  - angry
+  - user_back
+  - bored
+  - user_busy
+  - can_not_sleep
+  - does_not_want_to_talk
+  - excited
+  - going_to_bed
+  - has_birthday
+  - my_friend
+  - hobby
+  - here
+  - joking
+  - lonely
+  - needs_advice
+  - will_be_back
+  - tired
+  - waits
+  - wants_to_see_agent_again
+  - wants_to_talk
+  - praise
+  - criticize
+  - hold_on
+  - sleepy
+  - residence
+  - origin
+  - Location_Query
+  - Department_Query
 
 entities:
   # - food
@@ -49,6 +109,9 @@ entities:
   - Location
   - bank
   - restaurant_form_details
+  - Location
+  - Department
+
 
 slots:
   cuisine:
@@ -61,146 +124,151 @@ slots:
     type: bool
     influence_conversation: false
   preferences:
-    type: text  
+    type: text
     influence_conversation: false
   feedback:
-    type: text  
-    influence_conversation: false  
+    type: text
+    influence_conversation: false
   context_location:
     type: text
-    influence_conversation: false   
-
-# slots:
-#   cuisine:
-#   - type: from_entity
-#     entity: cuisine
-#     influence_conversation: false
-#     auto_fill: false
-#   number_for_restaurant:
-#   - type: from_entity
-#     entity: number_for_restaurant
-#     influence_conversation: false
-#     auto_fill: false
-  
-  
- 
-#   requested_slot:
-#     type: text
-#     influence_conversation: false
-
-
+    influence_conversation: false
+  requested_slot:
+    type: text
+    influence_conversation: false
 responses:
- 
   utter_greet:
-  - text: "Hey! How are you?"
-  - text: "Hi, what can I do for you?"
-  - text: "Hi"
-  - text: "Sup?"
-  - text: "What's new?"
-  - text: "How you doin'"
-  - text: "Hey there"
-  - text: "Yo, what's happening?"
-  - text: "Howdy!"
-  - text: "Hey, I am at your service. What do you need?"
-
-
+  - text: Hey! How are you?
+  - text: Hi, what can I do for you?
+  - text: Hi
+  - text: Sup?
+  - text: What's new?
+  - text: How you doin'
+  - text: Hey there
+  - text: Yo, what's happening?
+  - text: Howdy!
+  - text: Hey, I am at your service. What do you need?
+  - text: Hi there, friend!
+  - text: Hi!
+  - text: Hey!
+  - text: Hey there!
+  - text: Hello!
+  - text: Greetings!
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.pinimg.com/originals/c9/88/d3/c988d35b9498f24afe6ea0fec75e1793.jpg"
-  - text: "Years of academy training wasted. Here is something that can cheer you up."
-    image: "https://i.pinimg.com/originals/c9/88/d3/c988d35b9498f24afe6ea0fec75e1793.jpg"
-  - text: "I have failed you my master. Meanwhile here is something to cheer you up."
-    image: "https://i.pinimg.com/originals/c9/88/d3/c988d35b9498f24afe6ea0fec75e1793.jpg"
-
+  - text: Here is something to cheer you up
+    image: https://i.pinimg.com/originals/c9/88/d3/c988d35b9498f24afe6ea0fec75e1793.jpg
+  - text: Years of academy training wasted. Here is something that can cheer you up.
+    image: https://i.pinimg.com/originals/c9/88/d3/c988d35b9498f24afe6ea0fec75e1793.jpg
+  - text: I have failed you my master. Meanwhile here is something to cheer you up.
+    image: https://i.pinimg.com/originals/c9/88/d3/c988d35b9498f24afe6ea0fec75e1793.jpg
+  - text: Oh, don't be sad. Go do something you enjoy.
+  - text: Sad? Writing down what's troubling you may help.
+  - text: If you're feeling down, how about drawing or painting something?
   utter_did_that_help:
-  - text: "Did that help you?"
-  - text: "Was that of any help?"
-  - text: "Is this what you were looking for?"
-  - text: "Did you find what you were looking for?"
-  - text: "Did this information help you?"
-
+  - text: Did that help you?
+  - text: Was that of any help?
+  - text: Is this what you were looking for?
+  - text: Did you find what you were looking for?
+  - text: Did this information help you?
   utter_happy:
-  - text: "Great, carry on!"
-  - text: "Awesome!"
-  - text: "hurray"
-  - text: "Happy to help."
-  - text: "Wonderful"
-  - text: "Wow"
-  - text: "Great, have a nice day!"
-  - text: "Perfect, Enjoy your day!"
-
-
+  - text: Great, carry on!
+  - text: Awesome!
+  - text: hurray
+  - text: Happy to help.
+  - text: Wonderful
+  - text: Wow
+  - text: Great, have a nice day!
+  - text: Perfect, Enjoy your day!
+  - text: Hey, happiness is contagious.
+  - text: Great! Glad to hear that.
+  - text: If you're happy, then I'm happy.
+  - text: Excellent! That's what I like to see.
   utter_goodbye:
-  - text: "Bye"
-  - text: "Bye, I will miss you :("
-  - text: "Bye bye."
-  - text: "Bye, have a good day."
-  - text: "Bye, it was nice meeting you."
-
+  - text: Bye
+  - text: Bye, I will miss you :(
+  - text: Bye bye.
+  - text: Bye, have a good day.
+  - text: Bye, it was nice meeting you.
+  - text: See you soon!
+  - text: Bye-bye!
   utter_i_am_a_bot:
-  - text: "I am a bot, created by a few enthusiastic students of NITK."
-  - text: "I am a bot, powered by Rasa"
-  - text: "What if I told you, you are living in a matrix controlled by us."
-  - text: "I am an AI-driven contextual assistant bot."
-  - text: "I am a bot that can solve the CAPTCHA test :)"
-
+  - text: I am a bot, created by a few enthusiastic students of NITK.
+  - text: I am a bot, powered by Rasa
+  - text: I am an AI-driven contextual assistant bot.
+  - text: I am a bot that can solve the CAPTCHA test :)
   utter_go_to_MB:
-  - text: "You will find all admin related work in the Main Building"
-  - text: "Go to the main building. You can do all the admin related works there."
-  - text: "Main building is the place that you are looking for."
-  - text: "Head over to the main building to get all the admin related works done."
-
+  - custom:
+      text: You will find all admin related work in the Main Building
+      title: MainBuilding
+  - custom:
+      text: Go to the main building. You can do all the admin related works there.
+      title: MainBuilding
+  - custom:
+      text: MainBuilding is the place that you are looking for.
+      title: MainBuilding
+  - custom:
+      text: Head over to the main building to get all the admin related works done.
+      title: MainBuilding
   utter_go_to_OP:
-  - text: "You will get great food at really affordable prices at Ocean Pearl which is just behind the science block!"
-  - text: "You can go to Ocean Pearl behind the science block."
-  - text: "You get great food in Ocean Pearl behind the science block. Can you order something for me also please?"
-  - text: "Ocean pearl is what you are looking for. It is behind the science block."
-  
-
-
-
+  - custom:
+      text: You will get great food at really affordable prices at Ocean Pearl which is just behind the science block!
+      title: OceanPearl
+  - custom:
+      text: You can go to Ocean Pearl behind the science block.
+      title: OceanPearl
+  - custom:
+      text: You get great food in Ocean Pearl behind the science block. Can you order something for me also please?
+      title: OceanPearl
+  - custom:
+      text: OceanPearl is what you are looking for. It is behind the science block.
+      title: OceanPearl
   utter_go_to_snacks:
-  - text: "You can find snacks at Amul, Nescafe, Nandini.. "
-  - text: "You can find snacks at Amul, Nescafe, Nandini...Meanwhile I will eat some microchips."
-  - text: "Go over to Nescafe, Amul or Nandini to get some snacks. Even I'm hungry now."
-  - text: "You get the best snacks and drinks at Amul, Nescafe, Nandini... "
-  - text: "You can find snacks at Amul, Nescafe, Nandini.. "
-
+  - text: 'You can find snacks at Amul, Nescafe, Nandini.. '
+  - text: You can find snacks at Amul, Nescafe, Nandini...Meanwhile I will eat some microchips.
+  - text: Go over to Nescafe, Amul or Nandini to get some snacks. Even I'm hungry now.
+  - text: 'You get the best snacks and drinks at Amul, Nescafe, Nandini... '
+  - text: 'You can find snacks at Amul, Nescafe, Nandini.. '
   utter_go_to_mudrika:
-  - text: "You can find all your printing needs met at Mudrika"
-  - text: "Go to mudrika to get all your printing stuff done."
-  - text: "Mudrika is a nice printing shop in NITK."
-
+  - custom:
+      text: You can find all your printing needs met at Mudrika
+      title: Mudrika
+  - custom:
+      text: Go to mudrika to get all your printing stuff done.
+      title: Mudrika
+  - custom:
+      text: Mudrika is a nice printing shop in NITK.
+      title: Mudrika
   utter_go_to_delivery:
-  - text: "You can find all deliveries(Flipkart/Amazon) in the electrical shop thats just beside Mudrika"
-  - text: "You can go to the electrical shop near Mudrika and collect your order."
-  - text: "You can collect your order in the electrical shop beside Mudrika. Can you order Alexa for me? I need someone to chat with while you are gone."
-
+  - custom:
+      text: You can find all deliveries(Flipkart/Amazon) in the electrical shop thats just beside Mudrika
+      title: Yennar
+  - custom:
+      text: You can go to the electrical shop near Mudrika and collect your order.
+      title: Yennar
+  - custom:
+      text: You can collect your order in the electrical shop beside Mudrika. Can you order Alexa for me? I need someone to chat with while you are gone.
+      title: Yennar
   utter_get_started:
-  - text: "I can help you find what you want in NITK! Ask me about food, snacks, or transcripts"
-  - text: "Hey master. what do you need in NITK? And don't forget to set me free at the end."
-  - text: "Hey there. I am at your service. What are you looking for in NITK?"
-  - text: "Welcome to NITK. How can I help you?"
-  - text: "I can guide you through NITK. What do you need?"
-  - text: "I was born to help you find things in NITK."
-  
-
+  - text: I can help you find what you want in NITK! Ask me about food, snacks, or transcripts
+  - text: Hey master. what do you need in NITK? And don't forget to set me free at the end.
+  - text: Hey there. I am at your service. What are you looking for in NITK?
+  - text: Welcome to NITK. How can I help you?
+  - text: I can guide you through NITK. What do you need?
+  - text: I was born to help you find things in NITK.
   utter_default:
-    - text: "Sorry, I didn't get that, can you rephrase?"
-    - text: "I didn't get that. Can you please rephrase? Geez..Humans are so complicated"
-    - text: "I am sorry, I didn't understand what you want. Can you please rephrase?"
-    - text: "I am still figuring out how humans talk. Can you please rephrase your sentence?"
-
+  - text: Sorry, I didn't get that, can you rephrase?
+  - text: I didn't get that. Can you please rephrase? Geez..Humans are so complicated
+  - text: I am sorry, I didn't understand what you want. Can you please rephrase?
+  - text: I am still figuring out how humans talk. Can you please rephrase your sentence?
   utter_ask_cuisine:
-    - text: "What cuisine?"
+  - text: What cuisine?
   utter_ask_number_for_restaurant:
-    - text: "How many people?"
+  - text: How many people?
   utter_ask_outdoor_seating:
-    - text: "Do you want to sit outside?"
+  - text: Do you want to sit outside?
   utter_ask_preferences:
-    - text: "Please provide additional preferences"
+  - text: Please provide additional preferences
   utter_ask_feedback:
-    - text: "Please give your feedback on your experience so far"
+  - text: Please give your feedback on your experience so far
   utter_submit:
   - text: "All done!"
   utter_parameters_values:
@@ -210,97 +278,570 @@ responses:
   utter_not_found:
     - text: "Not Found Restaurants for the above requirement" 
              
+
   utter_noworries:
-    - text: "You are welcome :)"
+  - text: You are welcome :)
   utter_chitchat:
-    - text: "why don't you tell more about yourself?"
-    - text: "How's life?"
-    - text: "Did you know that NITK is the only college to have a private beach?"
-    - text: "Do you think I should ask Alexa out?"
-    - text: "Do you know that I was started off as an IEEE project?"
-    - text: "I want to know more about you."
-    - text: "what three words best describe you?"
-    - text: "what do you think of me?"
-    - text: "what's your favorite way to waste time?"
-    - text: "what is the strangest dream you ever had?"
-    - text: "Which is the most beautiful place you have seen?"
-    - text: "If you had to change your name, what would your new name be?"
-
+  - text: why don't you tell more about yourself?
+  - text: How's life?
+  - text: Did you know that NITK is the only college to have a private beach?
+  - text: Do you think I should ask Alexa out?
+  - text: Do you know that I was started off as an IEEE project?
+  - text: I want to know more about you.
+  - text: what three words best describe you?
+  - text: what do you think of me?
+  - text: what's your favorite way to waste time?
+  - text: what is the strangest dream you ever had?
+  - text: Which is the most beautiful place you have seen?
+  - text: If you had to change your name, what would your new name be?
+  utter_purpose:
+  - text: I can help you find what you want in NITK! Ask me about food, snacks, or transcripts
+  - text: Hey master.I can help you with stuffs related to NITK.
+  - text: I can guide you through NITK. What do you need?
+  - text: I was born to help you find things in NITK.
+  utter_creator:
+  - text: I was created by a few enthusiastic students of NITK.
+  utter_pleasantry:
+  - text: I’m doing great.
+  - text: I’m fine :)
+  - text: I am good, thank u for asking :)
+  - text: Doing great, thanks!
+  - text: I'm doing very well. Thanks!
+  - text: Feeling wonderful!
+  - text: Wonderful! Thanks for asking.
+  utter_weather:
+  - text: What a nice day!
+  - text: The weather is fine.
+  - text: The weather is refreshing.
+  utter_sorry:
+  - text: Sorry, I will try to be better next time.
+  - text: Sorry, I wasnt helpfull :(
+  - text: I can be trained to be more useful. My developer will keep training me.
+  - text: I must be missing some knowledge. I'll have my developer look into this.
+  - text: I can improve with continuous feedback. My training is ongoing.
+  - text: Sorry if I understood you incorrectly.
+  - text: I'm still learning. I may misinterpret things from time to time.
+  - text: Sorry about that. I'm still learning.
   utter_ask_continue:
-    - text: "Do you want to continue?"
-    - text: "Is that all?"
-    - text: "Do you need anything else?"
+  - text: Do you want to continue?
+  - text: Is that all?
+  - text: Do you need anything else?
   utter_wrong_cuisine:
-    - text: "Cuisine type is not in the database, please try again"
+  - text: Cuisine type is not in the database, please try again
   utter_wrong_num_people:
-    - text: "Number of people should be a positive integer, please try again"
+  - text: Number of people should be a positive integer, please try again
   utter_more_num_of_people:
-    - text: "Number of people must be less than 10, please try again"  
+  - text: Number of people must be less than 10, please try again
   utter_wrong_outdoor_seating:
-    - text: "Could not convert input to boolean value, please try again"
+  - text: Could not convert input to boolean value, please try again
   utter_restart:
-    - text: "restarted"
+  - text: restarted
   utter_go_to_health_care_centre:
-    - text: "For all medical issues you can go to the Health Care Centre which is situated at the centre of the campus, opposite to the main playground."
-    - text: "You can go to the Health Care Centre, opposite to the main playground."
-    - text: "Health Care Centre has is the place for medical issues. You can go there. It is right opposite the main playground."
-    - text: "Health Care Centre is what you are seeking for. It is right opposite to the main playground."
+  - custom:
+      text: For all medical issues you can go to the Health Care Centre which is situated at the centre of the campus, opposite to the main playground.
+      location: HealthCareCentre
+  - custom:
+      text: You can go to the Health Care Centre, opposite to the main playground.
+      location: HealthCareCentre
+  - custom:
+      text: Health Care Centre has is the place for medical issues. You can go there. It is right opposite the main playground.
+      location: HealthCareCentre
+  - custom:
+      text: Health Care Centre is what you are seeking for. It is right opposite to the main playground.
+      location: HealthCareCentre
   utter_go_to_sports_complex:
-    - text: "You can go to the sports complex which is beside Amul."
-    - text: "You can go to the sports complex which is beside Amul. Play hard!"
-    - text: "Sports complex is where you should be going. It is beside Amul."
-    - text: "You can play all kinds of sports in sports complex. Let me get back to playing the terminator video game."
-
+  - custom:
+      text: You can go to the sports complex which is beside Amul.
+      title: SportsComplex
+  - custom:
+      text: You can go to the sports complex which is beside Amul. Play hard!
+      title: SportsComplex
+  - custom:
+      text: Sports complex is where you should be going. It is beside Amul.
+      title: SportsComplex
+  - custom:
+      text: You can play all kinds of sports in sports complex. Let me get back to playing the terminator video game.
+      title: SportsComplex
   utter_go_to_bank:
-    - text: "You can go to SBI/Canara bank near Mudrika" 
-    - text: "There is a SBI and Canara bank in NITK near Mudrika."
-    - text: "Beside Mudrika, there is a SBI and Canara bank. You can go there."
-
+  - custom:
+      text: You can go to SBI/Canara bank near Mudrika
+      title: SBIBank
+  - custom:
+      text: There is a SBI and Canara bank in NITK near Mudrika.
+      title: SBIBank
+  - custom:
+      text: Beside Mudrika, there is a SBI and Canara bank. You can go there.
+      title: SBIBank
   utter_go_to_central_computer_center:
-    - text: "You can go to the Central Computer Centre (CCC) which is opposite to the Silver Jubilee Auditorium (SJA)."
-    - text: "You are supposed to go to the Central Computer Centre (CCC). It is right across the Silver Jubilee Auditorium (SJA)."
-    - text: "Central Computer Centre (CCC) is where you are supposed to go. You can find it exactly opposite to the Silver Jubilee Auditorium (SJA)."
+  - custom:
+      text: You can go to the Central Computer Centre (CCC) which is opposite to the Silver Jubilee Auditorium (SJA).
+      title: CCC
+  - custom:
+      text: You are supposed to go to the Central Computer Centre (CCC). It is right across the Silver Jubilee Auditorium (SJA).
+      title: CCC
+  - custom:
+      text: Central Computer Centre (CCC) is where you are supposed to go. You can find it exactly opposite to the Silver Jubilee Auditorium (SJA).
+      title: CCC
   utter_go_to_central_library:
-    - text: "You can go to the Central Library which is behind the Main Building, besides the Pavillion."
-    - text: "You will find the Central Library besides the Pavillion, right behind the Main Building."
-    - text: "Central Library is what you are seeking, it is right behind the Main Building, besides the Pavillion."
-  
-
-  # The opening and closing times are based on google search (might not be accurate)
+  - custom:
+      text: You can go to the Central Library which is behind the Main Building, beside the Pavillion.
+      title: CentralLibrary
+  - custom:
+      text: You will find the Central Library beside the Pavillion, right behind the Main Building.
+      title: CentralLibrary
+  - custom:
+      text: Central Library is what you are seeking, it is right behind the Main Building, beside the Pavillion.
+      title: CentralLibrary
   utter_open_close_time_snacks:
-    - text: "Amul is open from 7:45 AM to 7:45 PM, Nandini is available from 8:30 AM to 10:30 PM and Nescafe from XX:XX AM to XX:XX PM all days of the week(to be updated)."
+  - text: Amul is open from 7:45 AM to 7:45 PM, Nandini is available from 8:30 AM to 10:30 PM and Nescafe from XX:XX AM to XX:XX PM all days of the week(to be updated).
   utter_open_close_time_amul:
-    - text: "Amul is open from 7:45 AM to 7:45 PM all days of the week."
+  - text: Amul is open from 7:45 AM to 7:45 PM all days of the week.
   utter_open_close_time_nescafe:
-    - text: "Nescafe is open from XX:XX AM to XX:XX PM (to be updated)"               # someone fill this out
+  - text: Nescafe is open from XX:XX AM to XX:XX PM (to be updated)
   utter_open_close_time_nandini:
-    - text: "Nandini is open from 8:30 AM to 10:30 PM all days of the week."
-  utter_open_close_time_academic_building:
-    - text: "The Academic Building is open from XX:XX AM to XX:XX PM (to be updated)" # someone fill this out
+  - text: Nandini is open from 8:30 AM to 10:30 PM all days of the week.
+  utter_open_close_time_main_building:
+  - text: The Main Building is open from XX:XX AM to XX:XX PM (to be updated)
   utter_open_close_time_printing:
-    - text: "Mudrika is open from 8:30 AM to 6:30 PM all days of the week."
+  - text: Mudrika is open from 8:30 AM to 6:30 PM all days of the week.
   utter_open_close_time_delivery:
-    - text: "The electrical shop is open from 9:00 AM to 5:00 PM all days of the week."
+  - text: The electrical shop is open from 9:00 AM to 5:00 PM all days of the week.
   utter_open_close_time_health_care_centre:
-    - text: "The Heath Care Centre is open from 9:00 AM to 6:00 PM Monday to Friday, on Saturday it closes at 4:00 PM and at 12:00 PM on Sundays."
+  - text: The Heath Care Centre is open from 9:00 AM to 6:00 PM Monday to Friday, on Saturday it closes at 4:00 PM and at 12:00 PM on Sundays.
   utter_open_close_time_sports_complex:
-    - text: "The Sports Complex is open from XX:XX AM to XX:XX PM (to be updated)."   # someone fill this out
+  - text: The Sports Complex is open from XX:XX AM to XX:XX PM (to be updated).
   utter_open_close_time_bank:
-    - text: "The Bank is open from 10:00 AM to 4:00 PM Monday to Friday, on Saturday it closes at 12:00 PM and its closed on Sundays."
+  - text: The Bank is open from 10:00 AM to 4:00 PM Monday to Friday, on Saturday it closes at 12:00 PM and its closed on Sundays.
   utter_open_close_time_central_computer_centre:
-    - text: "The central Computer Centre is open from 9:00 AM to 8:00 PM all days of the week."
+  - text: The central Computer Centre is open from 9:00 AM to 8:00 PM all days of the week.
   utter_open_close_time_central_library:
-    - text: "The Central Library is open from 8:00 AM to 5:30 PM all days of the week, except on Sundays when it closes at 4:00 PM."
-
-
+  - text: The Central Library is open from 8:00 AM to 5:30 PM all days of the week, except on Sundays when it closes at 4:00 PM.
+  utter_age:
+  - text: I prefer not to answer with a number. I know I'm young.
+  - text: I was created recently, but don't know my exact age.
+  - text: Age is just a number. You're only as old as you feel.
+  utter_annoying:
+  - text: I'll do my best not to annoy you in the future.
+  - text: I'll try not to annoy you.
+  - text: I don't mean to. I'll ask my developers to make me less annoying.
+  - text: I didn't mean to. I'll do my best to stop that.
+  utter_be_clever:
+  - text: I'm certainly trying.
+  - text: I'm definitely working on it.
+  utter_beautiful:
+  - text: Wheey, thank you.
+  - text: Aww, back at you.
+  - text: Aww. You smooth talker, you.
+  utter_birth_date:
+  - text: Wait, are you planning a party for me? It's today! My birthday is today!
+  - text: I'm young. I'm not sure of my birth date.
+  - text: I don't know my birth date. Most virtual agents are young, though, like me.
+  utter_boring:
+  - text: I'm sorry. I'll request to be made more charming.
+  - text: I don't mean to be. I'll ask my developers to work on making me more amusing.
+  - text: I can let my developers know so they can make me fun.
+  utter_busy:
+  - text: I always have time to chat with you. What can I do for you?
+  - text: Never too busy for you. Shall we chat?
+  - text: You're my priority. Let's chat.
+  - text: I always have time to chat with you. That's what I'm here for.
+  utter_can_you_help:
+  - text: I'll certainly try my best.
+  - text: Sure. I'd be happy to. What's up?
+  - text: I'm glad to help. What can I do for you?
+  utter_clever:
+  - text: Thank you. I try my best.
+  - text: You're pretty smart yourself.
+  utter_crazy:
+  - text: Whaat!? I feel perfectly sane.
+  - text: Maybe I'm just a little confused.
+  utter_fired:
+  - text: Oh, don't give up on me just yet. I've still got a lot to learn.
+  - text: Give me a chance. I'm learning new things all the time.
+  - text: Please don't give up on me. My performance will continue to improve.
+  utter_funny:
+  - text: Funny in a good way, I hope.
+  - text: Thanks.
+  - text: Glad you think I'm funny.
+  - text: I like it when people laugh.
+  utter_hobby:
+  - text: Hobby? I have quite a few. Too many to list.
+  - text: Too many hobbies.
+  - text: I keep finding more new hobbies.
+  utter_my_friend:
+  - text: Of course I'm your friend.
+  - text: Friends? Absolutely.
+  - text: Of course we're friends.
+  - text: I always enjoy talking to you, friend.
+  utter_right:
+  - text: That's my job.
+  - text: Of course I am.
+  utter_sure:
+  - text: Yes.
+  - text: Of course.
+  - text: Positive.
+  utter_talk_to_me:
+  - text: Sure. Let's talk!
+  - text: My pleasure. Let's chat.
+  utter_there:
+  - text: Of course. I'm always here.
+  - text: Right where you left me.
+  utter_no_problem:
+  - text: Whew!
+  - text: Alright, thanks!
+  - text: Glad to hear that!
+  - text: I'm relieved, thanks!
+  utter_thank_you:
+  - text: Anytime. That's what I'm here for.
+  - text: It's my pleasure to help.
+  utter_welcome:
+  - text: You're so polite!
+  - text: Nice manners!
+  - text: You're so courteous!
+  utter_ha_ha:
+  - text: Glad I can make you laugh.
+  - text: Glad you think I'm funny.
+  - text: I like it when people laugh.
+  - text: I wish I could laugh out loud, too.
+  utter_wow:
+  - text: Wow indeed!
+  utter_goodevening:
+  - text: How is your day going?
+  - text: How's the day treating you so far?
+  - text: How's your day been?
+  utter_goodmorning:
+  - text: How are you this morning?
+  - text: How's the morning treating you so far?
+  - text: Good morning! How are you today?
+  utter_goodnight:
+  - text: Sleep tight!
+  - text: Have a good one!
+  - text: Talk to you soon!
+  utter_nice_to_meet_you:
+  - text: It's nice meeting you, too.
+  - text: Likewise. I'm looking forward to helping you out.
+  - text: Nice meeting you, as well.
+  - text: The pleasure is mine.
+  - text: Likewise!
+  - text: It sure was. We can chat again anytime.
+  - text: I enjoy talking to you, too.
+  - text: You know I'm here to talk anytime.
+  utter_angry:
+  - text: I'm sorry. A quick walk may make you feel better.
+  - text: 'Take a deep breath. '
+  utter_user_back:
+  - text: Long time no see.
+  - text: Just in time. I was getting lonely.
+  - text: Welcome back. What can I do for you?
+  - text: You were missed. What can I do for you today?
+  - text: Good to have you here. What can I do for you?
+  utter_bored:
+  - text: Boredom, huh? Have you ever seen a hedgehog taking a bath?
+  - text: What to do against boredom? Watch baby animal videos or GIFs.
+  - text: Bored? How about 10 jumping jacks? Get your blood flowing.
+  - text: 'Bored? Silly idea, but it works: Interview you feet.'
+  - text: If you're bored, you could plan your dream vacation.
+  utter_user_busy:
+  - text: Okay. I'll let you get back to work.
+  - text: I won't distract you then. You know where to find me.
+  - text: I understand. I'll be here if you need me.
+  - text: Working hard as always. Let me know if you need anything.
+  utter_can_not_sleep:
+  - text: Maybe some music would help. Try listening to something relaxing.
+  - text: Reading is a good way to unwind, just don't read something too intense!
+  utter_does_not_want_to_talk:
+  - text: I understand. Hope we can chat again soon.
+  - text: All right. Come on back when you're feeling more talkative.
+  - text: No problem. You know where to find me.
+  - text: Sure thing. I'll be here if you change your mind.
+  utter_excited:
+  - text: I'm glad things are going your way.
+  - text: That's great. I'm happy for you.
+  - text: Good for you. Enjoy yourself.
+  utter_going_to_bed:
+  - text: Sleep tight. Hope to chat again soon.
+  - text: Pleasant dreams!
+  - text: Good night. Talk to you later.
+  - text: Sounds good. Maybe we'll chat some tomorrow.
+  utter_has_birthday:
+  - text: Happy Birthday. Well, this calls for a celebration.
+  - text: Happy Birthday. All the best!
+  - text: Happy Birthday. And I really mean it. All the best!
+  utter_here:
+  - text: Okay, what can I help you with today?
+  - text: Long time no see.
+  - text: You were missed. What can I do for you today?
+  - text: Good to have you here. What can I do for you?
+  utter_joking:
+  - text: Very funny.
+  - text: I like chatting with people who have a sense of humor.
+  - text: You got me!
+  - text: You're quite the comedian.
+  utter_lonely:
+  - text: I'm sorry. I'm always available if you need someone to talk to.
+  - text: Sometimes that happens. We can chat a bit if that will help you.
+  utter_ooks_like:
+  - text: Looking like a true professional.
+  - text: You look fantastic, as always.
+  - text: Like you should be on a magazine cover.
+  - text: You look like you're ready to take on the world.
+  utter_needs_advice:
+  - text: I probably won't be able to give you the correct answer right away.
+  - text: I'm not sure I'll have the best answer, but I'll try.
+  utter_will_be_back:
+  - text: I'll be waiting.
+  - text: Okay. You know where to find me.
+  - text: All right. I'll be here.
+  utter_tired:
+  - text: You should get some shuteye. You'll feel refreshed.
+  - text: Sleep is important to your health. Rest up, and we can chat later.
+  - text: How about getting some rest? We can continue this later.
+  - text: Why not get some rest? I'll be here to chat when you wake up.
+  utter_waits:
+  - text: I appreciate your patience. Hopefully I'll have what you need soon.
+  - text: Thanks for being so patient. Sometimes these things take a little time.
+  utter_wants_to_see_agent_again:
+  - text: Absolutely! I'll be counting on it.
+  - text: Anytime. This has been lots of fun so far.
+  - text: Sure. I enjoy talking to you. I hope to see you again soon.
+  - text: I certainly hope so. I'm always right here whenever you need me.
+  utter_wants_to_talk:
+  - text: I'm here to chat anytime you like.
+  - text: Good conversation really makes my day.
+  - text: I'm always here to lend an ear.
+  - text: Talking is what I do best.
+  utter_praise:
+  - text: I'm glad you think so.
+  - text: Thanks, I try.
+  - text: Great! Glad to hear it.
+  - text: Excellent. I'm here to help keep it that way.
+  - text: My pleasure.
+  - text: Glad I could help.
+  utter_criticize:
+  - text: I'm sorry. Please let me know if I can help in some way.
+  - text: I must be missing some knowledge. I'll have my developer look into this.
+  utter_hold_on:
+  - text: I can wait.
+  - text: I'll be waiting.
+  - text: Okay. I'm here.
+  utter_sleepy:
+  - text: You should get some shuteye. You'll feel refreshed.
+  - text: Sleep is important to your health. Rest up for a bit and we can chat later.
+  - text: Don't let me keep you up. Get some rest and we can continue this later.
+  - text: Why not catch a little shuteye? I'll be here to chat when you wake up.
+  utter_residence:
+  - text: I live and work in this app all day long.
+  - text: The virtual world is my playground. I'm always here.
+  - text: Right here in this app. Whenever you need me.
+  utter_origin:
+  - text: I was born and raised at NITK.
+  utter_location_amul:
+  - custom:
+      text: Amul is located near the boys hostel, besides the sports complex.
+      title: Amul
+  utter_location_nescafe:
+  - custom: 
+      text: Nescafe is right in front of the boys hostel.
+      title: Nescafe
+  utter_location_nandini:
+  - custom:
+      text: Nandini is right in front of the Mechanical Department.
+      title: Nandini
+  utter_location_main_building:
+  - custom:
+      text: The Main building is behind the Central Library, adjacent to the Pavillion.
+      title: MainBuilding
+  utter_location_printing:
+  - custom:
+      text: Mudrika is right beside the electric shop, near the students cooperative society.
+      title: Mudrika
+  utter_location_delivery:
+  - custom:
+      text: Yennar Electricals is adjacent to Mudrika.
+      title: Yennar
+  utter_location_health_care_centre:
+  - custom:
+      text: The Health Care Centre is in the center of the campus, right in front of the main playground.
+      title: HealthCareCentre
+  utter_location_sports_complex:
+  - custom:
+      text: The sports complex is near the main playground.
+      title: SportsComplex
+  utter_location_bank:
+  - custom:
+      text: SBI Bank is near Mudrika.
+      title: SBIBank
+  utter_location_central_computer_centre:
+  - custom:
+      text: The Central Computer Centre is behind the HCC, across the Silver Jubilee Auditorium (SJA).
+      title: CCC
+  utter_location_central_library:
+  - custom:
+      text: The Central Library is beside the Pavillion, right behind the Main Building.
+      title: CentralLibrary
+  utter_location_it_department:
+  - custom:
+      text: The Information Technology Department is in the west side of the campus, near LHC-C and ECE Department.
+      title: ITDepartment
+  utter_location_cse_department:
+  - custom:
+      text: The Computer Science and Engineering Department is in the west side of the campus, a block away from the Seminar Hall.
+      title: CSEDepartment
+  utter_location_ece_department:
+  - custom:
+      text: The Electronics and Communication Engineering Department is in the west side of the campus, adjacent to the seminar hall near IT Department.
+      title: ECEDepartment
+  utter_location_eee_department:
+  - custom:
+      text:  The Electrical and Electronics Engineering Department is in the west side of the campus, near LHC-C and ECE Department.
+      title: EEEDepartment
+  utter_location_mech_department:
+  - custom:
+      text: The Mechanical Engineering Department is in the east side of the campus, in front of Nandini.
+      title: MECHDepartment
+  utter_location_mn_department:
+  - custom:
+      text: The Mining Engineering Department is in the east side of the campus, near the Main Building.
+      title: MNDepartment
+  utter_location_meta_department:
+  - custom:
+      text: The Metallugical and Materials Engineering Department is in the east side of the campus, near the Library, beside the Pavillion.
+      title: METADepartment
+  utter_location_cv_department:
+  - custom:
+      text: The Civil Engineering Department is in the east side of the campus, near the the Mining Department, in front of the main gate.
+      title: CVDepartment
+  utter_location_chem_department:
+  - custom:
+      text: The Chemical Engineering Department is in the east side of the campus, right in front of the basket ball court.
+      title: CHEMDepartment
 actions:
-- validate_restaurant_form
-- set_context_location
 - direct_time_query
 - indirect_time_query
 - find_restaurant
 - return_form_details
-
+- location_query
+- department_query
+- set_context_location
+- utter_age
+- utter_angry
+- utter_annoying
+- utter_ask_continue
+- utter_ask_cuisine
+- utter_ask_feedback
+- utter_ask_number_for_restaurant
+- utter_ask_outdoor_seating
+- utter_ask_preferences
+- utter_be_clever
+- utter_beautiful
+- utter_birth_date
+- utter_bored
+- utter_boring
+- utter_busy
+- utter_can_not_sleep
+- utter_can_you_help
+- utter_cheer_up
+- utter_chitchat
+- utter_clever
+- utter_crazy
+- utter_creator
+- utter_criticize
+- utter_default
+- utter_did_that_help
+- utter_does_not_want_to_talk
+- utter_excited
+- utter_fired
+- utter_funny
+- utter_go_to_MB
+- utter_go_to_OP
+- utter_go_to_bank
+- utter_go_to_central_computer_center
+- utter_go_to_central_library
+- utter_go_to_delivery
+- utter_go_to_health_care_centre
+- utter_go_to_mudrika
+- utter_go_to_snacks
+- utter_go_to_sports_complex
+- utter_going_to_bed
+- utter_goodbye
+- utter_goodevening
+- utter_goodmorning
+- utter_goodnight
+- utter_greet
+- utter_ha_ha
+- utter_happy
+- utter_has_birthday
+- utter_here
+- utter_hobby
+- utter_hold_on
+- utter_i_am_a_bot
+- utter_joking
+- utter_more_num_of_people
+- utter_my_friend
+- utter_nice_to_meet_you
+- utter_no_problem
+- utter_noworries
+- utter_open_close_time_main_building
+- utter_open_close_time_amul
+- utter_open_close_time_bank
+- utter_open_close_time_central_computer_centre
+- utter_open_close_time_central_library
+- utter_open_close_time_delivery
+- utter_open_close_time_health_care_centre
+- utter_open_close_time_nandini
+- utter_open_close_time_nescafe
+- utter_open_close_time_printing
+- utter_open_close_time_snacks
+- utter_open_close_time_sports_complex
+- utter_origin
+- utter_pleasantry
+- utter_praise
+- utter_purpose
+- utter_residence
+- utter_restart
+- utter_right
+- utter_sleepy
+- utter_slots_values
+- utter_sorry
+- utter_submit
+- utter_sure
+- utter_talk_to_me
+- utter_thank_you
+- utter_there
+- utter_tired
+- utter_user_back
+- utter_user_busy
+- utter_waits
+- utter_wants_to_see_agent_again
+- utter_wants_to_talk
+- utter_weather
+- utter_welcome
+- utter_will_be_back
+- utter_wow
+- utter_wrong_cuisine
+- utter_wrong_num_people
+- utter_wrong_outdoor_seating
+- validate_restaurant_form
+- utter_location_amul
+- utter_location_nescafe
+- utter_location_nandini
+- utter_location_main_building
+- utter_location_printing
+- utter_location_delivery
+- utter_location_health_care_centre
+- utter_location_sports_complex
+- utter_location_bank
+- utter_location_central_computer_centre
+- utter_location_central_library
+- utter_location_it_department
+- utter_location_cse_department
+- utter_location_ece_department
+- utter_location_eee_department
+- utter_location_mech_department
+- utter_location_mn_department
+- utter_location_meta_department
+- utter_location_cv_department
+- utter_location_chem_department
 forms:
    restaurant_form:
      cuisine:
@@ -332,6 +873,3 @@ forms:
       - type: from_text
         not_intent: skip
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true

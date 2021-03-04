@@ -149,7 +149,7 @@ class DirectTimeQuery(Action):
             "amul":"utter_open_close_time_amul",
             "nescafe":"utter_open_close_time_nescafe",
             "nandini":"utter_open_close_time_nandini",
-            "academic building":"utter_open_close_time_academic_building",
+            "main building":"utter_open_close_time_main_building",
             "mudrika":"utter_open_close_time_printing",
             "electrical shop":"utter_open_close_time_delivery",
             "health care centre":"utter_open_close_time_health_care_centre",
@@ -198,7 +198,7 @@ class IndirectTimeQuery(Action):
 
         return {
             "snacks":"utter_open_close_time_snacks",
-            "academic building":"utter_open_close_time_academic_building",
+            "main building":"utter_open_close_time_main_building",
             "printing":"utter_open_close_time_printing",
             "delivery":"utter_open_close_time_delivery",
             "health care centre":"utter_open_close_time_health_care_centre",
@@ -230,6 +230,7 @@ class IndirectTimeQuery(Action):
             return self.location_utter_mapping()[location]
         else:
             return "utter_default"
+
 
 class FindRestaurant(Action):
     def name(self):
@@ -372,3 +373,102 @@ class FormDetails(Action):
 
         
     
+
+class LocationQuery(Action):
+    def name(self):
+        return "location_query"
+
+    @staticmethod
+    def location_utter_mapping():
+
+        return {
+            "amul":"utter_location_amul",
+            "nescafe":"utter_location_nescafe",
+            "nandini":"utter_location_nandini",
+            "main building":"utter_location_main_building",
+            "mudrika":"utter_location_printing",
+            "electrical shop":"utter_location_delivery",
+            "health care centre":"utter_location_health_care_centre",
+            "sports complex":"utter_location_sports_complex",
+            "bank":"utter_location_bank",
+            "central computer centre":"utter_location_central_computer_centre",
+            "central library":"utter_location_central_library",
+        }
+
+    def run(self, dispatcher, tracker, domain):
+        query_locations = []
+
+        for e in tracker.latest_message["entities"]:
+            if e["entity"]=="Location":
+                query_locations.append(e["value"])
+                # making a list of locations detected
+
+        if len(query_locations)==1:
+            #single location found and recognised
+            location = query_locations[0]
+            dispatcher.utter_message(template=self.selectUtterStatment(location))
+        
+        else:
+            #mulitple locations or location not recognized
+            dispatcher.utter_message(template="utter_default")
+        
+        return []
+    
+    def selectUtterStatment(self,location):
+
+        location=location.lower().replace("_"," ")
+        
+        if location in self.location_utter_mapping().keys():
+            #location recognised
+            return self.location_utter_mapping()[location]
+        else:
+            return "utter_default"
+
+class DepartmentQuery(Action):
+    def name(self):
+        return "department_query"
+
+    @staticmethod
+    def department_utter_mapping():
+
+        return {
+            "it department":"utter_location_it_department",
+            "cse department":"utter_location_cse_department",
+            "ece department":"utter_location_ece_department",
+            "eee department":"utter_location_eee_department",
+            "mech department":"utter_location_mech_department",
+            "mn department":"utter_location_mn_department",
+            "meta department":"utter_location_meta_department",
+            "chem department":"utter_location_chem_department",
+            "cv department":"utter_location_cv_department",
+        }
+
+    def run(self, dispatcher, tracker, domain):
+        query_departments = []
+
+        for e in tracker.latest_message["entities"]:
+            if e["entity"]=="Department":
+                query_departments.append(e["value"])
+                # making a list of departments detected
+
+        if len(query_departments)==1:
+            #single department found and recognised
+            department = query_departments[0]
+            dispatcher.utter_message(template=self.selectUtterStatment(department))
+        
+        else:
+            #mulitple departments or location not recognized
+            dispatcher.utter_message(template="utter_default")
+        
+        return []
+    
+    def selectUtterStatment(self,department):
+
+        department=department.lower()
+        
+        if department in self.department_utter_mapping().keys():
+            #department recognised
+            return self.department_utter_mapping()[department]
+        else:
+            return "utter_default"
+

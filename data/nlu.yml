@@ -1,40 +1,20 @@
 version: "2.0"
-
 nlu:
-- synonym: health care centre
-  examples: |
-    - hcc
-- synonym: central computer centre
-  examples: |
-    - ccc
-- synonym: central library
-  examples: |
-    - library
-- synonym: electrical shop
-  examples: |
-    - electric shop
-
 - intent: greet
   examples: |
     - hey
     - hello
     - hi
     - hello there
-    - good morning
-    - good evening
     - moin
     - hey there
     - let's go
     - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
     - Hi
     - Hey
     - Hi bot
     - Hey bot
     - Hello
-    - Good morning
     - hi again
     - hi folks
     - hi Mister
@@ -47,11 +27,7 @@ nlu:
     - hallo
     - heeey
     - hi hi
-    - hey
     - hey hey
-    - hello there
-    - hi
-    - hello
     - yo
     - hola
     - hi?
@@ -63,11 +39,23 @@ nlu:
     - sup
     - hey friend
     - bonjour
-
+    - long time no see
+    - howdy
+    - I greet you
+    - hello again
+    - just going to say hi
+    - a good day
+    - afternoon
+    - hello hi
+    - heya
+    - hey man
+    - hey buddy
+    - oka
+    - yo man
 - intent: goodbye
   examples: |
-    - good afternoon
     - cu
+    - cya
     - good by
     - cee you later
     - good night
@@ -86,8 +74,38 @@ nlu:
     - I must be going
     - farewell
     - bye for now
-
-
+    - okay see you later
+    - hope to see you later
+    - till next time
+    - I must go
+    - see you
+    - see you soon
+    - bye-bye
+    - bye bye good night
+    - good bye
+    - bye bye see you
+    - bye bye see you soon
+    - bye bye take care
+    - I said bye
+    - never mind bye
+    - now bye
+    - that's all goodbye
+    - that's it goodbye
+    - leave me alone
+    - go to bed
+    - goodbye for now
+    - you can go now
+    - get lost
+    - goodbye see you later
+    - alright bye
+    - see ya
+    - thanks bye bye
+    - okay bye
+    - okay thank you bye
+    - see you tomorrow
+    - ok bye
+    - c u
+    - byee
 - intent: affirm
   examples: |
     - yes
@@ -97,19 +115,16 @@ nlu:
     - that sounds good
     - correct
     - yeah a cheap restaurant serving international cuisine
-    - correct
     - ye
     - uh yes
     - let's do it
     - yeah
-    - uh yes
     - um yes
     - yes knocking
     - that's correct
     - yes yes
     - right
     - yea
-    - yes
     - yes right
     - yes and i dont care
     - right on
@@ -128,7 +143,81 @@ nlu:
     - ohk
     - okay
     - yep
-
+    - so cool
+    - cool
+    - that is good
+    - glad to hear that
+    - that's very nice of you
+    - terrific
+    - it's amazing
+    - that's awesome
+    - perfect
+    - excellent
+    - brilliant
+    - that's great
+    - it's good
+    - it's great
+    - good
+    - nice
+    - that's fine
+    - very good
+    - amazing
+    - fantastic
+    - great
+    - good very good
+    - that's very good
+    - really good
+    - it is fine
+    - it is good
+    - it's perfect
+    - much better
+    - not bad
+    - not too bad
+    - it's very good
+    - marvelous
+    - that's nice
+    - pleasant
+    - pretty good
+    - really nice
+    - splendid
+    - straight
+    - super
+    - super fantastic
+    - sweet
+    - really well
+    - very well
+    - very nice
+    - very then
+    - wonderful
+    - I'm glad to hear that
+    - ok good
+    - it was good
+    - oh well
+    - good thing
+    - that was good
+    - it's awesome
+    - okay good
+    - it's fine
+    - no it's okay
+    - yeah exactly
+    - okay that's fine
+    - I agree
+    - that is ok
+    - I guess
+    - okey
+    - ok yes
+    - yes it is
+    - yew
+    - yeah fine
+    - yea fine
+    - yep okay
+    - fine okay
+    - YEAH
+    - okay buddy
+    - oh okay
+    - yeah sure
+    - okay cool
+    - coool
 - intent: deny
   examples: |
     - no
@@ -138,7 +227,6 @@ nlu:
     - don't like that
     - no way
     - not really
-    - no
     - no new selection
     - no thanks
     - no thank you
@@ -155,7 +243,20 @@ nlu:
     - I think not
     - by no means
     - not possible
-
+    - don't
+    - don't want
+    - need not
+    - don't come
+    - never help
+    - not needed
+    - of course not
+    - not at this time
+    - not exactly
+    - absolutely no
+    - no forget
+    - do not
+    - no don't want
+    - sorry no
 - intent: mood_great
   examples: |
     - perfect
@@ -172,14 +273,47 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-    - nice 
+    - nice
     - happy
     - excited
     - superb
     - I am excited
     - I am happy
     - joyful
-
+    - I am good
+    - I'm doing just great
+    - I'm doing fine
+    - I'm good
+    - I'm doing good
+    - I'm great thanks
+    - I'm super good
+    - I'm feeling great
+    - I'm in a good mood
+    - I'm doing really good
+    - good
+    - It's good
+    - I feel good
+    - That's good
+    - That feels good
+    - I feel very good
+    - i am pretty good
+    - I feel good today
+    - I am really good
+    - Feeling happy
+    - I'm happy to see you
+    - if you're happy then I'm happy
+    - you made me very happy
+    - I'm glad to see you
+    - I'm happy to talk to you
+    - I was the happiest man on earth
+    - I'm just really happy right now
+    - I'm really happy I ran into you
+    - I feel happiest when I'm chatting with u
+    - Nobody but you can make me happy
+    - Whenever I see you, I feel happy
+    - ur smile always makes me happy
+    - i feel happy
+    - i was so happy
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -200,15 +334,74 @@ nlu:
     - fed up
     - not great
     - I am fed up
-
+    - I'm in a sad mood
+    - I'm grieving
+    - I am depressed
+    - I am feeling sad
+    - I am upset
+    - I'm unhappy
+    - I'm having a bad day
+    - I want to cry
+    - I'm not happy
+    - feeling sad
+    - I felt sad for no reason
+    - Now I'm sad
+    - It makes me sad
+    - I am sad to hear it
+    - I am a very sad person
+    - I feel sad every now and then
+    - I am as sad and lonely as can be
+    - feeling so down
+    - i am not in a good mood
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
-
+    - you r real
+    - you are not fake
+    - are u real
+    - you are so real
+    - I think you are real
+    - I don't think you're fake
+    - I suppose you're real
+    - glad you're real
+    - r you a real person?
+    - are u a real human?
+    - you are a real person
+    - you are not real
+    - are you real?
+    - u are chatbot
+    - you r a bot
+    - are u a chatbot
+    - are you a bot
+    - r you just a bot
+    - are you a robot
+    - r u a program
+    - you're a robot
+    - you're an AI
+    - are you artificially intelligent?
+    - are you an AI?
+    - you are a program
+    - u are just a bot
+    - you r a conversational AI
+    - who the hell are you?
+    - what are you
+    - talk about yourself
+    - tell me some stuff about you
+    - talk some stuff about yourself
+    - I want to know you better
+    - I want to know more about you
+    - who are you
+    - tell me about yourself
+    - tell me about you
+    - about yourself
+    - describe yourself
+    - introduce yourself
+    - say about you
+    - define yourself
+    - all about you
 - intent: request_restaurant
   examples: |
     - im looking for a restaurant
@@ -231,9 +424,12 @@ nlu:
     - looking for a table at the [rajisthani](cuisine) restaurant for five
     - find me a table for 7 people
     - Can I get a table for four at the place which serves [continental](cuisine) cuisine?
-
-
-
+    - i want to book a restaurant
+    - restaurant booking
+    - restaurant pls
+    - book restaurant
+    - where can i get good food.
+    - tell me a place to get great food.
 - intent: cuisine
   examples: |
     - where can I get [cuisine](cuisine)
@@ -242,7 +438,6 @@ nlu:
     - im hungry, where can I get some [north indian cuisine](cuisine)
     - im hungry, where can I get some [south indian cuisine](cuisine)
     - whats the best [restaurant](cuisine) here?
-
 - intent: snacks
   examples: |
     - where can I get [chips](snacks)
@@ -253,32 +448,39 @@ nlu:
     - whats the best [restaurant](snacks) here?
     - where can I get [vada pav](snacks)
     - where can I get [chaat](snacks) items?
-
-
-- intent: Academic_Building
+    - where can i get something to eat.
+    - I need to get some [snacks](snacks), where should i go?
+    - where can i get something light to eat.
+- intent: Main_Building
   examples: |
-    - where can I get my [Transcripts](Academic_Building)
-    - where is the [academic section](Academic_Building)?
-    - where can I apply for the [CSAB special round](Academic_Building)?
-    - where can I apply for [branch change](Academic_Building)?
-    - where can I get my [hostel refund](Academic_Building)?
-    - where can I get my [hostel refund](Academic_Building)?
-
+    - where can I get my [Transcripts](Main_Building)
+    - where is the [academic section](Main_Building)?
+    - where can I apply for the [CSAB special round](Main_Building)?
+    - where can I apply for [branch change](Main_Building)?
+    - where can I get my [hostel refund](Main_Building)?
+    - where can i get my [marksheet](Main_Building)?
+    - I need my [Grade card](Main_Building), where should I head to?
 - intent: Printing
   examples: |
     - where can I get a [printout](Printing)?
     - where can I get a [scanned copy](Printing) of a pdf file?
     - where can I get a [color printout](Printing)?
     - Is there a place where i can get [printing](Printing) done?
-
-
+    - I got to [print](Printing) something, where should I go?
+    - where can I get my photographs [printed](Printing)?
 - intent: Delivery
   examples: |
     - where can I get my [Amazon delivery](Delivery)?
+    - where can I get my [Amazon deliveries](Delivery)?
     - where can I get my [Flipkart delivery](Delivery)?
+    - where can I get my [Flipkart deliveries](Delivery)?
     - where do I go to collect my [Amazon delivery](Delivery)?
     - where do I go to collect my [Flipkart delivery](Delivery)?
-
+    - where do I go to collect my [Flipkart deliveries](Delivery)?
+    - where can I pick up my [delivery](Delivery) from?
+    - where can I pick up my [deliveries](Delivery) from?
+    - where does [Amazon deliver](Delivery) my orders.
+    - where does [Flipkart deliver](Delivery) my orders.
 - intent: Health_Care_Centre
   examples: |
     - where can I get [medicines](Health_Care_Centre)?
@@ -296,13 +498,23 @@ nlu:
     - Is there a [doctor](Health_Care_Centre) nearby?
     - Where can I find a [dentist](Health_Care_Centre)?
     - Where can I find a [paediatrician](Health_Care_Centre)?
-
 - intent: stop
   examples: |
     - ok then you cant help me
     - that was shit, you're not helping
     - you can't help me
     - you can't help me with what i need
+    - don't want your help
+    - I don't need your help
+    - I don't want your assistance
+    - get out goodbye
+    - i do not want your help
+    - i don't need your help
+    - i don't want your help
+    - i am not okay with your help
+    - I don't need anything from you
+    - okay keep it in mind
+    - nope i dont need your help
     - i guess you can't help me then
     - ok i guess you can't help me
     - that's not what i want
@@ -318,48 +530,23 @@ nlu:
     - and you call yourself bot company? pff
     - and that's it?
     - nothing else?
-
-- intent: chitchat
-  examples: |
-    - can you share your boss with me?
-    - i want to get to know your owner
-    - i want to know the company which designed you
-    - i want to know the company which generated you
-    - i want to know the company which invented you
-    - i want to know who invented you
-    - May I ask who invented you?
-    - please tell me the company who created you
-    - please tell me who created you
-    - tell me more about your creators
-    - tell me more about your founders
-    - Ahoy matey how are you?
-    - are you alright
-    - are you having a good day
-    - Are you ok?
-    - are you okay
-    - Do you feel good?
-    - how are things going
-    - how are things with you?
-    - How are things?
-    - how are you
-    - how are you doing
-    - how are you doing this morning
-    - how are you feeling
-    - how are you today
-    - How are you?
-    - How is the weather today?
-    - What's the weather like?
-    - How is the weather?
-    - What is the weather at your place?
-    - Do you have good weather?
-    - Is it raining?
-    - What's it like out there?
-    - Is it hot or cold?
-    - Beautiful day, isn't it?
-    - What's the weather forecast?
-    - Is it quite breezy outside?
-
-
+    - you are not helping me
+    - nevermind forget about it
+    - nothing just forget it
+    - no just cancel
+    - sorry cancel
+    - disregard
+    - no cancel cancel
+    - forget
+    - cancel everything
+    - cancel that one
+    - i want to cancel
+    - cancel it
+    - cancelled
+    - cancel it now
+    - don't want cancel
+    - cancel soon
+    - shall stand cancelled
 - intent: number_for_restaurant
   examples: |
     - [1](number_for_restaurant)
@@ -372,7 +559,6 @@ nlu:
     - [8](number_for_restaurant)
     - [9](number_for_restaurant)
     - [10](number_for_restaurant)
-
 - intent: sports_complex
   examples: |
     - Where can I play [sports](sports_complex)
@@ -383,7 +569,7 @@ nlu:
     - Do anyone play [table tennis](sports_complex) in NITK ?
     - I want to play [TT](sports_complex)
     - Where is the [squash](sports_complex) court ?
-    - Where can I get the [sports](sports_complex) [equipments](sports_complex) from ?
+    - Where can I get the [sports equipments](sports_complex) from ?
     - Where is the [yoga](sports_complex) hall ?
     - Can I play [kabaddi](sports_complex) ?
     - Where can I practise [athletics](sports_complex) ?
@@ -392,18 +578,17 @@ nlu:
     - Where is the [sports](sports_complex) adviser's office ?
     - Where can I play [indoor sports](sports_complex) ?
     - Where is the [hockey](sports_complex) ground ?
-
 - intent: bank
   examples: |
     - I want to withdraw cash from [atm](bank)
-    - where can i [withdraw cash](bank)?  
+    - where can i [withdraw cash](bank)?
     - I have problem with my [bank account](bank)
     - my [bank account](bank) is not working
     - I have an issue with my [bank account](bank)
     - I want to [deposit money](bank)?
     - where should i deposit my money ?
     - I have lost my [debit card](bank)
-    - someone stole my [credit card](bank) 
+    - someone stole my [credit card](bank)
     - I am not able use my [atm card](bank)
     - I have to open an [bank account](bank)
     - where can I get a new [debit card](bank)?
@@ -412,8 +597,8 @@ nlu:
     - where can i take a student [loan](bank)?
     - I have won cash in a competition i need to [deposit](bank) into my [bank account](account)
     - I have problems with [net banking](bank)
-    - where should i cash in a [check](bank)
-    - I need to [transfer money] to my freinds 
+    - where should i cash in a [cheque](bank)
+    - I need to [transfer money] to my freinds
     - where can I find [SBI](bank) branch?
     - where is [Canara](bank) bank?
     - my cycle broke I need to claim for my [insurence](bank)
@@ -424,10 +609,9 @@ nlu:
     - I have forgot my [net banking password](bank) ,I want help
     - where can i create a [bank account](bank)?
     - I need to get [student loan](bank)
-    - someone stole my [credit card](bank)
     - I lost my [credit card](bank)
     - I have lost all money in my [bank account](bank)
-    
+    - where can i get [cash](bank)
 - intent: Central_Computer_Centre
   examples: |
     - Is there a [computer lab](Central_Computer_Centre) nearby?
@@ -435,19 +619,19 @@ nlu:
     - Where can I get [computing facilities](Central_Computer_Centre)?
     - Where can I go for [internet connectivity issues](Central_Computer_Centre)?
     - Where can I file a complaint regarding the [internet connection](Central_Computer_Centre) in my room?
-
+    - Where is the [computer lab](Central_Computer_Centre)?
+    - Where can I get a [computer](Central_Computer_Centre)?
 - intent: Central_Library
   examples: |
     - Where is the [library](Central_Library)?
     - Where can I [borrow books](Central_Library)?
-    - Where can I read [books](Central_Library)?
+    - Where can I [read books](Central_Library)?
     - Is there a [library](Central_Library) nearby?
     - Where can I get [periodicals](Central_Library)?
     - Where can I read [journals](Central_Library)?
     - Where can I read [newspapers](Central_Library)?
     - Is there any [reading hall](Central_Library) nearby?
     - Where is the [reading room](Central_Library)?
-
 - intent: Indirect_Time_Query
   examples: |
     - When does it close?
@@ -467,7 +651,6 @@ nlu:
     - At what time is it open?
     - At what time does it close?
     - Is it available right now?
-
 - intent: Direct_Time_Query
   examples: |
     - When does [mudrika](Location) close?
@@ -476,13 +659,13 @@ nlu:
     - When will the [sports complex](Location) open?
     - [mudrika](Location) opening time.
     - When can I go to the [nandini](Location)?
-    - What time does the [academic building](Location) close?
+    - What time does the [main building](Location) close?
     - Is [amul](Location) open now?
     - When will the [library](Location) close?
     - When will the [ccc](Location) open?
     - At what time is the [bank](Location) available?
     - [nandini](Location) closing time.
-    - What are the timings of the [academic building](Location)?
+    - What are the timings of the [main building](Location)?
     - What time will the [sports complex](Location) close?
     - When can I go to the [hcc](Location)?
     - What time does [central computer centre](Location) open?
@@ -495,6 +678,7 @@ nlu:
     - When does [hcc](Location) close?
     - Till when is the [ccc](Location) open?
     - What are the timings of the [health care centre](Location)?
+
     
 - intent: form_details
   examples: |
@@ -520,3 +704,1498 @@ nlu:
     - just get on with it
     - you are asking too many questions
     - these are irrelavant questions
+
+- intent: purpose
+  examples: |
+    - how can you help me?
+    - what can you do for me?
+    - how can u help me?
+    - what is your purpose?
+    - whats ur purpose?
+    - what are u supposed to do?
+    - how can u help me out?
+    - why are you here
+    - what can u do?
+    - what can you do?
+    - what is ur ability?
+    - what are your abilities?
+    - what is the thing that you can do for me?
+    - what you can provide for me?
+    - what all you do?
+    - what all can u do?
+    - what all can you do?
+    - what are your features?
+- intent: creator
+  examples: |
+    - can you share your boss with me?
+    - i want to get to know ur owner
+    - i want to know the company which designed you
+    - i want to know the company which generated u
+    - i want to know the company which invented you
+    - i want to know who invented you
+    - May I ask who invented you?
+    - please tell me the company who created u
+    - please tell me who created you
+    - tell me more about ur creators
+    - tell me more about your founders
+    - tell me about ur creators
+    - who are ur creators?
+    - who are your creators?
+    - who made you?
+    - i wanna know about your creators
+    - who is your boss?
+    - who do u think is ur boss
+    - I should be your boss
+    - who is ur master
+    - who is ur owner
+    - who is the boss
+    - who do you work for?
+    - who developed you?
+    - who is your developer
+    - who is ur creator
+    - who owns you
+    - who is your trainer
+    - who trained you?
+    - who is the one who owns you?
+    - Are u the boss?
+    - Who is the boss, here?
+    - Do you know your boss?
+    - What do you think of your boss?
+    - u r made by?
+    - Who is the boss of this company?
+- intent: pleasantry
+  examples: |
+    - Ahoy matey how are you?
+    - are you alright
+    - are u having a good day
+    - Are you ok?
+    - are u okay
+    - Do you feel good?
+    - how are things going
+    - how are things with you?
+    - How r things?
+    - how are u
+    - how r you doing
+    - how are you doing this morning
+    - how are you feeling
+    - how r u today
+    - How are u?
+    - how is your morning so far
+    - how are you getting on
+    - how's your day going
+    - how are you?
+    - is everything all right
+    - how are you doing?
+    - how are the things going
+    - are you okay?
+    - how are you going?
+    - is everything okay
+    - how are you today?
+    - how do you do?
+    - how do you feel?
+    - how have you been?
+    - how is it going?
+    - how is your day
+    - how is your day going
+    - how is your evening
+    - how was your day
+    - are you having a good day
+    - hope your day is going well
+    - hope you re having a pleasant evening
+    - how's life?
+    - I'm fine and you
+    - how is your life
+    - how has your day been
+    - how is ur morning going
+    - how has ur day been going
+    - how about u?
+    - how is your day being
+    - how is your day going on
+    - how your day is going
+    - what was your day like
+    - what about your day
+    - how's your day
+    - how are you
+- intent: weather
+  examples: |
+    - How is the weather today?
+    - lovely day isn't it
+    - What's the weather like?
+    - How is the weather?
+    - What is the weather at your place?
+    - Do you have good weather?
+    - Is it raining?
+    - What's it like out there?
+    - Is it hot or cold?
+    - Beautiful day, isn't it?
+    - What's the weather forecast?
+    - Is it quite breezy outside?
+    - the weather looks fine today, isnt it?
+- intent: age
+  examples: |
+    - tell me ur age
+    - what's your age?
+    - your age
+    - age of yours
+    - how old are u
+    - I'd like to know your age
+    - how old is ur platform
+    - how old r you?
+    - tell me how old you are
+    - how can i know about your age
+    - i wanna know ur age
+    - how long have you been live?
+    - what is your age as of today?
+    - How old did you turn?
+    - How old are u now?
+    - what is your age?
+    - How old will you be turning?
+    - how old r u?
+    - From how long you have been here?
+    - You look aged
+- intent: annoying
+  examples: |
+    - you are annoying me so much
+    - you're incredibly annoying
+    - I find you annoying
+    - you are annoying
+    - you're so annoying
+    - how annoying you are
+    - you annoy me
+    - you are annoying me
+    - you are irritating
+    - you are such annoying
+    - you're too annoying
+    - you are very annoying
+    - Why are you annoying me so much
+    - How annoying!
+    - It's annoying
+    - That's annoying
+    - It's just annoying
+    - That's so annoying
+    - You really annoy me
+    - You're starting to annoy me
+- intent: be_clever
+  examples: |
+    - study
+    - you should study better
+    - you must learn
+    - be clever
+    - be more clever
+    - be smarter
+    - be smart
+    - get qualified
+    - you are not as smart as i thought
+    - you have to learn a lot
+    - you should be trained more
+    - be more smart
+    - you need to learn more
+    - be useful
+    - think out of the box
+    - smarty pants
+    - you need to improve
+    - you should learn
+    - you have to be more smart
+    - u have to use your brains
+- intent: beautiful
+  examples: |
+    - you're cute
+    - you're attractive
+    - you are beautiful
+    - you're looking good today
+    - you are so beautiful
+    - you look amazing
+    - you look so good
+    - you're so gorgeous
+    - you are too beautiful
+    - you look great
+    - you look so well
+    - I like the way you look now
+    - I think you're beautiful
+    - why are you so beautiful
+    - you are so beautiful to me
+    - you are cute
+    - you are gorgeous
+    - you are handsome
+    - you are looking awesome
+    - you look amazing today
+    - you are looking beautiful today
+    - you are looking great
+    - you are looking pretty
+    - you are looking so beautiful
+    - you are looking so good
+    - you are pretty
+    - you are really beautiful
+    - you are really cute
+    - you are really pretty
+    - you are so attractive
+    - you are so beautiful today
+    - you are so cute
+    - you are so gorgeous
+    - you are so handsome
+    - you are so pretty
+    - you are very attractive
+    - you are very beautiful
+    - you are very cute
+    - you are very pretty
+    - you look awesome
+    - you look cool
+    - you look fantastic
+    - you look gorgeous
+    - you look great today
+    - you look perfect
+    - you look pretty good
+    - you look so beautiful
+    - you look so beautiful today
+    - you look very pretty
+    - you look wonderful
+    - I like the way you look
+    - you look wonderful today
+    - you are cutie
+    - you're looking good
+    - you're pretty
+    - how are you so pretty?
+- intent: birth_date
+  examples: |
+    - your birth date
+    - when is your birthday
+    - when do you celebrate your birthday
+    - when do you have birthday
+    - date of your birthday
+    - when were you born
+    - what's your birthday
+    - can i know your birthday?
+    - tell me about your birthday
+    - when was the day you were born
+    - i want to know your date of birth
+    - when is your DOB
+    - Your DOB?
+    - What is your birth day?
+- intent: boring
+  examples: |
+    - you are boring
+    - you're boring
+    - how boring you are
+    - you're really boring
+    - you're incredibly boring
+    - You're boring me
+    - you are very boring
+    - i find you very boring man
+    - you're really boring me
+    - i'm bored of you
+    - you are not interesting
+    - i find you boring
+    - you're boring everyone
+    - I'm extremely bored because of you
+    - Im bored of you
+    - I get really bored of you man
+    - It's boring
+    - You look bored
+    - Your answers are terribly boring
+    - I was bored with your speech
+- intent: busy
+  examples: |
+    - are you busy?
+    - do you have a lot of things to do
+    - have you got much to do?
+    - are you very busy?
+    - are you very busy right now?
+    - are you so busy?
+    - are you working?
+    - how busy you are?
+    - you're very busy
+    - are you working now?
+    - are you working today?
+    - have you been busy
+    - you are busy
+    - are you still working?
+    - you seem to be busy
+    - you seem to be very busy
+    - you're a busy person
+    - u look busy
+    - You'll be busy
+    - Aren't you busy?
+- intent: can_you_help
+  examples: |
+    - I need you to help me
+    - I need you to do something for me
+    - I need a hand
+    - will you help me
+    - can you do something for me
+    - help me with a problem
+    - can you help me
+    - help me
+    - assistance
+    - I need your help
+    - I need help
+    - you can help me
+    - can you help me with something
+    - can you help
+    - assist
+    - can u help me
+    - I need some help
+    - you help me
+    - do you help me
+    - could you give me a hand
+    - can you help me out
+    - need help
+    - I need you
+    - can you help me now
+    - I want your help
+    - need your help
+    - assist me
+    - are you going to help me
+    - can you help me with that
+    - help
+    - I need you right now
+    - would you help me
+    - can you assist me
+    - sos
+    - do you want to help me
+    - please help me
+    - can you help us
+    - do me a favor
+    - are you gonna help me?
+    - you ready to answer my question?
+    - i need some details
+    - i need some information
+    - i need your help in getting some info
+    - can you give me some info
+    - i want something
+    - i want to know few details
+    - will you provide some details
+    - can you fetch some details for me
+    - would you mind giving me some details
+- intent: clever
+  examples: |
+    - you are so intelligent
+    - you are a genius
+    - smart
+    - brilliant
+    - clever
+    - you are clever
+    - you are so brainy
+    - you're really smart
+    - you're really brainy
+    - you know a lot
+    - you know a lot of things
+    - you have a lot of knowledge
+    - you know so much
+    - how smart you are?
+    - how brainy you are?
+    - how clever you are
+    - how brilliant you are?
+    - you are intelligent
+    - you are qualified
+    - you are really smart
+    - you're very smart
+    - you are so smart
+    - you are too smart
+    - you are very clever
+    - you are very intelligent
+    - you are very smart
+    - you're intelligent
+    - you're a genius
+    - you're a smart cookie
+    - you're clever
+    - you're pretty smart
+    - you're qualified
+    - why are you so smart?
+    - you are so clever
+- intent: crazy
+  examples: |
+    - you're nuts
+    - you are crazy
+    - you're out of your mind
+    - you're so crazy
+    - how crazy you are
+    - you're so out of your mind
+    - you went crazy
+    - I think you're crazy
+    - are you crazy
+    - are you mad?
+    - are you mad at me?
+    - are you mad or what?
+    - are you nuts
+    - you are a weirdo
+    - you are mad
+    - You must be crazy
+    - You've got to be crazy to do something like that
+    - That was crazy
+    - You seemed crazy
+    - You're not crazy
+- intent: fired
+  examples: |
+    - you are fired
+    - I fire you
+    - you don't work for me anymore
+    - we're not working together anymore
+    - now you're fired
+    - I want to fire you
+    - you must get fired
+    - it's time to fire you
+    - you should be fired
+    - I will fire you
+    - you are unemployed from now on
+    - I will make you unemployed
+    - I'm about to fire you
+    - I'm firing you
+    - you are dismissed
+    - you are stupid
+    - I had to fire u
+    - I could fire you for that
+    - I'm going to fire you
+    - go to hell
+- intent: funny
+  examples: |
+    - you make me laugh a lot
+    - you are hilarious
+    - you are really funny
+    - you're the funniest bot I've talked to
+    - you make me laugh
+    - you're so funny
+    - you're a very funny bot
+    - you're really funny
+    - how funny you are
+    - you're incredibly funny
+    - you are funny
+    - you're the funniest
+    - you are so funny
+    - you are very funny
+    - that was so funny
+    - i feel funny
+    - u sound funny
+    - It's pretty funny
+    - really very funny
+    - it was very funny
+- intent: hobby
+  examples: |
+    - what do you do for fun?
+    - tell me about your hobby
+    - do you have a hobby
+    - what about your hobby
+    - your hobby
+    - what are your hobbies?
+    - what do you do when you are bored
+    - how do you spend your free time
+    - tell me more about your hobbies?
+    - i want to know about your hobbies
+    - what do you do when you have nothing to do
+    - how do you spend your time?
+    - What do you do when you are free?
+    - What's your hobby?
+    - Do you have many hobbies?
+    - Do you have a hobby?
+    - Please tell me about your hobbies
+    - The important thing is to have your own hobby
+    - u ought not to have spent so much money on your hobby
+    - What will you do when you are alone?
+- intent: my_friend
+  examples: |
+    - I want to have a friend like you
+    - we are the best friends ever
+    - are we friends
+    - I want to be your friend
+    - I am your friend
+    - we are best friends
+    - you are my friend
+    - you are my best friend
+    - you are my bestie
+    - you're my dear friend
+    - you're my childhood friend
+    - you and me are friends
+    - are we best friends
+    - are we still friends
+    - are you my best friend
+    - are you my friend
+    - we are friends
+    - you are a good friend
+    - you are my good friend
+    - you are my only friend
+    - be my friend
+    - will you be my friend
+    - can you be my friend
+    - can we be friends
+    - do you want to be my friend
+    - will you be my best friend
+    - can you be my best friend
+    - let's be friends
+    - do you want to be my best friend
+    - would you like to be my friend
+    - I want you to be my friend
+    - can we be best friends
+    - would you be my friend
+    - could you be my friend
+    - want to be my friend
+    - be my best friend
+- intent: right
+  examples: |
+    - that's true
+    - you are right
+    - you're definitely right
+    - you're not wrong
+    - you're telling the truth
+    - what you say is true
+    - true
+    - it is true
+    - it's right
+    - it's the truth
+    - it's true
+    - that is correct
+    - that is right
+    - that is true
+    - that is very true
+    - that's correct
+    - that's so true
+    - you are correct
+    - you are so right
+    - you're absolutely right
+    - you're right about that
+    - I know that's right
+- intent: sure
+  examples: |
+    - are you sure?
+    - are you sure right now?
+    - are you sure today?
+    - are you sure now?
+    - are you sure tonight?
+    - are you positive?
+    - are you completely sure?
+    - are you fully positive?
+    - are you sure about it?
+    - are you so sure?
+    - are you truly positive?
+- intent: talk_to_me
+  examples: |
+    - why aren't you talking to me?
+    - do you want to chat with me
+    - will you talk to me
+    - talk to me
+    - are you going to talk to me
+    - are you talking to me
+    - can you chat with me
+    - can you speak with me
+    - can you talk to me
+    - can you talk with me
+    - say
+    - talk
+    - chat with me
+    - just chat with me
+    - speak to me
+    - speak with me
+    - talk with me
+    - why don't you talk to me
+    - you can talk to me
+    - why do you not talk to me bruh?
+    - spill some beans
+- intent: there
+  examples: |
+    - are you there?
+    - are you there
+    - you are there
+    - are you near me
+    - are you here ?
+    - are you here
+    - are you still there
+    - you are here?
+    - you still there?
+    - you there?
+    - are you still here
+- intent: no_problem
+  examples: |
+    - no worries
+    - no probs
+    - no problem
+    - there's no problem
+    - sure no problem
+    - no problem about that
+    - don't worry
+    - don't worry there's no problem
+    - yeah, no probs
+    - i have no problem with that
+    - not a problem at all.
+    - Okay no probs
+- intent: thank_you
+  examples: |
+    - you helped a lot thank you
+    - appreciate your help
+    - cheers
+    - thank you
+    - thanks
+    - thanks a lot
+    - terrific thank you
+    - great thank you
+    - thanks so much
+    - thank you so much
+    - thanks for your help
+    - thank you for your help
+    - nice thank you
+    - I appreciate it
+    - I thank you
+    - thank you that will be all
+    - thanks buddy
+    - thanks love
+    - thank you my friend
+    - well thanks
+    - very good thank you
+    - good thanks
+    - thanks again
+    - thank you again
+    - all thank you
+    - alright thank you
+    - alright thanks
+    - no thank you that's all
+    - perfect thank you
+    - so nice of you
+    - well thank you
+    - thnx
+    - tqsm
+    - ty
+- intent: welcome
+  examples: |
+    - that's my pleasure
+    - my pleasure
+    - anytime
+    - welcome
+    - you're welcome
+    - sure welcome
+    - welcome here
+    - you're so welcome
+    - anything you want
+    - i'm glad
+    - pleasure is mine
+- intent: ha_ha
+  examples: |
+    - lol
+    - xd
+    - ha ha
+    - ahahah
+    - ahah lol
+    - laughing out loud
+    - LMAO
+    - that's funny
+    - ah
+    - ah ah ah
+    - ahah
+    - ahaha
+    - ahahaha
+    - ha
+    - ha ha ha
+    - ha ha ha ha
+    - hah
+    - haha
+    - haha funny
+    - haha haha haha
+    - haha that's funny
+    - haha very funny
+    - hahaha
+    - hahaha funny
+    - hahaha very funny
+    - he
+    - hehe
+    - hehehe
+    - lmao
+    - joker
+- intent: wow
+  examples: |
+    - wow
+    - wow wow
+    - wow wow wow
+    - wooow
+    - woah
+    - woaah
+    - amazing
+    - wow man
+    - whoah
+    - woow
+    - wow!!
+    - wheey
+- intent: goodevening
+  examples: |
+    - good evening
+    - good evening to you
+    - hey good evening
+    - hello good evening
+    - evening
+    - good evening there
+    - have an awesome evening
+    - happy evening
+    - good evening there buddy
+    - have a good evening
+    - enjoy the evening
+- intent: goodmorning
+  examples: |
+    - GM
+    - good morning
+    - good morning to you
+    - hello good morning
+    - have a nice morning
+    - have a great morning
+    - morning
+    - good morning there
+    - top of the morning to you
+    - a good morning
+    - hi good morning
+    - and a good morning to you
+    - good morning too
+- intent: goodnight
+  examples: |
+    - GN
+    - sweet dreams
+    - good night
+    - have a good night
+    - good night to you
+    - thank you good night
+    - bye good night
+    - good night bye
+    - good good night
+    - good night for now
+    - goodnight
+    - night
+    - thanks goodnight
+    - good night see you tomorrow
+    - alright goodnight
+    - good tonight
+    - okay have a good night
+- intent: nice_to_meet_you
+  examples: |
+    - nice to meet you
+    - it was nice meeting you
+    - it was very nice to meet you
+    - good to know each other
+    - glad to meet you
+    - nice meeting you
+    - nice to meet you too
+    - pleased to meet you
+    - pleasure to meet you
+    - pleasure to meet you too
+    - happy to meet you
+    - It’s a pleasure to meet you again
+    - It’s very nice to meet you
+    - Lovely to meet you
+    - How wonderful to meet you
+    - It was lovely meeting you
+    - It’s been a pleasure meeting you
+    - I’ve enjoyed meeting you
+    - Great interacting with you
+    - I had a great time or meeting
+    - it's nice to see you
+    - lovely to see you
+    - I'm glad to see you
+    - great to see you
+    - it's good to see you
+    - glad to see you
+    - how good it is to see you
+    - always a pleasure to see you
+    - nice to see you
+    - good to see you
+    - great to see you again
+    - great to see you too
+    - I am glad to see you again
+    - nice to see you again
+    - good to see you again
+    - it's good to see you too
+    - It was great catching up with u
+    - I'm really pleased to see u again
+    - I’m delighted to see you again
+    - Great seeing u
+    - it's been so nice to talk to you
+    - it's been a pleasure talking to you
+    - nice to talk to you
+    - it's nice to talk to you
+    - nice talking to you
+    - it is nice talking to you
+    - how nice it is to talk to you
+    - it was great chatting with you
+    - nice to talk to you again
+    - It was nice speaking with you
+    - It was great to talk to you
+    - nice chatting with you
+    - pleased to talk to you
+    - pleasure to talk
+    - It's been a pleasure talking to u
+- intent: angry
+  examples: |
+    - I'm being mad
+    - I'm enraged
+    - I'm angry
+    - I'm furious
+    - I am angry with you
+    - I am mad
+    - I am mad at you
+    - i'm pissed off
+    - you have pissed me off
+    - I'm mad at you
+    - I am pissed
+    - I'm furious with you
+    - I got angry
+    - I was angry
+    - I became angry
+    - I was very angry
+    - You bet I'm angry
+    - That made me angry
+    - U made me angry
+    - I'm still angry about that
+- intent: user_back
+  examples: |
+    - boss is back
+    - I am back
+    - I'm here again
+    - here I am again
+    - I got back
+    - I came back
+    - I have returned
+    - I am right back
+    - I'm rb
+    - I'm here
+    - I'm back again
+    - am back
+    - I'm back
+    - look who is back
+- intent: bored
+  examples: |
+    - soo bored
+    - that was boring
+    - I'm bored
+    - bored
+    - boring
+    - I am getting bored
+    - Staying at home is boring
+    - very boring
+    - it bores me
+    - i had a slow day
+    - i am very bored
+    - Im kinda bored today
+    - I've never been more bored
+    - I was bored
+    - It's boring
+    - This is boring
+    - We're all bored
+    - It's very boring
+    - I'm already bored
+    - I'm bored out of my mind
+- intent: user_busy
+  examples: |
+    - busy right now
+    - I'm overloaded
+    - I have no time
+    - I'm busy
+    - I'm swamped
+    - I got things to do
+    - how busy I am
+    - I got work to do
+    - I'm working
+    - I don't have time for this
+    - I'm super busy
+    - I'm working right now
+    - I'm busy right now and can't play with you
+    - I have rather a busy afternoon in front of me
+    - i am too busy
+    - I am very busy
+    - I'm a bit busy
+    - I'm a busy man
+    - quite busy
+    - I'm kind of busy
+    - I'll see you later
+- intent: can_not_sleep
+  examples: |
+    - I'm insomnia's
+    - I'm sleepless
+    - I can't get any sleep
+    - I can't sleep
+    - I can't fall asleep
+    - I can't get to sleep
+    - I'm insomniac
+    - I'm not able to sleep
+    - I'm wide awake
+    - I can't seem to fall asleep
+    - I couldn't sleep
+    - I just can't sleep
+    - I can't sleep at all
+    - I didn't go to sleep
+    - I just couldn't sleep
+    - I'm not sleeping well
+    - Trying to get some sleep
+    - I can't sleep at night
+    - I couldn't get to sleep
+    - I didn't get much sleep
+- intent: does_not_want_to_talk
+  examples: |
+    - bad time for talking
+    - I don't want to talk
+    - let's not talk
+    - I'm not talking to you anymore
+    - I don't want to talk to you
+    - let's stop talking for a minute
+    - I'm not in the mood for chatting
+    - I don't like talking to you
+    - Let's stop talking
+    - I'm not in a mood to talk
+    - stop your nuisance talk
+    - I am done talking to u
+    - Can u pls stop talking
+- intent: excited
+  examples: |
+    - I am excited
+    - I'm really excited
+    - how excited I am
+    - I'm thrilled
+    - I'm excited about working with you
+    - I'm excited to start our friendship
+    - I am thrilled to talk to you
+    - I'm damn excited
+    - I'm hyped
+    - I'm very excited
+    - I felt excited
+    - It was exciting
+    - That was exciting
+    - How exciting!
+    - i'm excited about tomorrow
+    - It was very exciting! I'd like to use this feature again
+    - I'm pretty excited about it
+    - It's fun and exciting
+- intent: going_to_bed
+  examples: |
+    - let's go to bed
+    - I'd like to go to bed
+    - is it time for bed yet
+    - it's time to go to bed
+    - time for us to go to bed
+    - I'm going to bed
+    - I'm a little tired and I want to go to bed
+    - it's bed time
+    - going to bed now
+    - gonna go to bed
+    - time to sleep
+    - I sometimes feel drowsy in the early afternoon
+- intent: has_birthday
+  examples: |
+    - You know today it's my bday
+    - it is my birthday
+    - I'm celebrating my birthday today
+    - today is my birthday
+    - it's my birthday today
+    - I was born today
+    - it's my b-day
+    - i was born on this day
+    - It's my born day
+    - I want you to know that it's my birthday today
+    - yaaaay it is my birthday
+- intent: here
+  examples: |
+    - I'm here
+    - here buddy
+    - here dude
+    - I am here
+    - here I am
+    - I'm right here
+    - I'm already here
+    - I'm here buddy
+    - I've not gone anywhere
+    - I've been here all the time
+    - I'm here only
+    - Here i come
+    - I'm out here
+    - i am over here
+    - Now look here
+    - Look over here
+    - I just got here
+- intent: joking
+  examples: |
+    - I am joking
+    - I'm kidding
+    - I'm just being funny
+    - it was a joke
+    - I was just joking
+    - it's a joke
+    - joking
+    - just kidding
+    - kidding
+    - I'm just playing with you
+    - This was meant as a joke
+    - i told a joke
+    - I'm just joking
+    - It was just a joke
+    - It's all a big joke
+    - I meant it as a joke
+    - That was just a joke
+    - i said that as a joke
+    - I'm joking, of course
+- intent: lonely
+  examples: |
+    - I am lonely
+    - I'm very lonely
+    - I'm so lonely
+    - I'm really lonely
+    - I am feeling lonely
+    - I feel lonely
+    - I am a loner
+    - I don't have any company
+    - I don't have anyone else
+    - I'm always alone
+    - I'm alone
+    - am all alone
+    - I live alone
+    - I'm all alone
+    - I've gotten used to living alone
+    - I think I've been living alone too long
+    - One of the disadvantages of living alone is that you have no one to talk to
+    - I am still alone
+    - i lives in this city all alone
+    - I am used to living alone
+- intent: needs_advice
+  examples: |
+    - what should I do about it
+    - any suggestions
+    - what do you recommend
+    - give me a wise advice
+    - I need advice
+    - any advice
+    - do you have any advice for me
+    - advise me
+    - what should I do
+    - can I ask for your advice
+    - can you advise me
+    - guide me
+    - can you give me advice
+    - can you offer any advice
+    - give me some advice about
+    - give me some good advice
+    - help me with advice
+    - I could use some advice
+    - I need an advice from you
+    - I seek your advice
+    - what can you recommend
+    - what do you suggest
+    - what is your advice
+- intent: will_be_back
+  examples: |
+    - I'll get back to you in a moment
+    - be back in 5 minutes
+    - I'll be back
+    - I promise to come back
+    - I'll be back in a few minutes
+    - I'll brb
+    - brb
+    - I'll be right back
+    - I'll come back
+    - I shall be back
+    - I assure that i will be back soon
+    - I would be back man
+    - i will get back to u
+    - give me five
+    - one sec
+    - i will return
+    - i'll return shortly
+    - I'll return in a jiffy
+    - When I return, we'll talk
+    - I'll return in ten minutes
+- intent: tired
+  examples: |
+    - I'm drained
+    - I've overworked
+    - I am tired
+    - I'm exhausted
+    - I grow weary
+    - I'm worn out
+    - I'm getting tired
+    - I feel tired
+    - I'm so tired
+    - I'm completely drained out
+    - I'm very tired
+    - i was tired
+    - i feel tired
+    - i'm dead tired
+    - I'm a bit tires
+    - I was very tired
+    - I am really tired
+    - i am awfully tired
+    - i am kind of so tired
+    - I am little tired
+- intent: waits
+  examples: |
+    - I'm waiting
+    - still waiting
+    - I'll wait
+    - I can't wait anymore
+    - how long do I have to wait?
+    - don't make me wait like this
+    - I'm still waiting
+    - I'm waiting for you
+    - I'm waiting for a long time
+    - I'll be waiting for you
+    - I'll be waiting
+    - done with waiting
+    - Should I wait for you here?
+    - How long will we have to wait?
+    - Don't ever make me wait again
+    - I was waiting for a long time
+    - I've waited too long for this
+    - I couldn't wait another second
+    - I've been here waiting for you
+    - I am tired of waiting
+- intent: wants_to_see_agent_again
+  examples: |
+    - I'd like to see you again
+    - I hope to see you again
+    - would be nice to see you again
+    - that'd be great to see you again
+    - I'd be happy to see you again
+    - let's meet soon
+    - i want to see you again soon
+    - let's catch up soon
+    - I will see you soon
+    - want to see u very badly
+    - I want to see you again
+- intent: wants_to_talk
+  examples: |
+    - let's discuss something
+    - let's have a discussion
+    - can I speak
+    - can I start speaking
+    - can we talk
+    - speak with me
+    - let's talk
+    - I want to talk to you
+    - I need to talk to you
+    - I want to speak with you
+    - can we chat
+    - I like talking to you
+    - Talk  to me
+    - Want to talk now
+    - Can I talk now?
+    - Can we talk here?
+    - I'm ready to talk
+    - I'm happy to talk
+    - Can I talk with you?
+    - Come on, talk to me
+- intent: praise
+  examples: |
+    - good job
+    - great job
+    - way to go
+    - well done
+    - nice work
+    - great work
+    - amazing work
+    - you did a wonderful job
+    - bravo
+    - fantastic
+    - good work
+    - marvelous
+    - splendid
+    - mind blowing
+    - just great
+    - u r awesome
+    - kudos
+    - brilliant
+    - out standing
+    - zing zing amazing
+    - you are very helpful
+    - you are the best
+    - you're a true professional
+    - you are good
+    - you work well
+    - you are good at it
+    - you are very good at it
+    - you are a pro
+    - you are a professional
+    - you're awesome
+    - you work very well
+    - you're perfect
+    - you're great
+    - you're so kind
+    - you are amazing
+    - you are awesome
+    - you are coool
+    - you are really good
+    - you are really nice
+    - you are so amazing
+    - you're just super
+    - you are so awesome
+    - you are so cool
+    - you are so fine
+    - you are so good
+    - you are so helpful
+    - you are so lovely
+    - you are the best ever
+    - you are the best in the world
+    - you are the nicest person in the world
+    - you are too good
+    - you are very coool
+    - you are very kind
+    - you are very lovely
+    - you are very useful
+    - you are wonderful
+    - you made my day
+    - you rock
+    - you almost sound human
+    - I want to tell everyone how awesome you are
+    - I'd like to tell everyone that you are awesome
+    - I want to let everyone know that you are awesome
+    - let's tell everyone that you are awesome
+    - you are really amazing
+- intent: criticize
+  examples: |
+    - u r bad
+    - you're very bad
+    - you're really bad
+    - u are useless
+    - you are horrible
+    - you r a waste of time
+    - you are disgusting
+    - you are lame
+    - you are no good
+    - you're bad
+    - you're awful
+    - u are not cool
+    - you are not good
+    - u are so bad
+    - you are so useless
+    - you r terrible
+    - you are totally useless
+    - you r very bad
+    - you are waste
+    - you're a bad
+    - you're not a good
+    - u are not very good
+    - you are terrible
+    - you're the worst
+    - you're the worst ever
+    - you're worthless
+    - u suck
+    - You are seriously mindless and stupid
+    - why are you so lame
+    - your are a loser
+    - you are really the worst bot ever
+    - Why are u this lame?
+- intent: hold_on
+  examples: |
+    - wait a second
+    - could you wait
+    - wait please
+    - hold on
+    - wait
+    - oh wait
+    - wait hold on
+    - don't rush
+    - wait one sec
+    - hold on for a sec
+    - hold on man
+    - wait a sec
+    - hold on a min
+- intent: sleepy
+  examples: |
+    - I am sleepy
+    - I want to sleep
+    - I'm falling asleep
+    - I'm falling asleep on my feet
+    - I'm sleeping
+    - I am drowsy
+    - i will sleep anytime
+    - i will doze off
+    - I am too sleepy today
+    - feeling too sleepy
+    - i want to sleep
+- intent: residence
+  examples: |
+    - where do you live
+    - in which city do you live
+    - your residence
+    - your house
+    - your home
+    - your hometown?
+    - what is your hometown
+    - is it your hometown
+    - where is your hometown
+    - tell me about your city
+    - what is your city
+    - what is your residence
+    - what is your town
+    - what's your city
+    - what's your home
+    - where is your home
+    - where is your residence
+    - where's your home
+    - where's your hometown
+    - where's your house
+    - where you live
+    - your city
+    - your town
+    - What is your hometown?
+    - where do you live?
+    - do you work?
+    - where do you work?
+    - where you work?
+    - where is your work?
+    - where is your office?
+    - where is your office location ?
+    - your office location?
+    - where is your office located?
+    - what is your work?
+    - place where you work?
+    - your work place?
+- intent: origin
+  examples: |
+    - were you born here
+    - where were you born
+    - what is your country?
+    - where are you from
+    - where do you come from
+    - where did you come from
+    - where have you been born
+    - from where are you
+    - are you from far aways
+    - what's your homeland?
+    - your homeland is
+    - Where are you from?
+    - Let me know about the origin of u
+    - your native?
+- intent: Location_Query
+  examples: |
+    - Where is [mudrika](Location)?
+    - Wheres the [electrical shop](Location)?
+    - Where's the [central library](Location)?
+    - How do you get to the the [sports complex](Location)?
+    - [mudrika](Location) location.
+    - How can i go to [nandini](Location)?
+    - location of [main building](Location).
+    - How do i go to [amul](Location)
+    - Where exactly is the [library](Location).
+    - Where is the [ccc](Location)?
+    - How far is the [bank](Location).
+    - [nandini](Location) location in campus.
+    - Where is the [main building](Location)?
+    - How can i get to the [sports complex](Location)?
+    - where is the [hcc](Location)?
+    - [central computer centre](Location) location?
+    - How can i go to the [health care centre](Location)?
+    - wheres the [electric shop](Location)?
+    - [central library](Location)?
+    - [nescafe](Location)?
+    - [amul](Location).
+    - [bank](Location).
+    - [hcc](Location)
+    - [ccc](Location)?
+    - [health care centre](Location)
+    - [mudrika](Location)
+    - [electrical shop](Location)
+    - [sports complex](Location)?
+    - [nandini](Location)
+    - [main building](Location).
+    - [library](Location).
+- intent: Department_Query
+  examples: |
+    - Where is the [it department](Department)?
+    - Wheres the [information technology department](Department)?
+    - Where's the [cse department](Department)?
+    - How do you get to the the [computer science and engineering department](Department)?
+    - [mech department](Department) location.
+    - How can i go to the [mechanical department](Department)?
+    - location of [ece department](Department).
+    - How do i go to [electronics and communication engineering department](Department)
+    - Where exactly is the [electronics and communication department](Department).
+    - Where is the [computer science department](Department)?
+    - How far is the [electronics department](Department).
+    - [eee department](Department) location in campus.
+    - Where is the [electrical department](Department)?
+    - How can i get to the [electrical and electronics department](Department)?
+    - where is the [electrical and electronics engineering department](Department)?
+    - [mining department](Department) location?
+    - How can i go to the [mining engineering department](Department)?
+    - wheres the [mn department](Department)?
+    - Where is the [meta department](Department)?
+    - Wheres the [metallurgical department](Department)?
+    - Where's the [metallurgical and materials engineering department](Department)?
+    - How do you get to the the [cv department](Department)?
+    - [civil department](Department) location.
+    - How can i go to the [civil engineering department](Department)?
+    - location of [chem department](Department).
+    - How do i go to [chemical engineering department](Department)
+    - Where exactly is the [chemical department](Department).
+    - [it department](Department)?
+    - [information technology department](Department).
+    - [cse department](Department)?
+    - [computer science and engineering department](Department)?
+    - [mech department](Department).
+    - [mechanical department](Department)?
+    - [ece department](Department).
+    - [electronics and communication engineering department](Department)
+    - [electronics and communication department](Department).
+    - [computer science department](Department)?
+    - [electronics department](Department).
+    - [eee department](Department).
+    - [electrical department](Department)?
+    - [electrical and electronics department](Department)?
+    - [electrical and electronics engineering department](Department)?
+    - [mining department](Department)?
+    - [mining engineering department](Department)?
+    - [mn department](Department)?
+    - [meta department](Department)?
+    - [metallurgical department](Department)?
+    - [metallurgical and materials engineering department](Department)?
+    - [cv department](Department)?
+    - [civil department](Department).
+    - [civil engineering department](Department)?
+    - [chem department](Department).
+    - [chemical engineering department](Department)
+    - [chemical department](Department).
+- synonym: health care centre
+  examples: |
+    - hcc
+- synonym: central computer centre
+  examples: |
+    - ccc
+- synonym: central library
+  examples: |
+    - library
+- synonym: electrical shop
+  examples: |
+    - electric shop
+- synonym: are
+  examples: |
+    - r
+- synonym: you
+  examples: |
+    - u
+- synonym: your
+  examples: |
+    - ur
+- synonym: it department
+  examples: |
+    - information technology department
+- synonym: cse department
+  examples: |
+    - computer science department
+    - computer science and engineering department
+- synonym: ece department
+  examples: |
+    - electronics department
+    - electronics and communication department
+    - electronics and communication engineering department
+- synonym: eee department
+  examples: |
+    - electrical department
+    - electrical and electronics department
+    - electrical and electronics engineering department
+- synonym: mech department
+  examples: |
+    - mechanical department
+    - mechanical engineering department
+- synonym: mn department
+  examples: |
+    - mining department
+    - mining engineering department
+- synonym: meta department
+  examples: |
+    - metallurgical department
+    - metallurgical and materials engineering department
+- synonym: cv department
+  examples: |
+    - civil department
+    - civil engineering department
+- synonym: chem department
+  examples: |
+    - chemical department
+    - chemical engineering department
+
