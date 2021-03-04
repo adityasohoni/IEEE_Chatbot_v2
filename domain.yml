@@ -18,7 +18,7 @@ intents:
   - request_restaurant
   - cuisine
   - snacks
-  - Academic_Building
+  - Main_Building
   - Printing
   - Delivery
   - Health_Care_Centre
@@ -106,7 +106,6 @@ entities:
   - name
   - Central_Computer_Centre
   - Central_Library
-  - Location
   - bank
   - restaurant_form_details
   - Location
@@ -801,7 +800,6 @@ actions:
 - utter_restart
 - utter_right
 - utter_sleepy
-- utter_slots_values
 - utter_sorry
 - utter_submit
 - utter_sure
