@@ -19,7 +19,7 @@ pipeline:
   #   dimensions:
   #   - number
   - name: DIETClassifier
-    epochs: 100
+    epochs: 150
   - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: 300
