@@ -626,7 +626,7 @@ responses:
       text: Amul is located near the boys hostel, besides the sports complex.
       title: Amul
   utter_location_nescafe:
-  - custom: 
+  - custom:
       text: Nescafe is right in front of the boys hostel.
       title: Nescafe
   utter_location_nandini:
@@ -679,7 +679,7 @@ responses:
       title: ECEDepartment
   utter_location_eee_department:
   - custom:
-      text:  The Electrical and Electronics Engineering Department is in the west side of the campus, near LHC-C and ECE Department.
+      text: The Electrical and Electronics Engineering Department is in the west side of the campus, near LHC-C and ECE Department.
       title: EEEDepartment
   utter_location_mech_department:
   - custom:

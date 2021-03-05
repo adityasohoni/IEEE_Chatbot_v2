@@ -430,6 +430,8 @@ nlu:
     - book restaurant
     - where can i get good food.
     - tell me a place to get great food.
+    - where can i find some good food?
+    - where can i find tasty food?
 - intent: cuisine
   examples: |
     - where can I get [cuisine](cuisine)
@@ -498,6 +500,8 @@ nlu:
     - Is there a [doctor](Health_Care_Centre) nearby?
     - Where can I find a [dentist](Health_Care_Centre)?
     - Where can I find a [paediatrician](Health_Care_Centre)?
+    - I have a [fever](Health_Care_Centre).
+    - I have a [fever](Health_Care_Centre), where should i go?
 - intent: stop
   examples: |
     - ok then you cant help me
