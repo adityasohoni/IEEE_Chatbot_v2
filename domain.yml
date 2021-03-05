@@ -379,15 +379,15 @@ responses:
       text: Central Library is what you are seeking, it is right behind the Main Building, beside the Pavillion.
       title: CentralLibrary
   utter_open_close_time_snacks:
-  - text: Amul is open from 7:45 AM to 7:45 PM, Nandini is available from 8:30 AM to 10:30 PM and Nescafe from XX:XX AM to XX:XX PM all days of the week(to be updated).
+  - text: Amul is open from 7:45 AM to 7:45 PM, Nandini is available from 8:30 AM to 10:30 PM and Nescafe from 7:00 AM to 9:30 PM all days of the week.
   utter_open_close_time_amul:
   - text: Amul is open from 7:45 AM to 7:45 PM all days of the week.
   utter_open_close_time_nescafe:
-  - text: Nescafe is open from XX:XX AM to XX:XX PM (to be updated)
+  - text: Nescafe is open from 7:00 AM to 9:30 PM all days of the week.
   utter_open_close_time_nandini:
   - text: Nandini is open from 8:30 AM to 10:30 PM all days of the week.
   utter_open_close_time_main_building:
-  - text: The Main Building is open from XX:XX AM to XX:XX PM (to be updated)
+  - text: The Main Building is open from 9:00 AM to 5:00 PM, Monday to Friday.
   utter_open_close_time_printing:
   - text: Mudrika is open from 8:30 AM to 6:30 PM all days of the week.
   utter_open_close_time_delivery:
@@ -395,7 +395,7 @@ responses:
   utter_open_close_time_health_care_centre:
   - text: The Heath Care Centre is open from 9:00 AM to 6:00 PM Monday to Friday, on Saturday it closes at 4:00 PM and at 12:00 PM on Sundays.
   utter_open_close_time_sports_complex:
-  - text: The Sports Complex is open from XX:XX AM to XX:XX PM (to be updated).
+  - text: The Sports Complex is open from 6:00 AM to 8:00 AM and 4:30PM to 9:00 PM.
   utter_open_close_time_bank:
   - text: The Bank is open from 10:00 AM to 4:00 PM Monday to Friday, on Saturday it closes at 12:00 PM and its closed on Sundays.
   utter_open_close_time_central_computer_centre:
