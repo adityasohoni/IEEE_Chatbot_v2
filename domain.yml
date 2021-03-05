@@ -220,11 +220,19 @@ responses:
       text: OceanPearl is what you are looking for. It is behind the science block.
       title: OceanPearl
   utter_go_to_snacks:
-  - text: 'You can find snacks at Amul, Nescafe, Nandini.. '
-  - text: You can find snacks at Amul, Nescafe, Nandini...Meanwhile I will eat some microchips.
-  - text: Go over to Nescafe, Amul or Nandini to get some snacks. Even I'm hungry now.
-  - text: 'You get the best snacks and drinks at Amul, Nescafe, Nandini... '
-  - text: 'You can find snacks at Amul, Nescafe, Nandini.. '
+  - custom:
+      text: You can find snacks at Amul, Nescafe, Nandini.. 
+      title: Amul
+  - custom:
+      text: You can find snacks at Amul, Nescafe, Nandini...Meanwhile I will eat some microchips..
+      title: Amul
+  - custom:
+      text: Go over to Nescafe, Amul or Nandini to get some snacks. Even I'm hungry now.
+      title: Amul
+  - custom:
+      text: You get the best snacks and drinks at Amul, Nescafe, Nandini... 
+      title: Amul
+  
   utter_go_to_mudrika:
   - custom:
       text: You can find all your printing needs met at Mudrika
@@ -337,16 +345,16 @@ responses:
   utter_go_to_health_care_centre:
   - custom:
       text: For all medical issues you can go to the Health Care Centre which is situated at the centre of the campus, opposite to the main playground.
-      location: HealthCareCentre
+      title: HealthCareCentre
   - custom:
       text: You can go to the Health Care Centre, opposite to the main playground.
-      location: HealthCareCentre
+      title: HealthCareCentre
   - custom:
       text: Health Care Centre has is the place for medical issues. You can go there. It is right opposite the main playground.
-      location: HealthCareCentre
+      title: HealthCareCentre
   - custom:
       text: Health Care Centre is what you are seeking for. It is right opposite to the main playground.
-      location: HealthCareCentre
+      title: HealthCareCentre
   utter_go_to_sports_complex:
   - custom:
       text: You can go to the sports complex which is beside Amul.
