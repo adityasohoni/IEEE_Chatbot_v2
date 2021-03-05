@@ -166,7 +166,19 @@ stories:
     - action: restaurant_form
     - active_loop: null
     - action: utter_submit
-    - action: utter_slots_values
+    - action: find_restaurant
+
+- story: happy form + form_details
+  steps:
+    - intent: request_restaurant
+    - action: restaurant_form
+    - active_loop: restaurant_form
+    - intent: form_details
+    - action: return_form_details
+    - action: restaurant_form
+    - active_loop: null
+    - action: utter_submit
+    - action: find_restaurant
 
 - story: happy form + 
   steps:
@@ -175,7 +187,7 @@ stories:
     - active_loop: restaurant_form
     - active_loop: null
     - action: utter_submit
-    - action: utter_slots_values
+    - action: find_restaurant
 
 - story: stop form + stop
   steps:
@@ -187,6 +199,19 @@ stories:
     - intent: deny
     - action: action_deactivate_loop
     - active_loop: null
+
+
+- story: skip form 
+  steps:
+    - intent: request_restaurant
+    - action: restaurant_form
+    - active_loop: restaurant_form
+    - intent: skip
+    - action: action_deactivate_loop
+    - active_loop: null
+    - action: utter_submit
+    - action: find_restaurant
+
 
 - story: happy Central_Computer_Centre
   steps: 
