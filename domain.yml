@@ -109,6 +109,7 @@ entities:
   - bank
   - restaurant_form_details
   - Department
+  - Location
 
 
 slots:
