@@ -18,3 +18,5 @@ rasa shell nlu
 ```
 
 Look at the docs for more commands
+
+The demo video can be found [here](https://www.youtube.com/watch?v=JudV2MoD2LY)
